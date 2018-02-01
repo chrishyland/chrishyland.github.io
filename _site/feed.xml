@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-01T18:39:19+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Classification analysis Part 3!</title><link href="http://localhost:4000/pokemon_three/" rel="alternate" type="text/html" title="Classification analysis Part 3!" /><published>2018-01-27T08:00:00+07:00</published><updated>2018-01-27T08:00:00+07:00</updated><id>http://localhost:4000/pokemon_three</id><content type="html" xml:base="http://localhost:4000/pokemon_three/">&lt;p&gt;&lt;em&gt;This is the final part of a three part series&lt;/em&gt;. In this part, we will be evaluating all our previous models using different metrics. I would highly recommend checking out &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2017/12/29/pokemon-one.html&quot;&gt;part one of this series&lt;/a&gt; and &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2018/01/01/pokemon_two.html&quot;&gt;part two&lt;/a&gt; if you haven’t done so before reading this part.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-01T20:31:51+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Setting up Python3 for projects</title><link href="http://localhost:4000/setting-up-python/" rel="alternate" type="text/html" title="Setting up Python3 for projects" /><published>2018-01-31T08:00:00+07:00</published><updated>2018-01-31T08:00:00+07:00</updated><id>http://localhost:4000/setting-up-python</id><content type="html" xml:base="http://localhost:4000/setting-up-python/">&lt;p&gt;This post will be giving the tl;dr version of setting up Python3, virtual environment and github for any projects you may wish to do.&lt;/p&gt;
+
+&lt;h3 id=&quot;intro-to-python3-setup&quot;&gt;Intro to Python3 setup&lt;/h3&gt;
+&lt;p&gt;We will be using Python3 to develop this project. We will need to install a few things to get this working. Just a heads up, there’s currently Python2 which has been around a long time and Python3 which is newer. We will use Python3 since Python2 will be phased out sometime soon.&lt;/p&gt;
+
+&lt;p&gt;Good link first of all for more in depth explanation of everything I’m about to write but you can also just scroll down for tl;dr version: http://www.pyladies.com/blog/Get-Your-Mac-Ready-for-Python-Programming/&lt;/p&gt;
+
+&lt;p&gt;First, need to install Homebrew:
+https://brew.sh/&lt;/p&gt;
+
+&lt;p&gt;Tl;dr, this will allow us to install Python3 and other packages if needed.&lt;/p&gt;
+
+&lt;p&gt;To install Python3, just go:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install python3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Installing Python3 will automatically install Pip3 as well, which is a package manager for Python3 (it’ll make sure all the libraries you install have all the right dependencies and stuff installed).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;virtual-environments&quot;&gt;Virtual Environments&lt;/h3&gt;
+
+&lt;p&gt;After pip3, we will need to use Virtual environments. Tl;dr think of these as mini operating systems where you can install Python3 packages for each project you do since one project may need different package versions compared to another one. To download the virtual environment package, go:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 install virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Note that sometimes online you will see people using the command pip. This refers to installing things for Python2, so instead replace it with pip3 to get installation for Python3&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;After doing that, we can now create virtual environments! There’s a few ways to create venv (virtual environments) but one easy way to get it up and running is to go:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; venv name_of_env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, you can change the name_of_env to whatever name you want the environment to be. After doing that, you will see a new directory with the name of the environment. This is your virtual environment. To activate the virtual environment, go:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;name_of_env/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Again replace name_of_env to whatever name it actually is. You will see your terminal prompt now has the name of your environment in the front of it.&lt;/p&gt;
+
+&lt;p&gt;Now you can install any Python3 packages you need. Simply go:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 install package_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For example, if we want to install &lt;a href=&quot;http://www.numpy.org/&quot;&gt;Numpy&lt;/a&gt;, which is a library used quite frequently for data science work, type:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 install numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now sometime we need to make sure that if I use particular packages for a project, that other people know which ones they’ll need. We can output the packages we have currently installed in our venv by typing:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 freeze &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you look now, you will have a requirements.txt file. You can look at what’s inside by typing:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It should show you all the packages you have installed. Upload this file to github whenever you have new stuff installed!&lt;/p&gt;
+
+&lt;p&gt;When you have finished using the virtual environment, you should deactivate your venv by typing&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You should also delete your venv directory before pushing to github (more explanation on what this means) since it’ll take up unnecessary space since we are uploading unnecessary stuff on github. Do this by:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; name_of_env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Voila! Should be gone!&lt;/p&gt;
+
+&lt;p&gt;So next time you start up some more coding, follow the process in creating a venv like usual (which you should know by now):&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; venv name_of_env
+&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;name_of_env/bin/activate
+pip3 install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What the final line does there is for Pip to read in the requirements.txt file and install all the packages in the requirements file. Now when you check what packages you have:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 freeze
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You should have all the packages installed.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;intro-to-github&quot;&gt;Intro to Github&lt;/h3&gt;
+&lt;p&gt;This &lt;a href=&quot;https://www.youtube.com/watch?v=1h9_cB9mPT8&amp;amp;list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw&quot;&gt;youtube series&lt;/a&gt; is really good introduction to Git and Github. Would recommend you guys to watch this.&lt;/p&gt;
+
+&lt;p&gt;To get started on Github, open your command line and go to the Github repository. In your command line, type (DON’T TYPE THIS YET, WAIT UNTIL NEXT PARAGRAPH):&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone github_link
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For the github_link, go to the main repo, you should see a green button that says clone or download. Click on that and make sure it says “Clone with HTTPS”. Copy the link under the link and replace the github_link with it. You should now have cloned the repo. You should have a new directory with all the files of the repository inside.&lt;/p&gt;
+
+&lt;p&gt;Whenever you finished some code and want to upload it, first make sure you deleted your virtual environment and outputted packages you used into requirements.txt file. Then, first type:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Explanation of stuff you did to the code&quot;&lt;/span&gt;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And voila! Should be up on Github.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">This post will be giving the tl;dr version of setting up Python3, virtual environment and github for any projects you may wish to do.</summary></entry><entry><title type="html">Classification analysis Part 3!</title><link href="http://localhost:4000/pokemon_three/" rel="alternate" type="text/html" title="Classification analysis Part 3!" /><published>2018-01-27T08:00:00+07:00</published><updated>2018-01-27T08:00:00+07:00</updated><id>http://localhost:4000/pokemon_three</id><content type="html" xml:base="http://localhost:4000/pokemon_three/">&lt;p&gt;&lt;em&gt;This is the final part of a three part series&lt;/em&gt;. In this part, we will be evaluating all our previous models using different metrics. I would highly recommend checking out &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2017/12/29/pokemon-one.html&quot;&gt;part one of this series&lt;/a&gt; and &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2018/01/01/pokemon_two.html&quot;&gt;part two&lt;/a&gt; if you haven’t done so before reading this part.&lt;/p&gt;
 
 &lt;h2 id=&quot;model-evaluation&quot;&gt;Model Evaluation&lt;/h2&gt;
 
