@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-01T18:07:20+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Classification analysis Part 3!</title><link href="http://localhost:4000/pokemon_three/" rel="alternate" type="text/html" title="Classification analysis Part 3!" /><published>2018-01-27T08:00:00+07:00</published><updated>2018-01-27T08:00:00+07:00</updated><id>http://localhost:4000/pokemon_three</id><content type="html" xml:base="http://localhost:4000/pokemon_three/">&lt;p&gt;&lt;em&gt;This is the final part of a three part series&lt;/em&gt;. In this part, we will be evaluating all our previous models using different metrics. I would highly recommend checking out &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2017/12/29/pokemon-one.html&quot;&gt;part one of this series&lt;/a&gt; and &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2018/01/01/pokemon_two.html&quot;&gt;part two&lt;/a&gt; if you haven’t done so before reading this part.&lt;/p&gt;
+
+&lt;h2 id=&quot;model-evaluation&quot;&gt;Model Evaluation&lt;/h2&gt;
+
+&lt;p&gt;So, let us suppose we have our Charmander and we wish to classify her into a class or predict the type of Pokémon she is. Imagine we simply want to only classify whether is a Pokémon a fire type or &lt;em&gt;not&lt;/em&gt; a fire type Pokémon. After running your usual classification models on our dataset full of different Pokémon, we have our predictions for each Pokémon. Now, how can we quantify whether were our predictions any good at all? This is the focus of this post and we will delve into the different metrics one can use for doing so. Note that here we already know whether the Pokémon is a fire type or not, and you may ask yourself “why even bother running these models if we already know whether it is a fire type or not?”. Good point! The reason is that if our model works well on this dataset, then hopefully it is generalisable and will be able to predict future Pokémon’s type outside of our dataset.&lt;/p&gt;
+
+&lt;h2 id=&quot;confusion-matrix&quot;&gt;Confusion Matrix&lt;/h2&gt;
+
+&lt;p&gt;A very nice way to summarise the accuracy of our predictions is through something called a &lt;em&gt;confusion matrix&lt;/em&gt;. A &lt;em&gt;confusion matrix&lt;/em&gt; simply shows the number of correct and incorrect misclassifications on a more granular level. Here, we can visualise a confusion matrix as a matrix grid as seen below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pokemon_three_post/confusion_matrix.png&quot; alt=&quot;Drawing&quot; style=&quot;width: 400px; height: 300px;text-align:center;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now it may get confusing as sometimes the entries can get swapped around depending on which confusion matrix you look at. So let’s step through this matrix in particular slowly. n=165 will refer to the fact we have 165 Pokémon in our dataset in which we are trying to predict whether it is a fire type Pokémon or not (note that if we predict it to not be a fire type Pokémon, it doesn’t then tell us what type it actually is which may needed in some scenarios).&lt;/p&gt;
+
+&lt;p&gt;The column headers (prediction) can be interpreted as the prediction we made whilst the rows (actual) tells us what whether the Pokémon was actually a fire type or not. So the top left quadrant refers to us making a correct prediction of the Pokémon &lt;em&gt;NOT&lt;/em&gt; being a fire type, from the column it is in, whilst the actual type is &lt;em&gt;NOT&lt;/em&gt; a fire type, as seen from the row. Hence, we have made a &lt;em&gt;correct&lt;/em&gt; prediction of the Pokémon &lt;em&gt;NOT&lt;/em&gt; being a fire type! We call this a &lt;em&gt;True Negative&lt;/em&gt; (TN) as we have made a prediction that the Pokémon was &lt;em&gt;not&lt;/em&gt; (hence where the word negative comes from) a fire type Pokémon, which was correct! From this, we see that we have 50 Pokémon where we have correctly predicted that it was &lt;em&gt;not&lt;/em&gt; a fire type Pokémon.&lt;/p&gt;
+
+&lt;p&gt;Now we can work through this much faster.&lt;/p&gt;
+
+&lt;p&gt;Here, the bottom right quadrant is known as a &lt;em&gt;True Positive&lt;/em&gt; (TP). This means that if we classified Charmander as a fire type, and she is indeed a fire type, then we classified her into the right class. We have just made a &lt;em&gt;correct&lt;/em&gt; prediction of Charmander being a fire type! This is just simply the opposite case of the true negative.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, the top right quadrant is known as a &lt;em&gt;False Positive&lt;/em&gt;. We predicted a Pokémon to be a fire type Pokémon as seen from the column, where instead it was actually &lt;em&gt;not&lt;/em&gt; a fire type Pokémon as seen from the row. We have made an &lt;em&gt;incorrect&lt;/em&gt; prediction that the Pokémon &lt;em&gt;was&lt;/em&gt; a fire type Pokémon.&lt;/p&gt;
+
+&lt;p&gt;Finally, the bottom left quadrant is known as a &lt;em&gt;False Negative&lt;/em&gt; whereby we predicted the Pokémon to not be a fire type Pokémon when instead it was actually a fire type Pokémon. Hence, we have failed to correctly identify that it was a fire type Pokémon.&lt;/p&gt;
+
+&lt;p&gt;So to recap:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;True Positive: Correctly predicted that the Pokémon was a fire type Pokémon.&lt;/li&gt;
+  &lt;li&gt;True Negative: Correctly predicted that the Pokémon was &lt;em&gt;not&lt;/em&gt; a fire type Pokémon.&lt;/li&gt;
+  &lt;li&gt;False Positive: Incorrectly predicted that the Pokémon was a fire type Pokémon.&lt;/li&gt;
+  &lt;li&gt;False Negative: Incorrectly predicted that the Pokémon was &lt;em&gt;not&lt;/em&gt; a fire type Pokémon.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this foundation, we can now go on to build metrics that we will want to use!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pokemon_three_post/charmander.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;accuracy&quot;&gt;Accuracy&lt;/h2&gt;
+&lt;p&gt;This is usually the most intuitive metric, as we tend to use it quite frequently in everyday life. Simply put, this looks at the fraction of accurate predictions our model has made from identifying both fire type and non fire type Pokémon. Simply put, this is the true positives + the true negatives over all the metrics.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{True Positive + True Negative}{TP + TN + FP + FN}&lt;/script&gt;
+
+&lt;p&gt;Whilst this seems reasonably fine as a starting point, note that there are lots of flaws with this model which can mislead you. One such example is that if we had a &lt;em&gt;class imbalance&lt;/em&gt; such that we are trying to predict something rare that occurs once every 100 observations, we can still achieve 99% accuracy by just classifying everything as negative. A more concrete example could be a fatal disease that is present in only 1 out of every 100 people. Our medical equipment could simply declare everyone to not have the disease and have correctly identified 99 people as not having the disease. Resultantly, the model has an accuracy of 99%! However, that is indeed a terrible model for the one person who doesn’t have it and perhaps we are concerned about identifying that one person. Hence, the biggest flaw imo with this statistic is the way that it can mislead people regarding the strength of the model. Hence, we must take a more nuanced approach to using metrics.&lt;/p&gt;
+
+&lt;h2 id=&quot;sensitivity&quot;&gt;Sensitivity&lt;/h2&gt;
+&lt;p&gt;What this metric refers to is how sensitive is our model in identifying fire type Pokémon? Phrased differently, if a Pokémon is indeed a fire type Pokémon, how well is our model able to notice and identify that it is a fire type Pokémon. Therefore, sensitivity can then be stated as, out of all the fire type Pokémon Pokémon, how many did we accurately identified as a fire type Pokémon. Referring to what we discussed earlier, we can describe this as the fraction of True Positives over Actual Positives (True Positive + False Negative) or in other words:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{TP}{TP+FN}&lt;/script&gt;
+
+&lt;p&gt;A point of confusion is why False Negative is used instead of False Positive. Remember that False Negative refers to us predicting the Pokémon to NOT be a fire type when in fact it was. Therefore, False Negatives tells us how many more fire types there are that we did not correctly identify. Meanwhile, False Positives says that how many Pokémon did we identify as fire type, but instead were not. Therefore the Pokémon itself is not a fire type and hence it does not contribute to the total number of fire type Pokémon.&lt;/p&gt;
+
+&lt;p&gt;FYI, there are many names for sensitivity that you may come across such as &lt;em&gt;recall&lt;/em&gt; and &lt;em&gt;true positive rate&lt;/em&gt;. So whenever you see these names instead, know that they refer to sensitivity.&lt;/p&gt;
+
+&lt;h2 id=&quot;specificity&quot;&gt;Specificity&lt;/h2&gt;
+&lt;p&gt;This is the opposite to sensitivity. How well is our model able to identify non fire type Pokémon out of all the possible non fire type Pokémon. Or in otherwords, the True Negative out of Actual Negatives (True Negative + False Positive).&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{TN}{TN+FP}&lt;/script&gt;
+
+&lt;p&gt;We use False Positives here for the inverse reason of using False Negatives in when computing the &lt;em&gt;sensitivity&lt;/em&gt;. Now why might we be concern of this sort of metric? There are a few scenarios when we want to use this metric such as identifying cars that will &lt;em&gt;not&lt;/em&gt; pass safety inspections, companies that will &lt;em&gt;not&lt;/em&gt; have a profitable quarter, and more! Quite frankly though, it’s really how you frame the question as to when to use specificity or sensitivity.&lt;/p&gt;
+
+&lt;h3 id=&quot;trade-off-between-sensitivity-and-specificity&quot;&gt;Trade-off Between Sensitivity and Specificity&lt;/h3&gt;
+&lt;p&gt;Just a little note here that like all things, there is always a trade-off. In this case, we also have a trade-off between the sensitivity and specificity of our model.&lt;/p&gt;
+
+&lt;p&gt;One extreme example for illustration purpose is as follow. If we want a model with high sensitivity, that is, we want to identify as many of the fire type Pokémon as possible, the model can then simply predict every Pokémon to be a fire type. Looking at this, we have undoubtedly correctly identify all fire Pokémon since we have identified everything as fire type Pokémon. This gives a maximum value of 1 for the sensitivity since we have correctly identified all fire types. However, we have also incorrectly misclassified every Pokémon that is not a fire type. Therefore, we have not identified any Pokémon whose type is &lt;em&gt;not&lt;/em&gt; a fire type. From this, the number of &lt;em&gt;true negatives&lt;/em&gt; are 0. Hence, the specificity is given a minimum value of 0.&lt;/p&gt;
+
+&lt;p&gt;We can also reverse the scenario whereby if we classify every Pokémon as not a fire type, the specificity shoots up to 1 whilst sensitivity plummets to 0 for the opposite reasons as above.&lt;/p&gt;
+
+&lt;p&gt;Hence, we can see that for anywhere in the middle, increases in the sensitivity/specificity will lead to a decrease in the specificity/sensitivity.&lt;/p&gt;
+
+&lt;h2 id=&quot;precision&quot;&gt;Precision&lt;/h2&gt;
+&lt;p&gt;The precision measures how accurate are your positive classifications. Simply put, out of all the predictions we made that a Pokémon is a fire type, how many of those predictions were accurate? In other words, this is the number of true positives over total positive predictions we have made (true positives + false positives). This can be represented by:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{TP}{TP+FP}&lt;/script&gt;
+
+&lt;p&gt;This may seem quite a reasonable metric at first but it can still be misleading. One notable scenario is when we find out that the model tends to stay on the safe side when making positive classifications. A clear example is that for a sample size of 100, it could’ve just made one positive classification for the one observation whereby the model is &lt;em&gt;extremely&lt;/em&gt; sure that it is a fire type. This then undoubtedly minimises the number of incorrect positive errors. Resultantly, we have the precision formula giving us \(\frac{1}{1})\ for a maximum value of 1 if we only made 1 positive prediction, which was correct. This can have alot of potential consequences as there could have been 30 other Pokémon in the dataset that are fire types but our model didn’t classify them as such since it wasn’t extremely sure that they were fire types. This can be an issue for things whereby worst case scenarios are really threatening such as when screening for cancer, even if there’s only a 30% chance of cancer, you’d rather have your body identified for cancer than risk not having it identified for cancer and then later spreading.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Hopefully this post has introduced you to a few potential metrics to use next time you run your models! Whilst there are still quite a few other metrics such as the ROC curve which are highly utilised, I believe that these metrics are a decent foundation to learn about other metrics. Hope that this mini-series has been a good introductory level of the steps involved in a typical process of data science classification!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Data Science" /><category term="Statistics" /><summary type="html">This is the final part of a three part series. In this part, we will be evaluating all our previous models using different metrics. I would highly recommend checking out part one of this series and part two if you haven’t done so before reading this part.</summary></entry><entry><title type="html">Dynamic Programming Basics</title><link href="http://localhost:4000/Dynamic_Programming_Basic/" rel="alternate" type="text/html" title="Dynamic Programming Basics" /><published>2018-01-14T16:00:00+07:00</published><updated>2018-01-14T16:00:00+07:00</updated><id>http://localhost:4000/Dynamic_Programming_Basic</id><content type="html" xml:base="http://localhost:4000/Dynamic_Programming_Basic/">&lt;p&gt;Now why would I write a post on an seemingly esoteric topic such as dynamic programming? (Henceforth known as DP). Well, besides being a staple of many tech interview questions, I find the framework in which one can solve problems via DP quite beautiful tbh and can lead to elegant solutions. So this blog post will first look at the more common framework of divide and conquer algorithms, then seeing the paradigm shift to DP algorithms, examples, and finally a coded up solution of DP. Now would be a good time to brew your coffee before we delve in!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/dp_post/dp-meme.jpg&quot; alt=&quot;Dynamic Programming Tree&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;divide-and-conquer-algorithms&quot;&gt;Divide and Conquer Algorithms&lt;/h2&gt;
+
+&lt;p&gt;Divide and conquer algorithms boil down to solving problems in an intuitive manner which you normally do in every day life (or should be doing). If we had a massive problem to tackle, instead of taking it all on at once, we can simply break it down, solve each respective component, and combine our solutions.&lt;/p&gt;
+
+&lt;p&gt;Let us work with a concrete example. Imagine us being tasked by Elon Musk to build an electric car. What may seem like an overwhelming challenge, can be much more readily approached if we break down on what exactly we need to produce for the car and combine the parts. So we can build the engine, car body, tires, and whatever else is needed in the car. We can then combine the car parts and after connecting the parts together, we have a working car! (Okay I know I’ve simplified the process just a tad bit but you get the point!). Likewise, divide and conquer algorithms can be thought of composing of 3 parts.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Divide&lt;/em&gt;: Break the problem down into several non overlapping parts.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Conquer&lt;/em&gt;: Solve each part recursively.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Combine&lt;/em&gt;: Combine our sub-solutions to form an overall solution.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A more concrete example of a divide and conquer algorithm includes the famous &lt;em&gt;mergesort&lt;/em&gt;. Lets say we are given a set of &lt;em&gt;n&lt;/em&gt; dogs, which we then want to sort by ascending order of weight. We can employ mergesort on our dogs. Let’s put this through our divide and conquer framework.&lt;/p&gt;
+
+&lt;p&gt;1) Divide: Split the set of dogs up into two sets of bunnies.&lt;/p&gt;
+
+&lt;p&gt;2) Conquer: Recursively sort each half by weight.&lt;/p&gt;
+
+&lt;p&gt;3) Combine: Merge the two halves into a sorted whole.&lt;/p&gt;
+
+&lt;p&gt;Whenever we merge our two subsets of sorted bunnies into a single set, we need to undertake a linear number of comparisons and also have a temporary array to then store the results of the sorted set of dogs. By this, we need to compare each bunny of our two sublists in ascending order and add the lighter bunny into our temporary list.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/dp_post/merge-sort.png&quot; alt=&quot;Mergesort Tree&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can use this tree to further illustrate the example. Hence, let us say we had a 7 dogs weighing 38, 27, 43, 3, 9, 82, 10 pounds. First, we split the dogs into 2 groups with one group containing 4 dogs and the other group containing 3. We then continually split the groups up by half until we end up with 1 dog left in each group. Obviously, if there is only 1 dog in the group, the group is sorted! This is known as the &lt;em&gt;base case&lt;/em&gt;. Now we take 2 groups of dogs of size one and we then combine the 2 groups by first comparing the weights of the dogs from the 2 groups and then putting the lighter dog first and then the heavier dog later. This is the combine step in divide and conquer. We continuously repeat this process until we merge all the groups and are left with 1 group whereby the dogs are sorted in ascending order of weight.&lt;/p&gt;
+
+&lt;h3 id=&quot;dynamic-programming&quot;&gt;Dynamic Programming&lt;/h3&gt;
+&lt;p&gt;Dynamic programming is similar to divide and conquer algorithms except now when we break the problem down into several subproblems, our subproblems tend to overlap. That is, they are dependent on each other. A way to think of this is that back to our brief job of developing Tesla cars for Elon Musk, when breaking down the problem of building a car, we may find that to build the engine, may require us building a bolt or a nut that is also required to build the car body. Hence, we can see our subproblems overlap with one another.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, we then think of the framework for dynamic programming differently to our divide and conquer algorithms. The steps are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Define subproblems&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Find recurrences&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Solve the base cases&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Transform recurrence into an efficient algorithm&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For when defining subproblems, using some notation will go a long way in helping us figure out how to solve a particular problem. We usually define &lt;em&gt;OPT(j)&lt;/em&gt; to be the optimal value for the set of items from i to j in our problem.&lt;/p&gt;
+
+&lt;p&gt;For more concrete examples, we can turn to the famous Knapsack problem. The Knapsack problem states, if we had n items, whereby each item is associated with a personal utility value \(v_i\) and a weight \(w_i\). We also have a old Knapsack that can only carry a certain total weight W of items before breaking. We then want to maximize our utility so we ask the question, which set of items should we put in our Knapsack to maximize our utility whilst being constrained by the weight limit of the Knapsack.&lt;/p&gt;
+
+&lt;p&gt;A naive approach would be to try every possible combination of items to go into the Knapsack and choose the set of items that gives us the highest utility whilst satisfying the weight constraint. However, the number of possible combinations can explode exponentially. Hence, we can use a DP approach to this problem!&lt;/p&gt;
+
+&lt;h3 id=&quot;dynamic-programming-with-knapsack&quot;&gt;Dynamic Programming with Knapsack&lt;/h3&gt;
+
+&lt;p&gt;So just like divide and conquer, to tackle this problem, we are going to break the problem down and solve subproblems and combine our mini-solutions to form a final solution. Let’s say we have a basket of fruits which we could like to put into our Knapsack. Resultantly, first we restrict the sets of fruits we can take and then ask what set of fruits from this subset of fruits should we take if the total weight that the Knapsack can carry is less than W. An example would be the case where we have 10 fruits and the weight limit our Knapsack can take is 20kg. A subproblem we can break it to is first by restricting the set of items to only contain 1 item such as an apple and the weight limit being 1 kg. Suppose the apple weighs 1 kg, resultantly we can put it in our Knapsack. If it weighs more than 1 kg, we can’t put it into our Knapsack. We then increase the weight limit the Knapsack can carry to 2 kg and then again ask whether can we place the apple into our Knapsack. We repeat the process of slowly incrementing the weight limit our Knapsack until it reaches the original weight limit of 20 kg. At some point, assuming the apple weights less than 20 kg, we can start to include it into the Knapsack. Afterwards, we then set the weight limit back to 1 kg but now our subset of items contains the original apple but now we also have a banana. We now ask with a weight limit of 1 kg, can we include either the apple, banana, or both into our Knapsack. We then increment the weight limit of the Knapsack by 1 kg and ask the same question repeatedly until we finally reach the Knapsack original weight limit of 20 kg. However, the difference is that since we are seeking to maximize our utility, if we only have enough space for one of the fruits, we would then select the fruit that we prefer more to be included into the Knapsack. However, if we have space for both fruits, then we can just take both of them (assuming neither of the fruit has a negative utility value). Eventually, we will then have the solution to which fruits should we include if our Knapsack’s weight limit is 20 kg.&lt;/p&gt;
+
+&lt;p&gt;Let us formalise the previous example. We can first define our subproblem to be OPT(i,w), which is the maximum utility v which we can derive from choosing what fruits from a set of size i with a weight limit of w for our Knapsack. Back to our fruit example, then OPT(3,9) would be defined as the maximum utility we can get from 3 fruits and the Knapsack weight limit being 9 kg, whereby we choose the subset from the fruits that will give us the maximum utility whilst satisfying the Knapsack limit of 9 kg.&lt;/p&gt;
+
+&lt;p&gt;Now, we can define something called the &lt;em&gt;recurrence relation&lt;/em&gt; which can be thought of as a way to write out &lt;em&gt;recursion&lt;/em&gt; since that is what our solution is doing. We have 2 cases that can occur every time we ask what fruits from the subset of fruits should we put into our Knapsack with a weight limit of w. The first recurrence is that we do not select fruit i sine it does not give us additional utility. An example would be that if we currently have an apple and a banana in our Knapsack, swapping either fruit out with an orange will not increase our utility. Therefore, we do not select the orange and instead we select the subset of fruits without the orange whilst having the weight limit. We write this as OPT(i-1,w). However, if swapping out the orange gives us a higher utility and the orange weights 4 kg and the limit of the Knapsack is 10 kg, we then take the orange into our Knapsack but now the weight we have left over in our Knapsack is 6 kg and we gain the utility \(v_i\) from the orange. We write this as OPT(i-1, w-\(w_j)\). Hence, when deciding whether to take fruit i (the orange) we want to choose the case which gives us the higher value or in other words, whether we should include the orange or not include the orange. We formalise this by:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;OPT(i,w) = max\{OPT(i-1,w), v_j + OPT(i-1,w-w_j)\}&lt;/script&gt;
+
+&lt;p&gt;Just to translate that equation one more time, note that we have two arguments in our max function. This represents us choosing the choice which maximizes our utility from either including or not including the item. Note here that i is a &lt;em&gt;subset&lt;/em&gt; of the n original items and the weight limit w is &amp;lt; W or the actual weight limit of the Knapsack. We do this as we can slowly build up our solution to the original problem we had. It is trivial to see if we had weight limit of w = 0, the optimal solution is always no items included in the Knapsack unless an item has a weight of 0 as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;pseudocode&quot;&gt;Pseudocode&lt;/h3&gt;
+
+&lt;p&gt;The pseudocode for the Knapsack problem is seen as below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/dp_post/pseudocode.png&quot; alt=&quot;Pseudocode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just a side note here, the concept of &lt;em&gt;memoization&lt;/em&gt; is when we store the results of subproblem calculations such that we do not need to recompute it again for recursion. If you think about it, since DP is defined to have overlapping subproblems, there will be calculations recomputed that have already been computed. This is inefficient so we can simply save these calculations into an array and retrieve them if ever needed instead of recalculation.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Hopefully that made some sense and gave some insight and inspiration to start trying out DP algorithms on problems!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Now why would I write a post on an seemingly esoteric topic such as dynamic programming? (Henceforth known as DP). Well, besides being a staple of many tech interview questions, I find the framework in which one can solve problems via DP quite beautiful tbh and can lead to elegant solutions. So this blog post will first look at the more common framework of divide and conquer algorithms, then seeing the paradigm shift to DP algorithms, examples, and finally a coded up solution of DP. Now would be a good time to brew your coffee before we delve in!</summary></entry><entry><title type="html">Classification Analysis Part 2!</title><link href="http://localhost:4000/pokemon_two/" rel="alternate" type="text/html" title="Classification Analysis Part 2!" /><published>2018-01-01T16:00:00+07:00</published><updated>2018-01-01T16:00:00+07:00</updated><id>http://localhost:4000/pokemon_two</id><content type="html" xml:base="http://localhost:4000/pokemon_two/">&lt;p&gt;&lt;em&gt;This is the second part of a three part series&lt;/em&gt;. In this part, we will be analysing a few more complex models. I would highly recommend checking out &lt;a href=&quot;https://chrishyland.github.io/data%20science/statistics/2017/12/29/pokemon-one.html&quot;&gt;part one of this series&lt;/a&gt; if you haven’t done so before reading this part.&lt;/p&gt;
+
+&lt;h2 id=&quot;decision-trees&quot;&gt;Decision Trees&lt;/h2&gt;
+&lt;p&gt;A Decision tree is actually quite an intuitive idea. In this example, we are referring to decision trees for &lt;em&gt;classification&lt;/em&gt; problems (although the idea is quite similar for &lt;em&gt;regression problems&lt;/em&gt;). Let’s say we have our Pokémon dataset whereby we are only looking at the scenario whereby the Pokémon is a fire type Pokémon or not. A decision tree is simply a set of rules to follow to then help classify.&lt;/p&gt;
+
+&lt;p&gt;Suppose we had a dataset whereby the response variable is whether an individual cheated on their taxes or not, (exciting stuff, I know). We also have a bunch of features associated with each observation such as their marital status, taxable income, and whether they have claimed a tax refund.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pokemon_two_post/Dataset.jpg&quot; alt=&quot;Drawing&quot; style=&quot;width: 400px; height: 400px; margin: 0 auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From this, we can construct a decision tree. Here’s an example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pokemon_two_post/Decision-Tree.jpg&quot; alt=&quot;Drawing&quot; style=&quot;width: 400px; height: 400px;text-align:center;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Decision trees are regular trees upside down, so at the top of the tree here, this is known as the &lt;em&gt;root node&lt;/em&gt;. We start off here. This node asks the questions whether did the person claim a tax refund or not. So now, let’s say you got your dream job at the tax department and you are tasked to investigate whether did Robert cheat on his taxes this year. A machine learning enthusiast you are, you decide to employ a decision tree in order to aid your investigation. After constructing your decision tree, you first ask the question, did Robert claim a tax refund. If he did, we traverse down the left side and we get to a new node called the &lt;em&gt;leaf node&lt;/em&gt;. Here, there are no more nodes after this node and therefore terminates our traversal down the tree. Here, this node says “Don’t Cheat”, so therefore we classify that Robert did not cheat on his taxes (very naive I know, but this was just to illustrate a basic example). However, if Robert did not claim a tax refund, then we would have traversed down the right side of the tree until we reach the next node, which then asks whether is Robert married. We then keep on repeating the process until we reach a leaf node and therefore have a classification for Robert.&lt;/p&gt;
+
+&lt;p&gt;Note that if the predictor is continuous, then we go left if it’s less than or right if it’s greater than a certain threshold value (more on how to choose this value in future posts). If the predictor is a categorical one, we then construct &lt;em&gt;edges&lt;/em&gt; using the different categories the predictor can take one. On a final note, if this was a regression problem, such as how much will an individual earn from Bitcoin, we would assign the value to be the average of the observations with the same or similar features.&lt;/p&gt;
+
+&lt;p&gt;“&lt;em&gt;So how are these trees constructed?&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;Good question!&lt;/p&gt;
+
+&lt;p&gt;We won’t delve into the theory for this post but we will in a future post. Quite simply, we seek to split the data via predictors that will generate the &lt;em&gt;“purest”&lt;/em&gt; splits.&lt;/p&gt;
+
+&lt;p&gt;Here’s a clearer example.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pokemon_two_post/Dataset_Two.jpg&quot; alt=&quot;Drawing&quot; style=&quot;width: 400px; height: 400px;text-align:center;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at this dataset, we are aiming to predict whether will someone have an affair or not. Hence, we wish to “ask a question” such that it’ll give us a definitive answer on how to classify an individual. So if we ask the question “is the individual divorced”, we can the split the dataset into 2 subsets, one for individual who answers yes to that question and another for those who answers no. From this, our subsets looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/pokemon_two_post/Pure-Split.jpg&quot; alt=&quot;Decision Tree&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that for those who answers no to our question (the answer on the right), we can see that all those individuals did not have an affair (as seen from the no’s in the affair column). On the left hand side, for those who got a divorced, we can see that that almost all of them will have said yes to our question, except for one individual. Hence, we now need to ask another question for that subset of data to further split it up and isolate that single yes observation.&lt;/p&gt;
+
+&lt;p&gt;As usual, the way we would run this in Python would be:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.tree&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeClassifier&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeClassifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;So why Decision Trees?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Decision trees can capture non-linear and complex relationships within the dataset unlike linear regression. However, noticeable drawbacks include that the trees are not robust, therefore a small change to the dataset can tremendously affect the tree. Furthermore, decision trees do not have predictive capabilities that are as powerful as other models.&lt;/p&gt;
+
+&lt;h2 id=&quot;bagged-trees&quot;&gt;Bagged Trees&lt;/h2&gt;
+
+&lt;p&gt;So now, before we go further, I’d like to first introduce 2 ideas known as &lt;em&gt;bagging&lt;/em&gt; and &lt;em&gt;boosting&lt;/em&gt;. Here, we employ the technique called &lt;em&gt;bagging&lt;/em&gt;, whereby similar to the &lt;em&gt;bootstrapping&lt;/em&gt; technique, we sample observations &lt;em&gt;with replacement&lt;/em&gt; from the original dataset D, to create n new datasets. We then run decision trees on each one using different features as the point in which to split the data. We then take in a new input and take the average value for regression problem or the majority vote for a classification problem. Here, the idea is that with these independent samples, when we take the average, this leads to dramatically lower variance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/pokemon_two_post/bagging.png&quot; alt=&quot;Bagging&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From this, we can use &lt;em&gt;bagged trees&lt;/em&gt; to have multiple decision trees rather than just 1 decision tree. We just train our decision trees on the new datasets created and then take the majority vote on what the trees believe the observation to be.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-forest&quot;&gt;Random Forest&lt;/h2&gt;
+&lt;p&gt;A random forest is an improvement on &lt;em&gt;bagged trees&lt;/em&gt;. However, random forest only allows a &lt;em&gt;random selection of features&lt;/em&gt; to be used to split the data for each decision tree. This may sound strange since we are now using less data for each tree we create in the bagged trees model. However, the rationale for doing this is that it prevents one single strong predictor being used to to split the data again and again. If there is a single predictor that is constantly used to split the data, this causes us to have all our trees looking identical with one another. Resultantly, our trees will be highly correlated and in fact not reduce variance which we hoped for with bagged trees. Note that here, we are assuming that the other predictors are therefore strong predictors themselves and that this will lead to overall reduced variance. In other words, if we actually do only have 1 good predictor whilst the rest are useless, then random forest isn’t the way to go and we can simply use bagged trees.&lt;/p&gt;
+
+&lt;p&gt;##Boosting&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Boosting&lt;/em&gt; works by having trees grow &lt;em&gt;sequentially&lt;/em&gt; or using information from previously grown trees. Instead of bootstrapping, each tree is fitted on a modified dataset. We fit the trees to the residual. We need to however be extremely wary of overfitting, so a &lt;em&gt;hyperparameter&lt;/em&gt; (a parameter that we need to choose before running the algorithm) includes the number of trees to actually use. We also have a shrinkage parameter for how fast our trees can learn. Additionally, the number of splits in each tree.&lt;/p&gt;
+
+&lt;p&gt;Here’s a good image highlighting the difference between bagging and boosting.
+&lt;img src=&quot;http://localhost:4000/assets/pokemon_two_post/bagging_and_boosting.png&quot; alt=&quot;Bagging vs Boosting&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;adaptive-boosting&quot;&gt;Adaptive Boosting&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Boosting&lt;/em&gt; is related to bagging in the sense we sample observations &lt;em&gt;with replacement&lt;/em&gt; from the original dataset D, except now, we don’t have an equal probability of selecting any observation and instead let observations that were misclassified incorrectly last time have a higher probability of being sampled the next time round. So a good way to think about is that if we are asking someone a multiple rounds of series of questions repeatedly until they get all of them right, if they get a question wrong a few times, then that question will appear more frequently in the next round of questions until the person is able to answer the question correctly. Hence, in Adaptive Boosting, we fit a sequence of &lt;em&gt;weak learners&lt;/em&gt; on a series of observations that are sampled with replacement, whereby observations which were misclassified previously are given a higher weight of being resampled again. This leads to a lower bias but higher variance compared to the random forest technique (which also involves bagging).&lt;/p&gt;
+
+&lt;p&gt;Notice that for bagging techniques, we can train models simultaneously (or in parallel to one another) whilst for boosting, we need to train models one after another (or sequentially).&lt;/p&gt;
+
+&lt;p&gt;To instantiate our Adaptive Boosting classifier object, we simply go:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.ensemble&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AdaBoostClassifier&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;clf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AdaBoostClassifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We have quite a few parameters to set for our Adaptive Boosting classifier. The ones of key importance for now are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;n_estimators: This tells us the number of weak learners we will use to construct our model. We don’t want this to be too high or else we will be overfitting.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;learning_rate: This tells us the rate at which the model will learn.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;base_estimator: This is the underlying estimator that is used to construct the model. The default setting is a Decision Tree but we can use other estimators too!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We’ve been able to construct some more basic models and now will move onto move complex models.&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading this post and do email me if you have any questions! Stay tune for part three of this short series.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Data Science" /><category term="Statistics" /><summary type="html">This is the second part of a three part series. In this part, we will be analysing a few more complex models. I would highly recommend checking out part one of this series if you haven’t done so before reading this part.</summary></entry><entry><title type="html">Classification Analysis Part 1!</title><link href="http://localhost:4000/pokemon-one/" rel="alternate" type="text/html" title="Classification Analysis Part 1!" /><published>2017-12-30T16:00:00+07:00</published><updated>2017-12-30T16:00:00+07:00</updated><id>http://localhost:4000/pokemon-one</id><content type="html" xml:base="http://localhost:4000/pokemon-one/">&lt;p&gt;&lt;em&gt;This is the first part of a three part series&lt;/em&gt;. In this part, we will be doing some exploratory data analysis and looking at a few basic models. The Jupyter notebook for this post can be found &lt;a href=&quot;https://github.com/chrishyland/chrishyland.github.io/blob/master/Notebooks/Pokemon_one/Pokemon_Analysis_One.ipynb&quot;&gt;here&lt;/a&gt; alongside the &lt;a href=&quot;https://github.com/chrishyland/chrishyland.github.io/blob/master/Notebooks/Pokemon.csv&quot;&gt;dataset&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-this-all-about&quot;&gt;What’s this all about?&lt;/h2&gt;
+
+&lt;p&gt;Today we’ll be  exploring numerous classification techniques and applying this new tools so that we can classify what type a Pokémon is given their attributes. This sort of problem can be defined as a &lt;em&gt;classification&lt;/em&gt; problem whereby we seek to identify which category an observation belongs to. So in our Pokémon example, given any new Pokémon, we want to classify what type of Pokémon it is.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;dataset&quot;&gt;Dataset&lt;/h2&gt;
+&lt;p&gt;The dataset for the first &lt;em&gt;six&lt;/em&gt; generation has kindly already been scrapped for us from the all knowing &lt;a href=&quot;https://bulbapedia.bulbagarden.net/wiki/Main_Page&quot;&gt;Bulbapedia&lt;/a&gt; on &lt;a href=&quot;https://www.kaggle.com/alopez247/pokemon/data&quot;&gt;Kaggle&lt;/a&gt;. For the ease of analysis, only 8 &lt;em&gt;features&lt;/em&gt; will be used in training our model as seen below:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;exploratory-data-analysis&quot;&gt;Exploratory Data Analysis&lt;/h2&gt;
+&lt;p&gt;Let’s play around with the dataset and see the distribution of the attributes of the Pokémon as a whole (using the amazing &lt;a href=&quot;https://seaborn.pydata.org/&quot;&gt;seaborn package&lt;/a&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;toleft&quot;&gt;
+    &lt;img class=&quot;image&quot; src=&quot;/assets/pokemon_one_post/Pokemon_Analysis_One_4_1.png&quot; alt=&quot;Alt Text&quot; /&gt;
+    &lt;figcaption class=&quot;caption&quot;&gt;Photo by John Doe&lt;/figcaption&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/pokemon_one_post/Pokemon_Analysis_One_4_1.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that the distribution across attributes looks somewhat symmetric, although there are also quite a few noticeable outliers. To better visualise the distribution, we can use a &lt;a href=&quot;https://www.kaggle.com/ndrewgele/visualizing-pok-mon-stats-with-seaborn&quot;&gt;&lt;em&gt;swarm plot&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/pokemon_one_post/Pokemon_Analysis_One_5_0.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From this, there are some noticeable trends such that certain Pokémon types are associated with higher attributes. Finally, we can see the breakdown of the frequency of Pokémon types in our dataset:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/pokemon_one_post/Pokemon_Analysis_One_6_0.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, we must note that massive class imbalances, as some Pokémon primary types such as flying aren’t that frequent as compared to other more frequent types such as water. This can lead to difficulties in identifying flying type Pokémon.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;modelling&quot;&gt;Modelling&lt;/h2&gt;
+&lt;p&gt;We will need to make some tweaks to the features such that we recast the generation feature, which tells us from which of the 6 generations of Pokémon the observed Pokémon is from, as a set of 5 dummy variables, not 6 to prevent the &lt;a href=&quot;http://www.algosome.com/articles/dummy-variable-trap-regression.html&quot;&gt;dummy variable trap from happening!&lt;/a&gt;
+Additionally, we also transform the Legendary status feature into a numeric dummy variable.&lt;/p&gt;
+
+&lt;p&gt;We split the dataset up in a 80-20 training/test data split. The training set will be used to train our models whilst the test dataset &lt;em&gt;must not be touched until the end of the analysis&lt;/em&gt; upon which we will have an independent dataset to see how well our models perform.&lt;/p&gt;
+
+&lt;p&gt;We have quite a few models to try out! These include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logistic Regression&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Naive Bayes&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Decision Trees&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Random Forest&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adaptive Boosting&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gradient Boosting&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This post will cover the logistic regression and Naive Bayes in detail, leaving the remaining models to be discussed in the next post. Do note that these models will be covered at a shallow level (don’t worry though, more rigorous explanations will come in later posts!)&lt;/p&gt;
+
+&lt;h3 id=&quot;logistic-regression&quot;&gt;Logistic Regression&lt;/h3&gt;
+
+&lt;p&gt;Don’t let the fancy name “logistic” scare you! What the “logistic” part stands for is simply applying a function on our regression, more on this later.&lt;/p&gt;
+
+&lt;p&gt;For a general overview before diving in, let us consider the &lt;em&gt;binary classification&lt;/em&gt; case where we simply want to classify a single class. What this means is given a Pokémon, is it a fire type Pokémon or &lt;em&gt;not&lt;/em&gt; a fire type Pokémon? We won’t worry about other types for now as that is known as &lt;em&gt;multiclass classification&lt;/em&gt;. So if we were given some features/attributes about an unknown Pokémon such as its attack points, health points, and more, will we classify it as a fire type Pokémon or not.&lt;/p&gt;
+
+&lt;p&gt;Hopefully from your introductory statistics class, you’ve seen the humble linear regression with p features at some point:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y = \beta_0 + \beta_1x_1 + ... + \beta_px_p&lt;/script&gt;
+
+&lt;p&gt;What this mean is given some features about our Pokémon, different values for the features will increase (or decrease) the probability that the Pokémon is a fire type. For an easier example, let us consider the &lt;em&gt;simple linear regression model&lt;/em&gt; with only 1 feature \(x_1\):&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y = \beta_0 + \beta_1x_1&lt;/script&gt;
+
+&lt;p&gt;Let’s suppose that \(x_1\) is the attack points of a Pokémon, and that \(\beta_1\) is 0.02. Therefore, for every attack point increase in a Pokémon, increases the probability that the Pokémon is a fire type by 0.02. Plug a fixed value in for \(\beta_0\) and varying numbers for \(x_1\) to see for yourself!&lt;/p&gt;
+
+&lt;p&gt;We can however extend from this linear framework and consider &lt;em&gt;generalised linear models&lt;/em&gt; whereby we make different assumptions regarding the distribution of Y. This linear regression model is known as the &lt;em&gt;linear probability model&lt;/em&gt; whereby the response variable Y is a discrete set of values or categories. We now make the assumption that Y is a binary value, whereby it can take on either the value 0 or 1. An example could be where we are trying to classify whether will an individual pass their statistics course. We can then make the assumption that the response value, whether they passed or not, follows the &lt;a href=&quot;https://www.statlect.com/probability-distributions/Bernoulli-distribution&quot;&gt;Bernoulli distribution&lt;/a&gt;. Resultantly, this means that we are attempting to model the conditional probability \(P(Y=1|X=x\)). In plain English, this means, given a certain observation and their values, what is the probability that the individual will pass their course. An example for X=x could be that we have an observation with a family income of 60,000 dollars and they are male, what is the probability that the individual will pass their course P(Y=1). However, there are a few obvious issues with using this model as a classification model:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;There is no guarantee that the the probabilities generated will be between 0 and 1 because if they don’t, this violates the axioms of probability!!!. Lots of bad things are gonna happen if we start predicting that certain people will pass a course with more than 100% probability.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The error variance is not constant with this model. For the technical details, the variance of the Bernoulli distribution is p(x)(1-p(x)) whereby p(x) = P(Y=1\(|\)X=x). From this, we can see that the variance depends on the observed values \(\textbf{x}\) of an individual.  This is normally not too much of an error since we can use &lt;em&gt;generalised least squares&lt;/em&gt;, which helps to solve for heteroskedasticity.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The linear probability model does not generalise to multi-classes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The partial effects are always contant.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Primarily, to get over the first issue, we can apply the &lt;em&gt;logit transformation&lt;/em&gt; to the linear probability model. This logit transformation is defined as follows:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{exp(\beta_0)}{1 + exp(\beta)}&lt;/script&gt;
+
+&lt;p&gt;So if you try plug in any numbers into the linear probability model, you will notice that every output from the logit transformation will give us a number between 0 and 1, which is exactly what we want! I find that this graph helps to solidify the concept:
+&lt;img src=&quot;http://localhost:4000/assets/pokemon_one_post/Logit_function.png&quot; alt=&quot;Logit function&quot; /&gt;
+Here, we defined that the linear regression model to be \(\eta\) and the logistic function to be \(\Delta\) for notation simplicity. From this, we can see that the linear regression model \(\Delta\) can give us any value whilst the logistic function will transform the value to be between 0 and 1. Note that we never quite reach 0 or 1 at either end of the graph but it does &lt;em&gt;converge asymptotically&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, let us explore more on what we mean by we usually can’t have the partial effects constant. As an example, let us imagine we are looking at the probability of someone being happy as a result of eating ramen. The increase in probability of someone going from eating 0 to 1 bowl of ramen is surely not the same probability increase as going from his 5th to 6th bowl of ramen (this example is somewhat related to the idea of &lt;em&gt;diminishing marginal utility for the Econ geeks&lt;/em&gt;). The logistic regression takes care of this since now the partial effects depends on the level we are at (here the level refers to the number of bowls of ramen we are  eating).&lt;/p&gt;
+
+&lt;p&gt;To actually compute the parameters \(\beta\), we can use &lt;a href=&quot;https://onlinecourses.science.psu.edu/stat414/node/191&quot;&gt;maximum likelihood estimation&lt;/a&gt; to get these values. Simply put, we are optimizing the parameters via the likelihood function (more on this in another post!).&lt;/p&gt;
+
+&lt;p&gt;In Python (using the amazing sklearn package), all this is simply:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.linear_model&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LogisticRegression&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Creates logistic regression object.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Logistic_reg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LogisticRegression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Training our model on training set.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Logistic_reg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Making our final predictions on test set.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;predictions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logistic_reg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In conclusion, we are simply running our usual linear regression except we are then applying a logistic transformation onto it in order to keep the predicted probability values between 0 and 1.&lt;/p&gt;
+
+&lt;p&gt;More information about the logistic regression in sklearn can be read on their &lt;a href=&quot;http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h3&gt;
+&lt;p&gt;As good pracitioners of data science, it always good to have numerous tools in our tool kit to utilise in different scenarios. Another well known one is the &lt;em&gt;Naive Bayes&lt;/em&gt; model.&lt;/p&gt;
+
+&lt;p&gt;Now we are going to need some probability theory. Recall that the &lt;em&gt;product rule&lt;/em&gt; from probability is defined as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X \cup Y) = P(X,Y) = P(Y|X)P(X)&lt;/script&gt;
+
+&lt;p&gt;Translating this into English, this just tells us what the probability of the joint event of X and Y occurring, where X and Y are both events. We can then rearrange this to get:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y|X) =  \frac{P(X,Y)}{P(X)}&lt;/script&gt;
+
+&lt;p&gt;Using some math hacks which you need not concern with, we can arrive at:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y|X) =  \frac{P(X|Y)P(Y)}{P(X)}&lt;/script&gt;
+
+&lt;p&gt;The Naive Bayes classifier is a simple generative model based on the assumption that predictors are conditionally independent given the class label. It is considered “naive” because we do not in fact believe that features are not conditionally independent. A more concrete example would be, let us say we are given a new Pokémon (let’s call it Charmanchu), we want to classify whether Charmanchu is a fire type or not. The Naive Bayes assumption in this case would be, if Charmanchu was a fire type Pokémon (Y=1), what is the probability of seeing the observed features of Charmanchu (such as having high attack points but low health points). So intuitively, if fire type Pokémon tend to have high attack points and low health points, then the probability of seeing the observed results P(X\(|\)Y=1) would be quite high. From this, we will be more likely to classify Charmanchu as a fire type Pokémon. So from our Naive Bayes assumption, the class conditional density of P(X\(|\)Y) becomes:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X|Y) = \Pi_{j=1}^{p} P(X_j|Y)&lt;/script&gt;
+
+&lt;p&gt;P(X\(|\)Y) is normally tricky to compute since to actually compute the probability, we need to take into account the ways in which the predictors can correlate with one another. Thus naive assumption simply assumes that these predictors are independent with one another, &lt;em&gt;conditioned on the class&lt;/em&gt;. Therefore, it makes calculations &lt;em&gt;significantly easier&lt;/em&gt; as we now just need to only consider the probability of the values each predictor can take on. We can make an assumption regarding the distribution of each predictor, whether it be Gaussian, binomial, or any other. From all this, we simply just plug numbers in to whatever formula of the distribution we specified the predictor to be in order to get our class conditional density P(X\(|\)Y).&lt;/p&gt;
+
+&lt;p&gt;Naive Bayes makes it hard to overfit the data, which is quite good, and really shines for when we have a large number of features. This relates back to &lt;a href=&quot;http://scott.fortmann-roe.com/docs/BiasVariance.html&quot;&gt;bias-variance tradeoff&lt;/a&gt; since the assumption of class-conditional independence leads to more biased probabilities but also reduces the variance, which can be substantial if we have numerous features that are correlated. We estimate the parameters for the Naive Bayes model via maximum likelihood estimation, just like in the case of the logistic regression.&lt;/p&gt;
+
+&lt;p&gt;Back to our Charmanchu example. Let us say we would like to classify it as either a fire type Pokémon or not. Recall that from our derivations, we have that:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y|X) =  \frac{P(X|Y)P(Y)}{P(X)}&lt;/script&gt;
+
+&lt;p&gt;where from our Naive assumption, we have that:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X|Y) = \Pi_{j=1}^{p} P(X_j|Y)&lt;/script&gt;
+
+&lt;p&gt;So the probability of Charmanchu being a fire type Pokémon would be represented by the probability P(Y=1\(|\)x) whilst the probability of not being a fire type Pokémon would be P(Y=0\(|\)x). Therefore we have 2 equations:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y=1|X) =  \frac{P(X|Y)P(Y)}{P(X)}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y=0|X) =  \frac{P(X|Y)P(Y)}{P(X)}&lt;/script&gt;
+
+&lt;p&gt;Notice that the denominator is the same in both cases and simply scales the probability. We can simply drop the denominator as a result and only focus the numerator.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y=1|X) =  P(X|Y)P(Y)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y=0|X) =  P(X|Y)P(Y)&lt;/script&gt;
+
+&lt;p&gt;Here, we will classify Charmanchu as being a fire type Pokémon if the probability of being a fire type Pokémon is higher (this makes intuitive sense). So in mathematical terms, this would mean that&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(Y=1|x) &gt; P(Y=0|x)&lt;/script&gt;
+
+&lt;p&gt;Hence, we simply classify Charmanchu into the class with the highest probability.&lt;/p&gt;
+
+&lt;p&gt;In Python, the steps are quite similar to the logistic regression:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.naive_bayes&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GaussianNB&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Creates Naive Bayes object.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;naive_bayes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GaussianNB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Training our model on training set.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;naive_bayes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Making our final predictions on test set.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;predictions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;naive_bayes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We’ve been able to construct some basic models and now will move onto move complex models.&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading this post and do email me if you have any questions! Stay tune for part two of this series.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Data Science" /><category term="Statistics" /><summary type="html">This is the first part of a three part series. In this part, we will be doing some exploratory data analysis and looking at a few basic models. The Jupyter notebook for this post can be found here alongside the dataset.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
