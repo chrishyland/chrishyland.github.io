@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-01T20:31:51+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Setting up Python3 for projects</title><link href="http://localhost:4000/setting-up-python/" rel="alternate" type="text/html" title="Setting up Python3 for projects" /><published>2018-01-31T08:00:00+07:00</published><updated>2018-01-31T08:00:00+07:00</updated><id>http://localhost:4000/setting-up-python</id><content type="html" xml:base="http://localhost:4000/setting-up-python/">&lt;p&gt;This post will be giving the tl;dr version of setting up Python3, virtual environment and github for any projects you may wish to do.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-04T17:54:31+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Productivity Workflow</title><link href="http://localhost:4000/workflow/" rel="alternate" type="text/html" title="Productivity Workflow" /><published>2018-02-04T16:00:00+07:00</published><updated>2018-02-04T16:00:00+07:00</updated><id>http://localhost:4000/workflow</id><content type="html" xml:base="http://localhost:4000/workflow/">&lt;h3 id=&quot;the-expectations-of-life-depend-upon-diligence-the-mechanic-that-would-perfect-his-work-must-first-sharpen-his-tools&quot;&gt;“The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools.”&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+Tools help your productivity.
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+Tremendously.
+&lt;/p&gt;
+&lt;p&gt;Finding and getting to know what tools and software suits you can greatly help augment your productivity and achieve much more.&lt;/p&gt;
+
+&lt;p&gt;This post will differ to all my other posts on this site so far. I’d like to share and recommend to people the tools I use for my own productivity workflow. Do note though that this is not a one size fits all prescription but simply what I found to work for &lt;em&gt;ME&lt;/em&gt; over the past few years.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: I am not being endorsed for any of the following software that appears in this post (I wish I was though…)&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;trello&quot;&gt;Trello&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/trello.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My favorite productivity app. Quite simply, this is a very good system for me to organise things I need to get down for any project, whether it be coding projects, assignments, or personal goals. I found that it has been quite an effective to organise one’s thoughts. Furthermore, the ease in which it was designed for collaboration within teams just simplifies alot of group projects. Finally, my favorite aspect is that you can how a project is developing by looking at the progress made on the project board.&lt;/p&gt;
+
+&lt;h3 id=&quot;wunderlist&quot;&gt;Wunderlist&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/wunderlist.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The way I would describe Wunderlist is that it is for short term goals and also acts as an to do list whilst Trello is for longer term goals and projects. It is a nice and convenient one way for one to organise the tasks they need to get down quickly.&lt;/p&gt;
+
+&lt;h3 id=&quot;alfred&quot;&gt;Alfred&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/alfred.jpg&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is harder to explain exactly what Alfred does (as I’m still exploring it) but simply put, if you’re using a Mac, hitting command + the space bar will bring up a search tool that’ll allow you to search for any tools/files on your laptop. Then you can do more powerful features which I still need to familiarise myself with. However, it is time to say goodbye to using a trackpad!&lt;/p&gt;
+
+&lt;h3 id=&quot;evernote&quot;&gt;Evernote&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/evernote.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I find that Evernote leaves me with a really good and simple note taking experience. Just open up the app, put it in a folder you’re working on, and type away. Furthermore, it is on both my laptop and phone and hence allows my notes to transfer across my devices so that whatever comes to my mind which I then type on my phone gets transferred on my laptop for viewing later.&lt;/p&gt;
+
+&lt;h3 id=&quot;spark&quot;&gt;Spark&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/spark.jpg&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just amazing. Beautiful interface and effectively organises my emails for me.
+Fast and intuitive. Definitely use this over your current mail app that you’re using. The only drawback is that there is no mobile app :(&lt;/p&gt;
+
+&lt;h3 id=&quot;pocket&quot;&gt;Pocket&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/pocket.jpg&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I read from all sorts of mediums. However, alot of times I stumble across something that interests me but don’t currently have the time to read. With Pocket, you can save the article to read later and also doubles up as a reading list. Only drawback is that it doesn’t save quite a few things like images etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/slack.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Good for work related stuff. Differs to Messenger as there are less distractions and I see it as a space to do work only. My only issue is that it is hard to get other people to use it.&lt;/p&gt;
+
+&lt;h3 id=&quot;lastpass&quot;&gt;Lastpass&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/productivity/lastpass.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have alot of passwords so this is quite useful. Although this does get kinda glitchy and logs me out of sites sometimes…&lt;/p&gt;
+
+&lt;h3 id=&quot;markdown--atom&quot;&gt;Markdown + Atom&lt;/h3&gt;
+
+&lt;p&gt;Yes I know I know. Markdown isn’t a program. What I mean by this is that using Markdown to write things down compared to using Microsoft Word has saved me tremendous amount of time. No need to format and I can just focus on writing. Furthermore, I use Atom as my text editor where I downloaded a package so that Atom will just convert the markdown file into pdf. This makes it perfect to then send to other people to read.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now the following are just other things I use as well which do not necessarily carry over to my productivity.&lt;/p&gt;
+
+&lt;h3 id=&quot;audible&quot;&gt;Audible&lt;/h3&gt;
+
+&lt;p&gt;Amazing hack to get onto your reading list. It’s hard to find time to sit down and read a book. Using audiobooks allows you to simply get through your book whilst commuting and doesn’t use up your hands. Furthermore, you can listen at twice the speed to get through more since I strongly believe in Pareto principle applies to most books. That is, 80% of the content and important bits comes from 20% of the book itself. Furthermore, getting through books allows one to consume a wide variety of books, especially useful if I want to be a polymath one day.&lt;/p&gt;
+
+&lt;h3 id=&quot;daylio&quot;&gt;Daylio&lt;/h3&gt;
+
+&lt;p&gt;This is a nice little app to keep track of my mood. Lots of famous people keep a journal to reflect on their day/mood/goals etc so I found this as a good small step in reaching that. Furthermore, Daylio has good statistical visualisation which allows you to see your sentiment throughout the month.&lt;/p&gt;
+
+&lt;h3 id=&quot;itermzsh&quot;&gt;iTerm/Zsh&lt;/h3&gt;
+
+&lt;p&gt;Much much better than terminal which comes standard on Macbook. Allows for much more customisation.&lt;/p&gt;
+
+&lt;h3 id=&quot;google-drive&quot;&gt;Google Drive&lt;/h3&gt;
+
+&lt;p&gt;Good for syncing and backing up files. Furthermore, you can now access stuff from your phone as well! However, it is surprisingly quick to fill up 15GB free since gmail is included.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So there you have it, just some of the tools I personally use to help me be more productive. Love to hear about any tools that you use!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Other" /><summary type="html">“The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools.” Tools help your productivity.</summary></entry><entry><title type="html">Setting up Python3 for projects</title><link href="http://localhost:4000/setting-up-python/" rel="alternate" type="text/html" title="Setting up Python3 for projects" /><published>2018-01-31T08:00:00+07:00</published><updated>2018-01-31T08:00:00+07:00</updated><id>http://localhost:4000/setting-up-python</id><content type="html" xml:base="http://localhost:4000/setting-up-python/">&lt;p&gt;This post will be giving the tl;dr version of setting up Python3, virtual environment and github for any projects you may wish to do.&lt;/p&gt;
 
 &lt;h3 id=&quot;intro-to-python3-setup&quot;&gt;Intro to Python3 setup&lt;/h3&gt;
 &lt;p&gt;We will be using Python3 to develop this project. We will need to install a few things to get this working. Just a heads up, there’s currently Python2 which has been around a long time and Python3 which is newer. We will use Python3 since Python2 will be phased out sometime soon.&lt;/p&gt;
