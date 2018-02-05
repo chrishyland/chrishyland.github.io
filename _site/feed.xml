@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-04T17:54:31+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Productivity Workflow</title><link href="http://localhost:4000/workflow/" rel="alternate" type="text/html" title="Productivity Workflow" /><published>2018-02-04T16:00:00+07:00</published><updated>2018-02-04T16:00:00+07:00</updated><id>http://localhost:4000/workflow</id><content type="html" xml:base="http://localhost:4000/workflow/">&lt;h3 id=&quot;the-expectations-of-life-depend-upon-diligence-the-mechanic-that-would-perfect-his-work-must-first-sharpen-his-tools&quot;&gt;“The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools.”&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-05T18:37:00+07:00</updated><id>http://localhost:4000/</id><title type="html">Chris Hyland</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Productivity Workflow</title><link href="http://localhost:4000/workflow/" rel="alternate" type="text/html" title="Productivity Workflow" /><published>2018-02-04T16:00:00+07:00</published><updated>2018-02-04T16:00:00+07:00</updated><id>http://localhost:4000/workflow</id><content type="html" xml:base="http://localhost:4000/workflow/">&lt;h3 id=&quot;the-expectations-of-life-depend-upon-diligence-the-mechanic-that-would-perfect-his-work-must-first-sharpen-his-tools&quot;&gt;“The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools.”&lt;/h3&gt;
 &lt;p align=&quot;center&quot;&gt;
 Tools help your productivity.
 &lt;/p&gt;
@@ -19,20 +19,36 @@ Tremendously.
 
 &lt;p&gt;My favorite productivity app. Quite simply, this is a very good system for me to organise things I need to get down for any project, whether it be coding projects, assignments, or personal goals. I found that it has been quite an effective to organise one’s thoughts. Furthermore, the ease in which it was designed for collaboration within teams just simplifies alot of group projects. Finally, my favorite aspect is that you can how a project is developing by looking at the progress made on the project board.&lt;/p&gt;
 
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://trello.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;wunderlist&quot;&gt;Wunderlist&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/wunderlist.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The way I would describe Wunderlist is that it is for short term goals and also acts as an to do list whilst Trello is for longer term goals and projects. It is a nice and convenient one way for one to organise the tasks they need to get down quickly.&lt;/p&gt;
 
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://www.wunderlist.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;alfred&quot;&gt;Alfred&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/alfred.jpg&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It is harder to explain exactly what Alfred does (as I’m still exploring it) but simply put, if you’re using a Mac, hitting command + the space bar will bring up a search tool that’ll allow you to search for any tools/files on your laptop. Then you can do more powerful features which I still need to familiarise myself with. However, it is time to say goodbye to using a trackpad!&lt;/p&gt;
+&lt;p&gt;It is harder to explain exactly what Alfred does (as I’m still exploring it) but simply put, if you’re using a Mac, hitting command + the space bar will bring up a search tool that’ll allow you to search for any tools/files on your laptop. You can also set a bunch of hot keys and create workflows so that holding some keys will run processes that you tend to do repetitively. You can do more powerful features which I still need to familiarise myself with. However, it is time to say goodbye to using a trackpad!&lt;/p&gt;
+
+&lt;p&gt;Price: Free for basic versions&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;evernote&quot;&gt;Evernote&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/evernote.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I find that Evernote leaves me with a really good and simple note taking experience. Just open up the app, put it in a folder you’re working on, and type away. Furthermore, it is on both my laptop and phone and hence allows my notes to transfer across my devices so that whatever comes to my mind which I then type on my phone gets transferred on my laptop for viewing later.&lt;/p&gt;
+
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://evernote.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;spark&quot;&gt;Spark&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/spark.jpg&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
@@ -40,20 +56,36 @@ Tremendously.
 &lt;p&gt;Just amazing. Beautiful interface and effectively organises my emails for me.
 Fast and intuitive. Definitely use this over your current mail app that you’re using. The only drawback is that there is no mobile app :(&lt;/p&gt;
 
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://sparkmailapp.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;pocket&quot;&gt;Pocket&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/pocket.jpg&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I read from all sorts of mediums. However, alot of times I stumble across something that interests me but don’t currently have the time to read. With Pocket, you can save the article to read later and also doubles up as a reading list. Only drawback is that it doesn’t save quite a few things like images etc.&lt;/p&gt;
+
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://getpocket.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/slack.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Good for work related stuff. Differs to Messenger as there are less distractions and I see it as a space to do work only. My only issue is that it is hard to get other people to use it.&lt;/p&gt;
 
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://slack.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;lastpass&quot;&gt;Lastpass&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/productivity/lastpass.png&quot; alt=&quot;Drawing&quot; align=&quot;middle&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I have alot of passwords so this is quite useful. Although this does get kinda glitchy and logs me out of sites sometimes…&lt;/p&gt;
+
+&lt;p&gt;Price: Free&lt;/p&gt;
+
+&lt;p&gt;Get it &lt;a href=&quot;https://www.lastpass.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;markdown--atom&quot;&gt;Markdown + Atom&lt;/h3&gt;
 
