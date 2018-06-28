@@ -1,6 +1,6 @@
 ---
 title: Introduction to Bash Scripting
-date:   2018-06-28 01:00:00
+date:   2018-06-28 10:00:00
 layout: post
 tag:
 - Computer Science
@@ -10,14 +10,22 @@ description: Crash course on Bash Scripting.
 ---
 # How to write bash scripts
 
-First we need to define some definitions:
+## Introduction
+This is a quick crash course on how to do the basics of bash scripting.
+
+First we need some definitions:
 
 *Terminal*: What is used to take in input and print output. However, the terminal doesn't know what to do with this.
+
 *Shell*: The shell interprets what the user types in and executes those commands. We can also use the python interpretor shell to run commands.
-*Bash*: Type of shell program. This is the default on lots of systems. Bash came from sh (shell command language) but now has more features.
 
-Bash is for small task automation. Not necessary for large scale software development. If more than 50 lines of code, recommended to use other languages.
+*Bash*: A type of shell program. This is the default on lots of systems. Bash came from sh (shell command language) but now has more features.
 
+Bash is quite useful for small task automation. Not really a good idea for large scale software development. If you're writing more than 50 lines of code, it is recommended to use other languages.
+
+---
+
+## Getting Into It.
 ```bash
 echo "Hello"
 ```
@@ -28,13 +36,17 @@ echo "Hello" > new.txt  # use >> to append to a file.
 ```
 
 We can count the number of lines in a file by the _wc_ command.
+
 ```bash
 wc -l < file.txt
 ```
-The flow of data is reverse here since the file on the right is going in as the input to the command on the left. The -l flag will count the number of lines in the code. A more conventional and intuitive way of doing this is going:
+
+The flow of data is reversed here since the file on the right is going in as the input to the command on the left. The -l flag will count the number of lines in the code. A more conventional and intuitive way of doing this is going:
+
 ```bash
 cat file.txt | wc -l
 ```
+
 This pipes the output of the cat command as the input for the wc command.
 
 We can execute multiple commands with the && command. 
@@ -42,6 +54,8 @@ We can execute multiple commands with the && command.
 cat file.txt | wc -l && echo "It worked!"
 ```
 The latter half of the code after the && will only execute if the first half executes correctly. We can use conditional execution using ||.
+
+---
 
 ## Variables and Quoting
 Whenever we have a \$, that denotes a *variable* in bash scripting. When denoting environment variables, or variables outside of the program, we denote them with capital letters such as $HOME.
@@ -99,7 +113,6 @@ We can run shell scripts in 3 different manners:
 bash myscript.sh
 source myscript.sh
 ```
-
 We can also pass in arguments to our file. Note that the first argument is the name of the script.
 ```bash
 ourfilename=$0
@@ -167,6 +180,8 @@ if [ -z "word" ]; then
     echo "The length of the string is 0!"
 fi
 ```
+
+---
 
 ## Functions
 
@@ -246,4 +261,7 @@ cd ${1}
 ls | grep -i ${2}$
 ```
 
+---
 
+## Conclusion
+That was quite a few things thrown at you there but if you weren't able to pick all that up in one go, don't worry! I couldn't either when I first started out. Instead, I'd recommend slowly working your way around a few of the functions and slowly add more and more commands into your toolbox. Happy scripting!
