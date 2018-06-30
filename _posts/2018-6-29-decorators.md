@@ -1,5 +1,5 @@
 ---
-title: Introduction to Bash Scripting
+title: Introduction to Decorators
 date:   2018-06-29 10:00:00
 layout: post
 tag:
@@ -52,7 +52,7 @@ our_function()
 ```
 > I choose you Pikachu!
 
-The alternative and more common styling of the above is to just the @ symbol like below.
+The alternative and more common styling of the above is to just use the @ symbol like below.
 
 ```python
 def wrap_poke(pokemon):
@@ -90,5 +90,5 @@ So this works for other functions!
 Decorators are a way for us to call **higher-order functions**, which are basically functions that either take a function in as an argument or returns a function as a result. Hence, decorators are a way for us to take a function and extend its behaviour without modifying the source code directly. 
 
 ## Where to from here?
-Decorators are used for code that you want to "wrap" with additional functionality. Numerous cases and examples can be found in Django, synchronization, telling the time, and more!
+Whilst seemingly contrived there are actual use cases for this! Decorators are used for code that you want to "wrap" with additional functionality. Numerous cases and examples can be found in Django, synchronization, telling the time, and more! 
 
