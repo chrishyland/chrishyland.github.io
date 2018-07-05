@@ -65,7 +65,7 @@ So why else might we be bothered with function pointers?
 
 Note that with these pointers, we do not need to de-allocate memory as we are not pointing to memory.
 
-===
+---
 
 Here's another example just to drill this home:
 ```C
