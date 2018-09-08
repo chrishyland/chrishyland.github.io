@@ -27,7 +27,7 @@ We look at some examples of computational techniques. Alot of times we require c
 --- 
 
 ## Numerical Integration
-We have a function h(x) which we seek to evaluate at a grid of points x. We then use those values to approximate h by a piecewise linear function, which we can integrate exactly in order to find an approximation to $\int_{x \in D}h(x)dx$. Keep this integral in mind as we will spend the rest of this chapter on finding out how to evaluate this integral. Such examples of this include both midpoint and trapezoid rule. These algorithms converge quickly in low dimension with bounded domains.
+We have a function h(x) which we seek to evaluate at a grid of points x. We then use those values to approximate h by a piecewise linear function, which we can integrate exactly in order to find an approximation to $$\int_{x \in D}h(x)dx$$. Keep this integral in mind as we will spend the rest of this chapter on finding out how to evaluate this integral. Such examples of this include both midpoint and trapezoid rule. These algorithms converge quickly in low dimension with bounded domains.
 
 <div class="toleft">
     <img class="image" src="/assets/Monte-integration/trapezoid.png" alt="Alt Text">
@@ -47,17 +47,19 @@ The issue is for high-dimensional problems, we suffer from the curse of dimensio
 ## Monte Carlo Integration
 Recall that expectations for density functions of continuous random variables are just integrals, hence, we try to write our integrals as an expectation. Then finding the expectation is equivalent to evaluating the integral, except that computing expectations are much easier to do.
 
-First we need to recall some properties of density functions f, on the domain $\mathbb{D}$.
+First we need to recall some properties of density functions f, on the domain $$\mathbb{D}$$.
 
 - f is never negative;
-- $\int_{x \in D}f(x)dx = 1$;
+- $$\int_{x \in D}f(x)dx = 1$$;
 - Some properties of smoothness. 
 
 
 Then, we need to recall the _Law of the Unconscious Statistician_ that states that if we want to calculate the $\textbf{expected value}$ of a function g(X) for the random variable X, if we know the probability distribution of X but not g(X), we can simply compute 
+
 $$
 \mathbb{E}(g(X)) = \int_{\infty}^{\infty}g(x)f_X(x)dx
 $$ 
+
 and this still works in giving us the expectation of X.
 
 So now, if we are interested in evaluating the integral
@@ -88,24 +90,25 @@ So we take draws from f and evaluate v(.) on it.
 
 In particular, we hope that the density f() that we have chose is one that is very easy to sample from. From this, we can have multiple draws from that distribution and therefore the expectation of v(.). 
 
-In terms of theoretical justifications for this, recall that the $\textbf{weak law of large numbers}$ (Khinchin's Law) states that the sample average $\textbf{converges in probability}$ towards the expected value for a sequence of random variables that are i.i.d and whose first moment exists. Convergence in probability is that the probability of an unusual outcome becomes smaller and smaller as the sequence progresses, or in other words
+In terms of theoretical justifications for this, recall that the $$\textbf{weak law of large numbers}$$ (Khinchin's Law) states that the sample average $$\textbf{converges in probability}$$ towards the expected value for a sequence of random variables that are i.i.d and whose first moment exists. Convergence in probability is that the probability of an unusual outcome becomes smaller and smaller as the sequence progresses, or in other words
+
 $$
-\Lim{n \rightarrow \infty}Pr(|X_n - X| > \epsilon) = 0
+lim_{n \rightarrow \infty}Pr(|X_n - X| > \epsilon) = 0
 $$
 
-for a sequence of random variables $\{X_n\}$ and all $\epsilon > 0$. Therefore, the WLLN can then be expressed as
+for a sequence of random variables $$\{X_n\}$$ and all $$\epsilon > 0$$. Therefore, the WLLN can then be expressed as
 
 $$
 lim_{n \rightarrow \infty}Pr(|\bar{X}_n - \mu| > \epsilon) = 0,
 $$
 
-where $\mu$ is the expected value and $\bar{X} = \frac{1}{n}(X_1 + ... + X_n)$. Hence, going back to our scenario, as long as v(x) is a sequence of Lebesgue integrable random variables (which means that their expected value exists and is finite), we have that
+where $$\mu$$ is the expected value and $$\bar{X} = \frac{1}{n}(X_1 + ... + X_n)$$. Hence, going back to our scenario, as long as v(x) is a sequence of Lebesgue integrable random variables (which means that their expected value exists and is finite), we have that
 
 $$
 \frac{1}{S}\sum_{k=1}^Sv(x^{(s)}) \rightarrow E[v(X)] = \int_{X \in \mathbb{D}}h(x)dx.
 $$
 
-Hence, we see that this converges to our integral of interest as number of draws from f increases or $S \rightarrow \infty$. An important thing to note is that unlike most cases of asymptotics, we actually have control over S and hence we can keep simulating to ensure we get the integral of interest!
+Hence, we see that this converges to our integral of interest as number of draws from f increases or $$S \rightarrow \infty$$. An important thing to note is that unlike most cases of asymptotics, we actually have control over S and hence we can keep simulating to ensure we get the integral of interest!
 
 ---
 
