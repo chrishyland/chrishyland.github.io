@@ -40,7 +40,7 @@ We have a function h(x) which we seek to evaluate at a grid of points x. We then
     <figcaption class="caption"></figcaption>
 </div>
 
-The issue is for high-dimensional problems, we suffer from the curse of dimensionality, as we try to cover too much of the space. Hence, such techniques do not scale well. For example, if we get 4 grid points for each dimension, so only 4 points along each axis, we would already have $4^10$ points to sample and that is already massive for such a poor performance. Instead, sampling random points is more efficient, that is, if the space was $R^{10}$, we would sample vectors with 10 components and evaluate them accordingly. The issue is that this does not work really well. Hence, we turn to Monte Carlo integration instead.
+The issue is for high-dimensional problems, we suffer from the curse of dimensionality, as we try to cover too much of the space. Hence, such techniques do not scale well. For example, if we get 4 grid points for each dimension, so only 4 points along each axis, we would already have $$4^10$$ points to sample and that is already massive for such a poor performance. Instead, sampling random points is more efficient, that is, if the space was $$R^{10}$$, we would sample vectors with 10 components and evaluate them accordingly. The issue is that this does not work really well. Hence, we turn to Monte Carlo integration instead.
 
 ---
 
