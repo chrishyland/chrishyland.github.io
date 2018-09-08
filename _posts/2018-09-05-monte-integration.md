@@ -54,7 +54,7 @@ First we need to recall some properties of density functions f, on the domain $$
 - Some properties of smoothness. 
 
 
-Then, we need to recall the _Law of the Unconscious Statistician_ that states that if we want to calculate the $\textbf{expected value}$ of a function g(X) for the random variable X, if we know the probability distribution of X but not g(X), we can simply compute 
+Then, we need to recall the _Law of the Unconscious Statistician_ that states that if we want to calculate the $$\textbf{expected value}$$ of a function g(X) for the random variable X, if we know the probability distribution of X but not g(X), we can simply compute 
 
 $$
 \mathbb{E}(g(X)) = \int_{\infty}^{\infty}g(x)f_X(x)dx
