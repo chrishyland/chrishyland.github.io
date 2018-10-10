@@ -62,7 +62,9 @@ $$
 
 $$
 
-So here, the fact that we have uniform continuity, means that $$||f_n - f||_{\infty} \rightarrow 0$$  as $$n \rightarrow \infty$$. 
+
+
+
 
 In other words, the supremum norm goes to 0. Furthermore, since $$f_n$$ are continuous and uniformly converges to f, this means that f is also continuous and hence we have that $$lim {x_n \rightarrow x}f(x_n) = f(x)$$, so then $$||f(x_n) - f(x)|| \rightarrow 0$$. This shows that 
 
