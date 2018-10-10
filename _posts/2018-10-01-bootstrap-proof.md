@@ -45,34 +45,28 @@ If these conditions hold, we have that $$f_n(x_n) \rightarrow f(x)$$.
 The proof of this is as follows:
 
 $$
-
 ||f_n(x_n) - f(x) || \leq ||f_n(x_n) - f(x_n)|| + ||f(x_n) - f(x)||
-
 $$
 
 $$
-
 \leq sup_{y \in D}||f_n(y) - f(y)|| + ||f(x_n) - f(x)||
-
 $$
 
 $$
-
 = ||f_n - f||_{\infty} + ||f(x_n) - f(x)||.
-
 $$
 
 
-
+So here, the fact that we have uniform continuity, means that $$||f_n - f||_{\infty} \rightarrow 0$$  as $$n \rightarrow \infty$$. 
 
 
 In other words, the supremum norm goes to 0. Furthermore, since $$f_n$$ are continuous and uniformly converges to f, this means that f is also continuous and hence we have that $$lim {x_n \rightarrow x}f(x_n) = f(x)$$, so then $$||f(x_n) - f(x)|| \rightarrow 0$$. This shows that 
 
 $$
-
 ||f_n(x_n) - f(x)|| \rightarrow 0 \; as\; n \rightarrow \infty
+$$ 
 
-$$ for all $$x \in D$$. So relating this back to conditions on the bootstrap, if we don't have $$f_n$$ being continuous, then that means $$f$$ would not be continuous and we would not have $$f(x_n) = f(x)$$ as $$x_n \rightarrow x$$. Furthermore, if we don't have uniform convergence, we would not have $$||f_n - f||_{\infty} \rightarrow 0$$. 
+for all $$x \in D$$. So relating this back to conditions on the bootstrap, if we don't have $$f_n$$ being continuous, then that means $$f$$ would not be continuous and we would not have $$f(x_n) = f(x)$$ as $$x_n \rightarrow x$$. Furthermore, if we don't have uniform convergence, we would not have $$||f_n - f||_{\infty} \rightarrow 0$$. 
 
 
 
