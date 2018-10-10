@@ -18,7 +18,9 @@ Recall that the bootstrap is when you sample from the data you have. The idea is
 We are interested in the test statistic $$\gamma(x) \in \mathbb{R}$$. The distribution of this may depend on 
 
   1) Sample size n;
+
   2) Distribution F;
+
   3) Parameter of the distribution $$\theta$$.
 
 
@@ -60,7 +62,9 @@ $$
 
 $$
 
-So here, the fact that we have uniform continuity, means that $$||f_n - f||_{\infty} \rightarrow 0$$  as $$n \rightarrow \infty$$ or in other words, the supremum norm goes to 0. Furthermore, since $$f_n$$ are continuous and uniformly converges to f, this means that f is also continuous and hence we have that $$lim_{x_n \rightarrow x}f(x_n) = f(x)$$, so then $$||f(x_n) - f(x)|| \rightarrow 0$$. This shows that 
+So here, the fact that we have uniform continuity, means that $$||f_n - f||_{\infty} \rightarrow 0$$  as $$n \rightarrow \infty$$. 
+
+In other words, the supremum norm goes to 0. Furthermore, since $$f_n$$ are continuous and uniformly converges to f, this means that f is also continuous and hence we have that $$lim {x_n \rightarrow x}f(x_n) = f(x)$$, so then $$||f(x_n) - f(x)|| \rightarrow 0$$. This shows that 
 
 $$
 
