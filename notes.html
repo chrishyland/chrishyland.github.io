@@ -2,5 +2,57 @@
 layout: page
 title: University Notes
 ---
+<section class="list">
+    {% for post in site.posts %}
+        {% if post.projects %}
+            <div class="item {% if post.star %}star{% endif %}">
+                <a class="url" href="{% if post.externalLink %}{{ post.externalLink }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">
+                    <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
+                    <h3 class="title">{{ post.title }}</h3>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
 
-Below are a collection of notes I've made throughout my time at University. I hope they come in handy for anyone who uses them and message me if you spot any mistakes.
+    Below are a collection of notes I've made throughout my undergraduate degree. I hope they come in handy for anyone who uses them and message me if you spot any mistakes.
+
+    <h2> Mathematics </h2>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> MATH3969 - Measure Theory and Fourier Analysis </a></li>
+    </ul>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> MATH2923 - Analysis (Advance) </a></li>
+    </ul>
+    <h2> Computer Science </h2>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> COMP2907 - Algorithms and Complexity </a></li>
+    </ul>
+
+    <h2> Econometrics </h2>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> ECMT3170 - Computational Econometrics </a></li>
+    </ul>    
+
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> ECMT2160 - Econometric Analysis </a></li>
+    </ul>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> ECOS3904 - Macroeconometrics </a></li>
+    </ul>
+    
+    <h2> Business Analytics </h2>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> QBUS2820 - Predictive Analytics </a></li>
+    </ul>
+
+    <h2> Finance </h2>
+       <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> FINC2012 - Corporate Finance 2</a></li>
+    </ul>
+    <ul>
+        <li> <a href="https://github.com/chrishyland/uni-notes"> FINC3017 - Investments and Portfolio Management </a></li>
+    </ul>
+
+
+
+</section>
