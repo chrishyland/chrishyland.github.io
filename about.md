@@ -5,12 +5,10 @@ layout: page
 
 ## Hey!
 
-I am currently an undergraduate student in my penultimate year at the University of Sydney. As an aspiring polymath, my majors are in:  Statistics, Computer Science, Mathematics, and Econometrics with minors in Business Analytics, Economics, and Finance.
-
-I have co-founded and am currently the co-president of the [ANOVA Project](http://anovaprojectusyd.org). We are the first student pro-bono STEM consulting society in the world. Whether you're an organisation that wants to help give the next generation of STEM students an opportunity at building their careers or a keen STEM student interested in developing your skills, feel free to reach out to me!
+I am currently an undergraduate student in my penultimate year at the University of Sydney. As an aspiring polymath, my majors are in:  Mathematics, Statistics, Computer Science and Econometrics with minors in Business Analytics, Economics, and Finance.
 
 ### About myself
-I'm currently exploring the blogosphere and contributing with my knowledge on the intersection of Machine Learning, Computer Science, Statistics, Mathematics, and Econometrics. I wear many hats, from being a Trade Strats intern at Goldman Sachs, a research assistant in Computational Economics at [QuantEcon](https://quantecon.org/), entrepreneur with the ANOVA Project, machine learning engineer, head academic tutor in the Econometrics department, and sleep deprived student.
+I'm currently exploring the blogosphere and contributing with my knowledge on the intersection of Machine Learning, Computer Science, Statistics, Mathematics, and Econometrics. I wear many hats, from being a data scientist at [Liven](https://www.liven.com.au/), quant at Goldman Sachs, a software engineer in omputational economics at [QuantEcon](https://quantecon.org/), technical consultant with the ANOVA Project, head academic tutor in the Econometrics department, and sleep deprived student.
 
 This blog comprises of my (hopefully decent) attempts at explaining concepts, messing around with some data, and noting down my own musings.
 
