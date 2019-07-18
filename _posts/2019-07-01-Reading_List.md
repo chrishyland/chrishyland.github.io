@@ -13,8 +13,11 @@ description: My reading list for 2019
 ## Introduction
 I love to read books but unfortunately I have not placed reading books as a priority during my university years. This year, one of the metrics to my New Year Resolution OKRs is to read 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my personal review of them. In addition, podcasts/youtube channels/Netflix shows that I have found particularly interesting will also be here.
 
-## Book List
-### 11/26
+My interests ranges from startups, self-development, biographies, Economics, technology, and more.
+
+---
+
+## Book List (11/26)
 
 #### The Everything Store
 
@@ -36,12 +39,13 @@ I love to read books but unfortunately I have not placed reading books as a prio
 
 #### Getting Things Done
 
-#### Reboot
+#### Reboot: Leadership and the Art of Growing Up
 
+---
 
 ## Podcasts
 
-#### The im Ferris Show
+#### The Tim Ferris Show
 
 #### How I Built This
 
@@ -59,7 +63,7 @@ I love to read books but unfortunately I have not placed reading books as a prio
 
 #### Crazy/Genius
 
-
+---
 
 ## Netflix Shows
 
