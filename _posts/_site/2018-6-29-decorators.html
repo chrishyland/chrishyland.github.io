@@ -1,0 +1,84 @@
+<h1 id="decorators">Decorators</h1>
+
+<p>Decorators are a good introduction to metaprogramming. What this means is that a part of the program tries to modify another part of the program at compile time.</p>
+
+<p>Let’s say we had the following function.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">chosen_pokemon</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s">"Pikachu!"</span>
+</code></pre></div></div>
+
+<p>A decorator will take this function and add some extra code to this function. An example of a decorator for our above function would be:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">wrap_poke</span><span class="p">(</span><span class="n">pokemon</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">choose_pokemon</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"I choose you {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">pokemon</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">choose_pokemon</span>
+</code></pre></div></div>
+
+<p>Notice that the wrap_gen function returns the inner function choose_pokemon without the (). This means that we aren’t actually executing that function but merely returning the state (kinda like generators but not quite).</p>
+
+<p>So now we can combine our decorator with our first function like so:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">wrap_poke</span><span class="p">(</span><span class="n">pokemon</span><span class="p">):</span>
+  <span class="s">"""
+  Note that argument is a function.
+  """</span>
+  <span class="k">def</span> <span class="nf">choose_pokemon</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"I choose you {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">pokemon</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">choose_pokemon</span>
+  
+<span class="k">def</span> <span class="nf">chosen_pokemon</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s">"Pikachu!"</span>
+  
+<span class="c"># Note that we didn't execute chose_pokemon since no ()</span>
+<span class="n">our_function</span> <span class="o">=</span> <span class="n">wrap_poke</span><span class="p">(</span><span class="n">chosen_pokemon</span><span class="p">)</span>
+
+<span class="c"># To call our wrap_poke function:</span>
+<span class="n">our_function</span><span class="p">()</span>
+</code></pre></div></div>
+<blockquote>
+  <p>I choose you Pikachu!</p>
+</blockquote>
+
+<p>The alternative and more common styling of the above is to just use the @ symbol like below.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">wrap_poke</span><span class="p">(</span><span class="n">pokemon</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">choose_pokemon</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"I choose you {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">pokemon</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">choose_pokemon</span>
+  
+<span class="nd">@wrap_poke</span>
+<span class="k">def</span> <span class="nf">chosen_pokemon</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s">"Pikachu!"</span>
+  
+<span class="c"># Executing function.</span>
+<span class="k">print</span><span class="p">(</span><span class="n">chosen_pokemon</span><span class="p">())</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>I choose you Pikachu!</p>
+</blockquote>
+
+<p>With this wrapping functionality, this allow for flexibility now as we can define new functions and simply wrap them up with our decorators like so:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@wrap_poke</span>
+<span class="k">def</span> <span class="nf">chosen_pokemon_two</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s">"Squirtle!"</span>
+
+<span class="c"># Execute function.</span>
+<span class="k">print</span><span class="p">(</span><span class="n">chosen_pokemon_two</span><span class="p">())</span>
+</code></pre></div></div>
+<blockquote>
+  <p>I choose you Squirtle!</p>
+</blockquote>
+
+<p>So this works for other functions!</p>
+
+<hr />
+
+<h2 id="so-what-is-actually-happening-here">So what is actually happening here?</h2>
+<p>Decorators are a way for us to call <strong>higher-order functions</strong>, which are basically functions that either take a function in as an argument or returns a function as a result. Hence, decorators are a way for us to take a function and extend its behaviour without modifying the source code directly.</p>
+
+<h2 id="where-to-from-here">Where to from here?</h2>
+<p>Whilst seemingly contrived there are actual use cases for this! Decorators are used for code that you want to “wrap” with additional functionality. Numerous cases and examples can be found in Django, synchronization, telling the time, and more!</p>
+

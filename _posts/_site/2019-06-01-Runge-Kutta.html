@@ -1,0 +1,127 @@
+<h2 id="introduction">Introduction</h2>
+<p>Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation <script type="math/tex">y'(t) = f(t,y(t))</script> over a time interval <script type="math/tex">[t_0,t_1]</script> with a starting point <script type="math/tex">y(t_0) = y_0</script>. We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.</p>
+
+<p>The significance of IVP problems is that we are given an initial point and the slope of the function at that point ,from the DE itself. Hence, we want to figure out what is the next point. The algorithm at a high level for Runge-Kutta methods would be taking one step along the slope and picking our next point <script type="math/tex">y_*</script> from that step. We then evaluate the slope at that new point <script type="math/tex">y_*</script> and step along that new slope. We iterate this process. Hence, the issues we have are:</p>
+
+<p>1) How do we estimate the slope?
+2) How far should this step size be?
+—</p>
+<h2 id="introduction-to-runge-kutta-methods">Introduction to Runge-Kutta Methods</h2>
+
+<p>We want to solve differential equations of the form
+<script type="math/tex">\frac{dy}{dx} = f(x,y).</script></p>
+
+<p>The form that we use for all Runge-Kutta methods are:
+<script type="math/tex">y_{i+1} = y_i + \phi h</script></p>
+
+<p>where h is a step size in x and <script type="math/tex">\phi</script> is the slope. An intuitive way of why this form can be seen if we want to solve the differential equation between i to i+1.</p>
+
+<script type="math/tex; mode=display">\int_{y_{i}}^{y_{i+1}}dy = \int_{x_{i}}^{x_{i+1}}f(x,y)dx</script>
+
+<script type="math/tex; mode=display">y_{i+1} - y_i = \int_{x_{i}}^{x_{i+1}}f(x,y)dx</script>
+
+<script type="math/tex; mode=display">y_{i+1} = y_i + \int_{x_{i}}^{x_{i+1}}f(x,y)dx</script>
+
+<h2 id="which-matches-our-form">which matches our form.</h2>
+
+<h2 id="eulers-method">Euler’s Method</h2>
+<p>Recall that the form of Runge-Kutta methods are <script type="math/tex">y_{i+1} = y_i + \phi h.</script> For Euler’s method, we set the slope to be <script type="math/tex">\phi = f(x,y) = \frac{dy}{dx}.</script> Hence, the form of the Euler method is</p>
+
+<script type="math/tex; mode=display">y_{i+1} = y_i + f(x_i,y_i)h</script>
+
+<p>for a step size h. Hence, we start at the point <script type="math/tex">y_0</script> and evaluate the slope <script type="math/tex">f(x,y_0)</script>. After fixing a step size h, we then arrive at the next point <script type="math/tex">y_1</script> by <script type="math/tex">y_1 = y_0 + f(x,y_0)h</script>.</p>
+
+<h2 id="heuns-method">Heun’s Method</h2>
+<p>Heun’s method is similar to Euler’s method except it uses a Predictor and Corrector. That is, it has a different method of calculating the slope <script type="math/tex">\phi</script>.</p>
+
+<p>The first step is the <strong>predictor</strong> step, which is identical to Euler’s method</p>
+
+<script type="math/tex; mode=display">y_{i+1}^0 = y_i + f(x_i,y_i)h</script>
+
+<p>Hence we are now at the point <script type="math/tex">(x_{i+1},y_{i+1}^0)</script> where <script type="math/tex">x_{i+1} = x_i + h</script> and <script type="math/tex">y_{i+1}^0</script> is the new value from Euler’s method. We can now evaluate to get the slope at our new point <script type="math/tex">f(x_{i+1}, y_{i+1}^0)</script>. Unlike Euler’s method, we don’t move along this new slope.</p>
+
+<p>The second step is now we take our original slope <script type="math/tex">f(x_i,y_i)</script> and our new slope from our step <script type="math/tex">f(x_{i+1}, y_{i+1}^0)</script> and take the average of the two to be our slope <script type="math/tex">\phi</script>. That is, <script type="math/tex">\phi = \frac{f(x_i,y_i) + f(x_{i+1},y_{i+1}^0)}{2}</script>. This is known as the <strong>corrector</strong> step. Therefore, our final <em>actual step</em> using Heun’s method is</p>
+
+<script type="math/tex; mode=display">y_{i+1} = y_i + \frac{f(x_i,y_i) + f(x_{i+1},y_{i+1}^0)}{2}h</script>
+
+<h2 id="where-y_i10--y_i--fx_iy_ih-using-eulers-method-and-x_i1--x_i--h">where <script type="math/tex">y_{i+1}^0 = y_i + f(x_i,y_i)h</script> using Euler’s method and <script type="math/tex">x_{i+1} = x_i + h</script>.</h2>
+<h2 id="general-runge-kutta-framework">General Runge-Kutta Framework</h2>
+<p>So we now look at the general form of Runge-Kutta. Recall as always</p>
+
+<script type="math/tex; mode=display">y_{i+1} = y_i + \phi h</script>
+
+<p>where <script type="math/tex">\phi</script> is the representative slope for the interval h. We analyse <script type="math/tex">\phi</script>. We can write <script type="math/tex">\phi</script> out as</p>
+
+<script type="math/tex; mode=display">\phi(x_i,y_i,h) = a_1k_1 + a_2k+2 + .... + a_nk_n</script>
+
+<p>where</p>
+
+<script type="math/tex; mode=display">k_1 = f(x_i,y_i)</script>
+
+<script type="math/tex; mode=display">k_2 = f(x_i + p_1h, y_i + q_{1,1}k_1h)</script>
+
+<script type="math/tex; mode=display">k_3 = f(x_i + p_{2}h, y_i + q_{2,1}k_1h + q_{2,2}k_2h)</script>
+
+<script type="math/tex; mode=display">k_n = f(x_i + p_{n-1}h, y_i + q_{n-1,1}k_1h + q_{n-1,2}k_2h + ... + q_{n-1,n-1}k_{n-1}h).</script>
+
+<h2 id="here-n-refers-to-the-order-of-the-runge-kutta-method-looking-back-from-earlier-eulers-method-is-a-1st-order-runge-kutta-method-and-heuns-method-is-a-2nd-order-runge-kutta-method">Here, <strong>n</strong> refers to the order of the Runge-Kutta method. Looking back from earlier, Euler’s method is a <script type="math/tex">1^{st}</script>-order Runge-Kutta method and Heun’s method is a <script type="math/tex">2^{nd}</script>-order Runge-Kutta method.</h2>
+<h2 id="2nd-order-runge-kutta-methods">2nd Order Runge-Kutta Methods</h2>
+<p>We look at 2nd Order Runge-Kutta methods which includes Heun’s method in addition to 2 other 2nd order methods.</p>
+
+<p>Recall that the set up was</p>
+
+<script type="math/tex; mode=display">y_{i+1} = y_i + (a_1k_1+a_2k_2)h</script>
+
+<p>where</p>
+
+<p><script type="math/tex">k_1 = f(x_i,y_i)</script> and <script type="math/tex">k_2 = f(x_i + p_1h, y_i + q_{11}k_1h).</script></p>
+
+<p>The issue is now we need to decide what both <script type="math/tex">p_1</script> and <script type="math/tex">q_{11}</script> is. Once we have that, we know what <script type="math/tex">k_2</script> is. Then we need to decide what <script type="math/tex">a_1</script> and <script type="math/tex">a_2</script> is. Deciding <script type="math/tex">p_1</script>, <script type="math/tex">q_{11}</script>, <script type="math/tex">a_1</script>, and <script type="math/tex">a_2</script> is what leads to alternative methods.</p>
+
+<p>To figure out what numbers to use, we can use the Taylor series expansion on our set up equation about the point <script type="math/tex">y_i</script> on <script type="math/tex">a_1k_1 + a_2k_2</script>. As a result, we will get the following constraints</p>
+
+<script type="math/tex; mode=display">\begin{cases}
+a_1 + a_2 = 1 \\
+a_2p_1 = \frac{1}{2}\\
+a_2q_{11} = \frac{1}{2}
+\end{cases}</script>
+
+<p>with the 4 unknowns. Hence, we select the unknowns, which is non-unique, as long as it satisfies the constraints.</p>
+
+<h3 id="1-heuns-method">1) Heun’s Method</h3>
+<p>In Heun’s method, we set</p>
+
+<script type="math/tex; mode=display">a_2 = \frac{1}{2}.</script>
+
+<p>We can then solve for the rest of the numbers to arrive back as what we did earlier.</p>
+
+<h3 id="2-midpoint-method">2) Midpoint Method</h3>
+<p>In the midpoint method, we set</p>
+
+<p><script type="math/tex">a_2 = 1</script>/</p>
+
+<h3 id="3-ralstons-method">3) Ralston’s Method</h3>
+<p>In Ralston’s method, we set</p>
+
+<script type="math/tex; mode=display">a_2 = \frac{2}{3}.</script>
+
+<h2 id="4th-order-runge-kutta-method">4th Order Runge-Kutta Method</h2>
+<p>The 4th order Runge-Kutta method is the method that is generally used the most frequently in practice.</p>
+
+<p>The form of the 4th order Runge-Kutta method is</p>
+
+<script type="math/tex; mode=display">y_{i+1} = y_i + \frac{1}{6}(k_1+2k_2+2k_3+k_4)h</script>
+
+<p>where we have</p>
+
+<script type="math/tex; mode=display">\begin{cases}
+k_1 = f(x_i,y_i)\\
+k_2 = f(x_i+\frac{1}{2}h,y_i+ \frac{1}{2}k_1h)\\
+k_3 = f(x_i+\frac{1}{2}h,y_i+ \frac{1}{2}k_2h)\\
+k_4 = f(x_i + h,y_i+ k_3h). 
+\end{cases}</script>
+
+<p><strong>Remark</strong> The tradeoff between using a higher order method is computational cost/complexity in coding up vs accuracy.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Hence, we have looked at different forms of Runge-Kutta methods by varying the form of the slope <script type="math/tex">\phi</script>. However, we have not discussed anything about specifying the step size h, which is a massive topic in Runge-Kutta methods.</p>

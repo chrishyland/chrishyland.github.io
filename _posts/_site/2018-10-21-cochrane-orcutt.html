@@ -1,0 +1,81 @@
+<h3 id="cochrane-what-what-is-the-purpose-of-even-doing-this-procedure-cant-i-just-regress-y_t-on-x_t-and-be-done-with-it">Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress <script type="math/tex">y_t</script> on <script type="math/tex">x_t</script> and be done with it?</h3>
+
+<p>Recall that if we have serial correlation/autocorrelation with our error terms, then we would have that inferences on our <script type="math/tex">\beta</script> parameters won’t turn out well. In particular, the standard errors would be too small, leading to large test statistics (since you divide <script type="math/tex">\beta</script> by the standard error), and hence this can lead to “easier” rejections of the null that <script type="math/tex">\beta = 0</script>. (On a side note, you can use the Breusche-Godfrey test to check whether does this serial correlation exist).</p>
+
+<p>So what the Cochrane Orcutt procedure will do is that it will take your <script type="math/tex">y_t</script> and $x_t$ variable and construct new variables <script type="math/tex">\tilde{y}_t</script> and <script type="math/tex">\tilde{x}_t</script> such that when you regress these 2 variables on each other, your serial correlation problems are solved and you can now do inferences like before!</p>
+
+<h3 id="wow-thats-amazing-so-how-do-i-go-about-doing-this">Wow that’s amazing! So how do I go about doing this?</h3>
+
+<p>It’s simple! First, you need to construct your new variables duh.</p>
+
+<h3 id="okay-how-do-i-go-about-doing-that">Okay… How do I go about doing that?</h3>
+
+<p>Oops, my bad. So first of all, we just run our usual OLS regression of the original <script type="math/tex">y_t</script> and <script type="math/tex">x_t</script>, so that we have</p>
+
+<script type="math/tex; mode=display">y_t = \alpha + \beta x_t + e_t</script>
+
+<p>where <script type="math/tex">e_t</script> is our residual terms from the regression.</p>
+
+<h3 id="i-suspect-that-the-residuals-will-be-involved-in-the-construction-of-these-new-variables">I suspect that the residuals will be involved in the construction of these new variables?</h3>
+
+<p>Right you are! So after running our regression above, we need to then save our residuals <script type="math/tex">e_t</script>. Then, we can run an AR(1) model on our residuals to get</p>
+
+<script type="math/tex; mode=display">e_t = \rho e_{t-1} + v_t</script>
+
+<p>So now we need to keep track of the coefficient of the slope in this regression, that is, we need to save that <script type="math/tex">\rho</script> term.</p>
+
+<h3 id="alright-what-next">Alright! What next?</h3>
+
+<p>Now we can construct our variables! Recall that differencing our variable is taking our data and subtracting the lag from it. That is, an ordinary differencing would be</p>
+
+<script type="math/tex; mode=display">y_t - y_{t-1}</script>
+
+<p>where in Stata, you can do this by generating a new variable from taking your variable and subtracting the lag of it (I think going L.variable will get the lag using that L command).</p>
+
+<p>However, we are doing quasi-differencing, so what we instead do is multiply our lag term by the <script type="math/tex">\rho</script> from our earlier AR(1) of the residuals. So what we have is</p>
+
+<script type="math/tex; mode=display">\tilde{y}_t = y_t - \rho y_{t-1}.</script>
+
+<p>and</p>
+
+<script type="math/tex; mode=display">\tilde{x}_t = x_t - \rho x_{t-1}.</script>
+
+<p>We now have our quasi-differenced variables <script type="math/tex">\tilde{y}_t</script> and <script type="math/tex">\tilde{x}_t</script>!</p>
+
+<h3 id="awesome-so-do-i-just-regress-them-on-each-other-now">Awesome! So do I just regress them on each other now?</h3>
+
+<p>Yep! So now in our regression, we would have</p>
+
+<script type="math/tex; mode=display">\tilde{y}_t = \tilde{\alpha} + \beta \tilde{x}_t + v_t</script>
+
+<h3 id="so-whats-up-with-the-coefficients-now">So what’s up with the coefficients now?</h3>
+
+<p>So fortunately for us, the <script type="math/tex">\beta</script> on <script type="math/tex">\tilde{x}_t</script> will be the same <script type="math/tex">\beta</script> as in our original regression with <script type="math/tex">x_t</script>! Hence, we can just do inference as before! A small caveat is that our intercept is now different as it is now <script type="math/tex">(1 - \rho)\alpha</script> or something like that, but don’t worry about that.</p>
+
+<h3 id="wait-my-coefficient-is-different-for-beta">Wait, my coefficient is different for <script type="math/tex">\beta</script>???</h3>
+
+<p>That’s okay! It might be different by a tad bit, but fortunately this estimator is still unbiased and its effectively the same as doing inference on the original <script type="math/tex">\beta</script>.</p>
+
+<hr />
+
+<p>I may have told a little white lie when I said that the result from the Cochrane-Orcutt procedure will give you the same (similar) value of <script type="math/tex">\beta</script> as the OLS estimator.</p>
+
+<p>When we use <script type="math/tex">\hat{\rho}</script>, this is a consistent estimator of <script type="math/tex">\rho</script> and you are also correct in that this whole procedure results in a Feasible GSL estimator <script type="math/tex">\beta_j</script>. It is also a good point that you mentioned that we can only use <script type="math/tex">\hat{\rho}</script>, not <script type="math/tex">\rho</script> itself and that FGLS estimator will not be unbiased but it is consistent. However, we have given up the unbiased property but what we get in returns is that this estimator is asymptotically more efficient than just using OLS if serial correlation holds. Also, our standard errors will be corrected and will be larger, making inferences more valid. It is a trade-off, but we are happy with this tradeoff because remember, being unbiased is not always the ultimate goal as I highlighted here.</p>
+
+<p>For the purposes of most cases, the <script type="math/tex">\hat{\beta}</script> from Cochrane-Orcutt and OLS should be the same (or really really similar). However, there are cases where they aren’t because for this FGLS estimator, we also require the condition that</p>
+
+<script type="math/tex; mode=display">Cov[(x_{t-1} + x_{t+1}, u_t] = 0</script>
+
+<p>so instead of <script type="math/tex">u_t</script> uncorrelated with <script type="math/tex">x_t</script>, it also needs to be uncorrelated with <script type="math/tex">x_{t-1}</script> and <script type="math/tex">x_{t+1}</script>. So when OLS and FGLS gives significantly different results, we should use OLS because the OLS model is likely to still be consistent whilst the FGLS is now producing misleading results.</p>
+
+<hr />
+
+<h3 id="long-story-short">Long story short</h3>
+
+<p>For the purposes of most cases, the Cochrane-Orcutt procedure and OLS should give you the same (or really similar results). In this case, you use the estimates from Cochrane-Orcutt as they are more efficient and asymptotically valid (but they are biased like you mentioned.)</p>
+
+<p>However, there are cases where they will give you dramatically different results and in those cases, just stick with OLS because it’s quite likely that the assumption outline earlier does not hold for the Cochrane-Orcutt procedure. There are ways to check on whether are these differences significant enough to warrant just using OLS instead but this is way beyond the scope of this post.</p>
+
+<hr />
+
+<p>Thanks!</p>

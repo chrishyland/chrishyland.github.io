@@ -1,0 +1,88 @@
+<h1 id="introduction">Introduction</h1>
+<p>Complexity theory can be a topic which confuses many undergraduates due to the plethora of jargon and seemingly contradictory ideas. In this post, I’ve tried to give a tl;dr rundown of many of the terms and try to concisely explain what it all means.</p>
+
+<hr />
+<h2 id="what-different-terms-are-there">What different terms are there?</h2>
+<p>There are 4 things you need to understand to really understand all this stuff.</p>
+
+<ul>
+  <li>P</li>
+  <li>NP</li>
+  <li>NP Complete</li>
+  <li>NP Hard</li>
+</ul>
+
+<h2 id="p">P</h2>
+
+<p>P stands for Polynomial time. A problem in P means it can be solved with a <strong>polynomial time</strong> algorithm. What this means is that it can be solved fairly quickly. This class of problems are a subset of NP, which we will come to next.</p>
+
+<hr />
+
+<h1 id="np">NP</h1>
+<p>NP stands for Nondeterministic polynomial time. Lets say we had a problem X. Problem X MIGHT be able to be solved in polynomial time <strong>or not</strong>. However, if we had a <strong>proposed solution</strong> to the problem, and we can verify that is indeed the correct solution in polynomial time, then the problem is in NP. An example would be Sudoku, idk if this is in P or strictly NP, it’s just an example!. Anyone who’s tried playing the game of Sudoku, they know it’s quite hard and let’s suppose we can’t solve it in polynomial time. Hence it is not in P. HOWEVER, if we were given a proposed solution to the Sudoku board, we can check if that solution is the <strong>correct solution or not</strong> to the Sudoku board really quickly (just look and see if the rules are obeyed).</p>
+
+<p>So you can see, problems that can be solved in polynomial time can be verified in polynomial time (it makes sense too, if you can solve a question easily, you can check if an answer your given is the right answer easily). However, problems that can be <strong>verified in polynomial time does not mean it can be solved in polynomial time</strong>. Hence, <strong>P is a subset of NP</strong>.</p>
+
+<p><img src="/assets/Complexity/np-complete.png" alt="Drawing" style="width: 400px; height: 300px;text-align:center;" /></p>
+
+<hr />
+
+<h1 id="np-complete">NP Complete</h1>
+<p>To understand how to show something is in NP-Complete, we need to go on a sidetrack to understand the concepts of <em>reductions</em>.</p>
+
+<h2 id="reductions">Reductions</h2>
+<p><em>Make sure you understand this section. It is so important for understanding NP Hard and Complete.</em></p>
+
+<p>Lets say we had problem X and Y. If we can <em>reduce problem X into problem Y</em> and we can solve problem Y, <em>X is EASIER than Y</em>. In otherwords, Y is harder than X or at least same is the same level of difficulty as X. Let this sink in. This is important. An example could be, let’s say we had a problem X that requires year 3 understanding of Maths and a problem Y that requires 2nd year uni level of Maths. IF (and a big if) we can somehow recast problem X into something similar to problem Y which requires uni level maths, and we can solve problem Y, then that means we can solve problem X since we CAN recast it to problem Y. So for example, imagine if you wanted to solve: 2x+8=6. Let’s say you can recast it to something much more complex in abstract maths requiring abstract algebra and group theory etc. If you can solve that much more complex version of the problem, then you can DEFINITELY solve the easier version we had initially.</p>
+
+<p>On a side note, when we reduce X to Y, we assume that reduction transformation iself is in polynomial time as well. So, if we can reduce X to Y in polynomial time, solve Y, and reduce back to X in polynomial time, we have found a solution to X.</p>
+
+<h3 id="tldr">tl;dr</h3>
+<p>X (reduces)-&gt; Y and we can solve Y, then X is <strong>AT MOST</strong> hard as Y. So Y is harder OR might be same level of difficulty, Y definitely can’t be easier.</p>
+
+<p>So back to NP complete problems. Looking at the diagram earlier, we see that NP-Complete is in the intersect of both NP-Hard problems and NP problems. It’s gonna be annoying but now I’m going to jump into NP-Hard problems before wrapping up with NP-Complete problems.</p>
+
+<hr />
+
+<h1 id="np-hard">NP Hard</h1>
+<p>The short and sweet definition (and definitely not rigorously phrased) of NP Hard problem are problems that are harder than <em>ALL</em> problems in NP. A problem that is NP hard is <strong>not necessarily in NP</strong> and could in fact be in EXP or takes exponential time to solve (where an example of exponential time algorithms could be to brute force and generate ALL possible answers and find which one is the right one). A problem that is <strong>in NP</strong> is a <strong>NP Complete</strong> problem. So, to show something is NP Hard, we need to be able to take all problems that in NP, <strong>reduce all the problems</strong> into our supposedly NP hard problem, and if we can solve our NP hard problem (in exponential time and <strong>maybe</strong> verifiy it in polynomial time), then all our problems in NP are <strong>easier</strong> than our NP hard problem and we know that our NP hard problem is indeed harder than all our problems in NP.</p>
+
+<h3 id="tldr-1">tl;dr</h3>
+<p>A problem X where all problems in NP can be reduced to problem X. This problem is <strong>NOT</strong> in NP since if was, then it would be <strong>NP Complete</strong>.</p>
+
+<p>–</p>
+
+<h2 id="wrapping-up-with-np-complete">Wrapping up with NP-Complete</h2>
+
+<p>2 conditions are needed to show something is in NP-Complete.</p>
+
+<ul>
+  <li>The problem is in NP.</li>
+  <li>Every problem in NP is reducible to our problem.</li>
+</ul>
+
+<p>1) We can show a problem is in NP by the same manner we mentioned earlier. We show that a solution can be verified in polynomial time.
+2) Reduce every problem in NP to our problem! However, this is not feasible, so what we do is that we reduce <strong>a known NP Complete problem</strong> into our problem. This is fine because for the known NP Complete problem, someone else has already reduced every problem in NP to that known NP complete problem. Now if we reduce that known NP Complete problem into our problem, then by transitive property, every problem in NP can be reduced to our problem!</p>
+
+<p>–</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>The following lists aims to show the steps to prove that a problem is in:</p>
+<ul>
+  <li>
+    <p>P: Show there exists a polynomial time algorithm to solve the problem.</p>
+  </li>
+  <li>
+    <p>NP: Show that we can verify a proposed solution in polynomial time.</p>
+  </li>
+  <li>
+    <p>NP-Hard: Reduce a NP Hard problem into our problem.</p>
+  </li>
+  <li>
+    <p>NP-Complete: Reduce a NP Complete problem into our problem <strong>AND</strong> show our problem is in NP.</p>
+  </li>
+</ul>
+
+<h1 id="resources">Resources</h1>
+<p>Resource I would really recommend reading: http://jeffe.cs.illinois.edu/teaching/algorithms/2009/notes/21-nphard.pdf</p>

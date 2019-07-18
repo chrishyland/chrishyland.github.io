@@ -1,4 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-11T17:38:48+10:00</updated><id>http://localhost:4000/</id><title type="html">chrishyland.github.io</title><subtitle>A Shot of Data</subtitle><entry><title type="html">Cochrane-Orcutt Procedure</title><link href="http://localhost:4000/cochrane-orcutt/" rel="alternate" type="text/html" title="Cochrane-Orcutt Procedure" /><published>2018-10-21T21:00:00+11:00</published><updated>2018-10-21T21:00:00+11:00</updated><id>http://localhost:4000/cochrane-orcutt</id><content type="html" xml:base="http://localhost:4000/cochrane-orcutt/">&lt;h3 id=&quot;cochrane-what-what-is-the-purpose-of-even-doing-this-procedure-cant-i-just-regress-y_t-on-x_t-and-be-done-with-it&quot;&gt;Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress &lt;script type=&quot;math/tex&quot;&gt;y_t&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;x_t&lt;/script&gt; and be done with it?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-18T22:33:38+10:00</updated><id>http://localhost:4000/</id><title type="html">chrishyland.github.io</title><subtitle>A Shot of Data</subtitle><entry><title type="html">A simple explanation of Docker and Kubernetes</title><link href="http://localhost:4000/Kubernetes/" rel="alternate" type="text/html" title="A simple explanation of Docker and Kubernetes" /><published>2019-07-10T19:00:00+10:00</published><updated>2019-07-10T19:00:00+10:00</updated><id>http://localhost:4000/Kubernetes</id><content type="html" xml:base="http://localhost:4000/Kubernetes/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This is a high level explanation of the difference between Kubernetes and Docker containers and what is their relationship.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;So first you have a container, which is just a way to package software and ensure your application’s code/libraries/dependencies  will always work no matter what environment/operating system you are on. You can think of it like a virtual machine except alot more lightweight and not having the additional overhead of an operating system. Docker is the most popular library for creating these containers.&lt;/p&gt;
+
+&lt;p&gt;The next level of abstraction is microservices, where you have many different apps each doing its own thing. The reason we would want to use such a set up is that if we want to make a change to a particular application, we can simply alter that application and make sure it doesn’t affect other application. It is industry standard nowadays to use microservices.&lt;/p&gt;
+
+&lt;p&gt;So now if you create a docker container for each of your applications but try to have a microservice architecture, you have an issue now since you have many different containers and you have an issue of how do we coordinate between these applications in different containers.&lt;/p&gt;
+
+&lt;p&gt;Kubernetes comes in here and “orchestrates” (fancy way of saying manages) all the containers to work together in sync. Docker also has its own container management tool called Docker Swarm but Kubernetes is just more popular. Examples of things Kubernetes does is&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;It ensures the containers talk to each other&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a container fails, Kubernetes will distribute the work to other containers or alert other containers that a container is down&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kubernetes can add/remove containers depending on demand helping to ensure you have just enough processing power&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ensure consistency of storage across containers&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acts as a load balancer by figuring which container to distribute work to&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and many more things!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;tl;dr, Kubernetes just helps to coordinate your system for when you have multiple docker containers that need to interact with each other and scale up/down your system by adding/removing containers as your demand changes.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">2019 Reading List</title><link href="http://localhost:4000/Reading_List/" rel="alternate" type="text/html" title="2019 Reading List" /><published>2019-07-01T19:00:00+10:00</published><updated>2019-07-01T19:00:00+10:00</updated><id>http://localhost:4000/Reading_List</id><content type="html" xml:base="http://localhost:4000/Reading_List/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution &lt;a href=&quot;https://en.wikipedia.org/wiki/OKR&quot;&gt;OKRs&lt;/a&gt; is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my &lt;em&gt;personal&lt;/em&gt; review of their impact on me.&lt;/p&gt;
+
+&lt;p&gt;In addition, podcasts/Netflix shows that I have found particularly interesting will also be here.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;book-list-1326&quot;&gt;Book List (13/26)&lt;/h2&gt;
+
+&lt;p&gt;The list is in chronological order of when I read them in addition to my rating of the book and any comments.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-everything-store&quot;&gt;The Everything Store&lt;/h4&gt;
+&lt;p&gt;2/5: An interesting exploration of the intense grit and tenacity of Jeff Bezos. Whilst there was some exploration of his decision making framework, I found that I was not able to take away much else.&lt;/p&gt;
+
+&lt;h4 id=&quot;misbehaving-the-making-of-behavioural-economics&quot;&gt;Misbehaving: The Making of Behavioural Economics&lt;/h4&gt;
+&lt;p&gt;2.5/5: I’ve read Daniel Kahneman’s Thinking, Fast and Slow last year and I found that to be a more interesting book on dealing with Behavioural Economics. I would suggest Kahneman’s book as alot of the content from Misbehaving can be found in Kahneman’s book and goes into more detail. There were some interesting anecdotes in this book but nothing too memorable.&lt;/p&gt;
+
+&lt;h4 id=&quot;deep-work&quot;&gt;Deep Work&lt;/h4&gt;
+&lt;p&gt;3.5/5: The main premise of the book is to focus on developing a deep level of expertise and doing work that is considered to be “deep”, which usually coincides with work that can’t be easily replicable by others and adds alot more value. The idea of blocking 3-4 hours of your day to focus on a single task with no distractions (e.g. friends) was immensely useful for helping my university studies by dramatically increasing the efficiency of my study sessions and giving me more time to focus on other aspects of my life. The reason that the rating wasn’t any higher was that I didn’t find the rest of the book that interesting after the sections mentioned above and found it to be repetitive.&lt;/p&gt;
+
+&lt;h4 id=&quot;chaos-monkeys&quot;&gt;Chaos Monkeys&lt;/h4&gt;
+&lt;p&gt;4/5: This was a really fun read and felt like I was reading an adventure novel set in Silicon Valley. Whilst quite sarcastic and lewd alot of the times, Chaos Monkeys really taught me about alot of the absurdities that goes in these seemingly prestigious organisations and not to take life too seriously.&lt;/p&gt;
+
+&lt;h4 id=&quot;bad-blood&quot;&gt;Bad Blood&lt;/h4&gt;
+&lt;p&gt;4/5: This was an extremely interesting read into how Silicon Valley can still get some things terribly wrong. In particular, to always have a grain of salt when listening to the supposedly game-changing opportunities happening in the Valley. The documentary was also a fascinating watch but the book was definitely better. Would recommend for those interested in seeing a darker side of startups and how important culture is.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-art-of-public-speaking-lessons-from-the-greatest-speeches-in-history&quot;&gt;The Art of Public Speaking: Lessons from the greatest speeches in history&lt;/h4&gt;
+&lt;p&gt;1/5: Unfortunately, I found this course to not have improved my public speaking in any manner.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-we-sleep-the-new-science-of-sleep&quot;&gt;Why We Sleep: The New Science of Sleep&lt;/h4&gt;
+&lt;p&gt;5/5: My top recommendation on this list so far. One of the very few books to have truly changed my life. I used to be one of the staunchest advocates for burning the midnight oil continuously and had terrible sleeping/caffeine behaviour. Ever since reading this, I am now always aiming to get 8 hours of sleep a night, if not for my health but for my performance at work and studies.&lt;/p&gt;
+
+&lt;h4 id=&quot;sapiens-a-brief-history-of-humankind&quot;&gt;Sapiens: A Brief History of Humankind&lt;/h4&gt;
+&lt;p&gt;3.5/5: There was alot of hype around this book before going into it and unfortunately I found it to be okay. The beginning was quite slow for me personally but really picked up and got alot more interesting when looking at the 20th century. This is probably more reflective of my interests in 20th century history.&lt;/p&gt;
+
+&lt;h4 id=&quot;a-beautiful-mind&quot;&gt;A Beautiful Mind&lt;/h4&gt;
+&lt;p&gt;4/5: This book was great for romanticising a life in academia, something which I long considered. The book’s exposition on the beauty of pure mathematics and Economics was really inspiring for a Math major like myself. Furthermore, it was really interesting to see many famous and notable names pop up through the book (e.g. Neumann, Belman) and seeing a much more humane side to these giants in Mathematics.&lt;/p&gt;
+
+&lt;h4 id=&quot;getting-things-done&quot;&gt;Getting Things Done&lt;/h4&gt;
+&lt;p&gt;2.5/5: The only real takeaway I got from this book was having a collection bucket and action list. That is, that our brain is terrible at storing information and hence the moment we have an idea/thought in which we need to recollect later on, WRITE IT DOWN IMMEDIATELY. Hence, having a collection bucket to collect these thoughts/ideas and then moving them to your action list when it is time to get things done. I didn’t find the other aspects of the GTD system that useful for me personally.&lt;/p&gt;
+
+&lt;h4 id=&quot;reboot-leadership-and-the-art-of-growing-up&quot;&gt;Reboot: Leadership and the Art of Growing Up&lt;/h4&gt;
+&lt;p&gt;4/5: Reboot was a nice breath of fresh air seeing someone who has such an accomplished career talk about such personal and heartfelt issues. It is easy to get caught up in the everyday grind but this book really helped me to stop and reflect on why I do what I do. A recommendation for high-flyers that are starting out in their careers.&lt;/p&gt;
+
+&lt;h4 id=&quot;debt-the-first-5000-years&quot;&gt;Debt: The First 5,000 Years&lt;/h4&gt;
+&lt;p&gt;4.5/5: All the hype around Sapiens should be redirected towards this book. This paints such an illuminating history of humankind from the perspective of debt and how it influences our financial system, customs, and norms. This book instantly dispelled numerous mental models I had about the world in the first 20 minutes of starting this book. Would recommend to anyone interested in Economics and history.&lt;/p&gt;
+
+&lt;h4 id=&quot;emotional-intelligence-why-it-can-matter-more-than-iq&quot;&gt;Emotional Intelligence: Why It Can Matter More than IQ&lt;/h4&gt;
+&lt;p&gt;2/5: Didn’t really help much with developing my EQ but definitely helped with understanding WHAT EQ is.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;podcasts&quot;&gt;Podcasts&lt;/h2&gt;
+
+&lt;h4 id=&quot;the-tim-ferris-show&quot;&gt;The Tim Ferris Show&lt;/h4&gt;
+&lt;p&gt;5/5: I have definitely adopted alot of Tim Ferris’ line of questioning and attempts at trying to deconstruct the habits/routines that alot of overachievers’ in my life perform. Memorable guests for me include Greg McKeown, Seth Godin, Patrick Collison, Drew Houston, Joe Gebbia, Josh Waitzkin, and Susan Cain.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-i-built-this&quot;&gt;How I Built This&lt;/h4&gt;
+&lt;p&gt;4/5: I usually switch up the Tim Ferris show with How I Built This depending on the guest on the show. Memorable ones for me include: Logic, Melanie Perkins, Whitney Wolfe, Miguel McKelvey, and John Zimmer.&lt;/p&gt;
+
+&lt;h4 id=&quot;a16z-podcast&quot;&gt;a16z Podcast&lt;/h4&gt;
+&lt;p&gt;4/5: To be honest I just started this one recently but have been quite blown away by the recent episodes involving Marc Andreessen and Ben Horowitz. I was quite a massive sceptic of blockchain but now am a convert.&lt;/p&gt;
+
+&lt;h4 id=&quot;startup-school&quot;&gt;Startup School&lt;/h4&gt;
+&lt;p&gt;4.5/5: This was a really exciting course to jump into when I first got involved in startup-land. I learnt a tremendous amount and really shifted my thinking in line with the fast-thinking and out of box creativity needed for startups.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-product-podcast&quot;&gt;The Product Podcast&lt;/h4&gt;
+&lt;p&gt;3.5/5: Another podcast I recently started but have been impressed by the quality of guests they have brought onto the show so far.&lt;/p&gt;
+
+&lt;h4 id=&quot;this-week-in-machine-learning--artificial-intelligence&quot;&gt;This Week in Machine Learning &amp;amp; Artificial Intelligence&lt;/h4&gt;
+&lt;p&gt;2/5: As much as I am interested in machine learning, I don’t seem to enjoy this podcast so much. Will need to give this one another chance.&lt;/p&gt;
+
+&lt;h4 id=&quot;grey-mattermasters-of-scale&quot;&gt;Grey Matter/Masters of Scale&lt;/h4&gt;
+&lt;p&gt;3/5: To me these podcasts feel quite similar with Reid Hoffman being the main star. Another great resource for learning how to operate a startup.&lt;/p&gt;
+
+&lt;h4 id=&quot;crazygenius&quot;&gt;Crazy/Genius&lt;/h4&gt;
+&lt;p&gt;2.5/5: A nice podcast for learning a bit more about certain trends in industries. Would be better if they got alot more into the nitty-gritty of the trends.&lt;/p&gt;
+
+&lt;h4 id=&quot;joe-rogan-experience&quot;&gt;Joe Rogan Experience&lt;/h4&gt;
+&lt;p&gt;3.5/5: A nice meme podcast to listen to in the background when you don’t want something so serious/academic to listen to.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;netflix-shows&quot;&gt;Netflix Shows&lt;/h2&gt;
+
+&lt;h4 id=&quot;world-war-ii-in-hd-colour&quot;&gt;World War II in HD Colour&lt;/h4&gt;
+&lt;p&gt;4.5/5: A really good series exploring Europe’s darkest days.&lt;/p&gt;
+
+&lt;h4 id=&quot;icarus&quot;&gt;Icarus&lt;/h4&gt;
+&lt;p&gt;4.5/5: A must watch into cheating in sports.&lt;/p&gt;
+
+&lt;h4 id=&quot;sour-grapes&quot;&gt;Sour Grapes&lt;/h4&gt;
+&lt;p&gt;4.5/5: A must watch into cheating in the wine industry.&lt;/p&gt;
+
+&lt;h4 id=&quot;tidying-up-with-marie-kondo&quot;&gt;Tidying Up with Marie Kondo&lt;/h4&gt;
+&lt;p&gt;2.5/5: This did not help motivate me to start cleaning up but feel content just watching other peoples’ homes get cleaned.&lt;/p&gt;
+
+&lt;h4 id=&quot;street-food&quot;&gt;Street Food&lt;/h4&gt;
+&lt;p&gt;3.5/5: Only watch the episode on Thai food!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;simple-pleasures-of-life&quot;&gt;Simple Pleasures of Life&lt;/h2&gt;
+
+&lt;h4 id=&quot;shingeki-no-kyojin&quot;&gt;Shingeki no Kyojin&lt;/h4&gt;
+&lt;p&gt;5/5&lt;/p&gt;
+
+&lt;h4 id=&quot;one-punch-man&quot;&gt;One Punch Man&lt;/h4&gt;
+&lt;p&gt;4/5&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;send-through-an-email-or-linkedin-message-if-you-have-suggestionsrecommendations-for-books-to-readpodcasts-to-listen-to&quot;&gt;Send through an email or Linkedin message if you have suggestions/recommendations for books to read/podcasts to listen to!&lt;/h3&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Other" /><summary type="html">Introduction I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution OKRs is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my personal review of their impact on me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Runge-Kutta Methods</title><link href="http://localhost:4000/Runge-Kutta/" rel="alternate" type="text/html" title="Runge-Kutta Methods" /><published>2019-06-25T19:00:00+10:00</published><updated>2019-06-25T19:00:00+10:00</updated><id>http://localhost:4000/Runge-Kutta</id><content type="html" xml:base="http://localhost:4000/Runge-Kutta/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation &lt;script type=&quot;math/tex&quot;&gt;y'(t) = f(t,y(t))&lt;/script&gt; over a time interval &lt;script type=&quot;math/tex&quot;&gt;[t_0,t_1]&lt;/script&gt; with a starting point &lt;script type=&quot;math/tex&quot;&gt;y(t_0) = y_0&lt;/script&gt;. We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.&lt;/p&gt;
+
+&lt;p&gt;The significance of IVP problems is that we are given an initial point and the slope of the function at that point ,from the DE itself. Hence, we want to figure out what is the next point. The algorithm at a high level for Runge-Kutta methods would be taking one step along the slope and picking our next point &lt;script type=&quot;math/tex&quot;&gt;y_*&lt;/script&gt; from that step. We then evaluate the slope at that new point &lt;script type=&quot;math/tex&quot;&gt;y_*&lt;/script&gt; and step along that new slope. We iterate this process. Hence, the issues we have are:&lt;/p&gt;
+
+&lt;p&gt;1) How do we estimate the slope?
+2) How far should this step size be?
+—&lt;/p&gt;
+&lt;h2 id=&quot;introduction-to-runge-kutta-methods&quot;&gt;Introduction to Runge-Kutta Methods&lt;/h2&gt;
+
+&lt;p&gt;We want to solve differential equations of the form
+&lt;script type=&quot;math/tex&quot;&gt;\frac{dy}{dx} = f(x,y).&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The form that we use for all Runge-Kutta methods are:
+&lt;script type=&quot;math/tex&quot;&gt;y_{i+1} = y_i + \phi h&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;where h is a step size in x and &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt; is the slope. An intuitive way of why this form can be seen if we want to solve the differential equation between i to i+1.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_{y_{i}}^{y_{i+1}}dy = \int_{x_{i}}^{x_{i+1}}f(x,y)dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} - y_i = \int_{x_{i}}^{x_{i+1}}f(x,y)dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} = y_i + \int_{x_{i}}^{x_{i+1}}f(x,y)dx&lt;/script&gt;
+
+&lt;h2 id=&quot;which-matches-our-form&quot;&gt;which matches our form.&lt;/h2&gt;
+
+&lt;h2 id=&quot;eulers-method&quot;&gt;Euler’s Method&lt;/h2&gt;
+&lt;p&gt;Recall that the form of Runge-Kutta methods are &lt;script type=&quot;math/tex&quot;&gt;y_{i+1} = y_i + \phi h.&lt;/script&gt; For Euler’s method, we set the slope to be &lt;script type=&quot;math/tex&quot;&gt;\phi = f(x,y) = \frac{dy}{dx}.&lt;/script&gt; Hence, the form of the Euler method is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} = y_i + f(x_i,y_i)h&lt;/script&gt;
+
+&lt;p&gt;for a step size h. Hence, we start at the point &lt;script type=&quot;math/tex&quot;&gt;y_0&lt;/script&gt; and evaluate the slope &lt;script type=&quot;math/tex&quot;&gt;f(x,y_0)&lt;/script&gt;. After fixing a step size h, we then arrive at the next point &lt;script type=&quot;math/tex&quot;&gt;y_1&lt;/script&gt; by &lt;script type=&quot;math/tex&quot;&gt;y_1 = y_0 + f(x,y_0)h&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;heuns-method&quot;&gt;Heun’s Method&lt;/h2&gt;
+&lt;p&gt;Heun’s method is similar to Euler’s method except it uses a Predictor and Corrector. That is, it has a different method of calculating the slope &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first step is the &lt;strong&gt;predictor&lt;/strong&gt; step, which is identical to Euler’s method&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1}^0 = y_i + f(x_i,y_i)h&lt;/script&gt;
+
+&lt;p&gt;Hence we are now at the point &lt;script type=&quot;math/tex&quot;&gt;(x_{i+1},y_{i+1}^0)&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;x_{i+1} = x_i + h&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;y_{i+1}^0&lt;/script&gt; is the new value from Euler’s method. We can now evaluate to get the slope at our new point &lt;script type=&quot;math/tex&quot;&gt;f(x_{i+1}, y_{i+1}^0)&lt;/script&gt;. Unlike Euler’s method, we don’t move along this new slope.&lt;/p&gt;
+
+&lt;p&gt;The second step is now we take our original slope &lt;script type=&quot;math/tex&quot;&gt;f(x_i,y_i)&lt;/script&gt; and our new slope from our step &lt;script type=&quot;math/tex&quot;&gt;f(x_{i+1}, y_{i+1}^0)&lt;/script&gt; and take the average of the two to be our slope &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. That is, &lt;script type=&quot;math/tex&quot;&gt;\phi = \frac{f(x_i,y_i) + f(x_{i+1},y_{i+1}^0)}{2}&lt;/script&gt;. This is known as the &lt;strong&gt;corrector&lt;/strong&gt; step. Therefore, our final &lt;em&gt;actual step&lt;/em&gt; using Heun’s method is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} = y_i + \frac{f(x_i,y_i) + f(x_{i+1},y_{i+1}^0)}{2}h&lt;/script&gt;
+
+&lt;h2 id=&quot;where-y_i10--y_i--fx_iy_ih-using-eulers-method-and-x_i1--x_i--h&quot;&gt;where &lt;script type=&quot;math/tex&quot;&gt;y_{i+1}^0 = y_i + f(x_i,y_i)h&lt;/script&gt; using Euler’s method and &lt;script type=&quot;math/tex&quot;&gt;x_{i+1} = x_i + h&lt;/script&gt;.&lt;/h2&gt;
+&lt;h2 id=&quot;general-runge-kutta-framework&quot;&gt;General Runge-Kutta Framework&lt;/h2&gt;
+&lt;p&gt;So we now look at the general form of Runge-Kutta. Recall as always&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} = y_i + \phi h&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt; is the representative slope for the interval h. We analyse &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. We can write &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt; out as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\phi(x_i,y_i,h) = a_1k_1 + a_2k+2 + .... + a_nk_n&lt;/script&gt;
+
+&lt;p&gt;where&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;k_1 = f(x_i,y_i)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;k_2 = f(x_i + p_1h, y_i + q_{1,1}k_1h)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;k_3 = f(x_i + p_{2}h, y_i + q_{2,1}k_1h + q_{2,2}k_2h)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;k_n = f(x_i + p_{n-1}h, y_i + q_{n-1,1}k_1h + q_{n-1,2}k_2h + ... + q_{n-1,n-1}k_{n-1}h).&lt;/script&gt;
+
+&lt;h2 id=&quot;here-n-refers-to-the-order-of-the-runge-kutta-method-looking-back-from-earlier-eulers-method-is-a-1st-order-runge-kutta-method-and-heuns-method-is-a-2nd-order-runge-kutta-method&quot;&gt;Here, &lt;strong&gt;n&lt;/strong&gt; refers to the order of the Runge-Kutta method. Looking back from earlier, Euler’s method is a &lt;script type=&quot;math/tex&quot;&gt;1^{st}&lt;/script&gt;-order Runge-Kutta method and Heun’s method is a &lt;script type=&quot;math/tex&quot;&gt;2^{nd}&lt;/script&gt;-order Runge-Kutta method.&lt;/h2&gt;
+&lt;h2 id=&quot;2nd-order-runge-kutta-methods&quot;&gt;2nd Order Runge-Kutta Methods&lt;/h2&gt;
+&lt;p&gt;We look at 2nd Order Runge-Kutta methods which includes Heun’s method in addition to 2 other 2nd order methods.&lt;/p&gt;
+
+&lt;p&gt;Recall that the set up was&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} = y_i + (a_1k_1+a_2k_2)h&lt;/script&gt;
+
+&lt;p&gt;where&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;k_1 = f(x_i,y_i)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;k_2 = f(x_i + p_1h, y_i + q_{11}k_1h).&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The issue is now we need to decide what both &lt;script type=&quot;math/tex&quot;&gt;p_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;q_{11}&lt;/script&gt; is. Once we have that, we know what &lt;script type=&quot;math/tex&quot;&gt;k_2&lt;/script&gt; is. Then we need to decide what &lt;script type=&quot;math/tex&quot;&gt;a_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;a_2&lt;/script&gt; is. Deciding &lt;script type=&quot;math/tex&quot;&gt;p_1&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;q_{11}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;a_1&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;a_2&lt;/script&gt; is what leads to alternative methods.&lt;/p&gt;
+
+&lt;p&gt;To figure out what numbers to use, we can use the Taylor series expansion on our set up equation about the point &lt;script type=&quot;math/tex&quot;&gt;y_i&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;a_1k_1 + a_2k_2&lt;/script&gt;. As a result, we will get the following constraints&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{cases}
+a_1 + a_2 = 1 \\
+a_2p_1 = \frac{1}{2}\\
+a_2q_{11} = \frac{1}{2}
+\end{cases}&lt;/script&gt;
+
+&lt;p&gt;with the 4 unknowns. Hence, we select the unknowns, which is non-unique, as long as it satisfies the constraints.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-heuns-method&quot;&gt;1) Heun’s Method&lt;/h3&gt;
+&lt;p&gt;In Heun’s method, we set&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;a_2 = \frac{1}{2}.&lt;/script&gt;
+
+&lt;p&gt;We can then solve for the rest of the numbers to arrive back as what we did earlier.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-midpoint-method&quot;&gt;2) Midpoint Method&lt;/h3&gt;
+&lt;p&gt;In the midpoint method, we set&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;a_2 = 1&lt;/script&gt;/&lt;/p&gt;
+
+&lt;h3 id=&quot;3-ralstons-method&quot;&gt;3) Ralston’s Method&lt;/h3&gt;
+&lt;p&gt;In Ralston’s method, we set&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;a_2 = \frac{2}{3}.&lt;/script&gt;
+
+&lt;h2 id=&quot;4th-order-runge-kutta-method&quot;&gt;4th Order Runge-Kutta Method&lt;/h2&gt;
+&lt;p&gt;The 4th order Runge-Kutta method is the method that is generally used the most frequently in practice.&lt;/p&gt;
+
+&lt;p&gt;The form of the 4th order Runge-Kutta method is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y_{i+1} = y_i + \frac{1}{6}(k_1+2k_2+2k_3+k_4)h&lt;/script&gt;
+
+&lt;p&gt;where we have&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{cases}
+k_1 = f(x_i,y_i)\\
+k_2 = f(x_i+\frac{1}{2}h,y_i+ \frac{1}{2}k_1h)\\
+k_3 = f(x_i+\frac{1}{2}h,y_i+ \frac{1}{2}k_2h)\\
+k_4 = f(x_i + h,y_i+ k_3h). 
+\end{cases}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt; The tradeoff between using a higher order method is computational cost/complexity in coding up vs accuracy.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Hence, we have looked at different forms of Runge-Kutta methods by varying the form of the slope &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. However, we have not discussed anything about specifying the step size h, which is a massive topic in Runge-Kutta methods.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Mathematics" /><category term="Computer Science" /><summary type="html">Introduction Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation over a time interval with a starting point . We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Cochrane-Orcutt Procedure</title><link href="http://localhost:4000/cochrane-orcutt/" rel="alternate" type="text/html" title="Cochrane-Orcutt Procedure" /><published>2018-10-21T21:00:00+11:00</published><updated>2018-10-21T21:00:00+11:00</updated><id>http://localhost:4000/cochrane-orcutt</id><content type="html" xml:base="http://localhost:4000/cochrane-orcutt/">&lt;h3 id=&quot;cochrane-what-what-is-the-purpose-of-even-doing-this-procedure-cant-i-just-regress-y_t-on-x_t-and-be-done-with-it&quot;&gt;Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress &lt;script type=&quot;math/tex&quot;&gt;y_t&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;x_t&lt;/script&gt; and be done with it?&lt;/h3&gt;
 
 &lt;p&gt;Recall that if we have serial correlation/autocorrelation with our error terms, then we would have that inferences on our &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; parameters won’t turn out well. In particular, the standard errors would be too small, leading to large test statistics (since you divide &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; by the standard error), and hence this can lead to “easier” rejections of the null that &lt;script type=&quot;math/tex&quot;&gt;\beta = 0&lt;/script&gt;. (On a side note, you can use the Breusche-Godfrey test to check whether does this serial correlation exist).&lt;/p&gt;
 
@@ -657,510 +929,4 @@ Output Stream: Force write all the data in the buffer. Make sure everything has 
 
 char buf[5];
 read(0, buf, 4);
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction A file is just a sequence of bytes. Everything in UNIX is a file. This is profoundly deep idea. Text files are files, directories are files, even commands like ls or pwd are just files.</summary></entry><entry><title type="html">A basic introduction to Functional Programming in Python</title><link href="http://localhost:4000/func_prog/" rel="alternate" type="text/html" title="A basic introduction to Functional Programming in Python" /><published>2018-06-30T20:00:00+10:00</published><updated>2018-06-30T20:00:00+10:00</updated><id>http://localhost:4000/func_prog</id><content type="html" xml:base="http://localhost:4000/func_prog/">&lt;h4 id=&quot;massive-disclaimer&quot;&gt;Massive Disclaimer&lt;/h4&gt;
-&lt;p&gt;I am by no means a functional programmer and still quite new to the field. This is my own attempts at understanding functional programing and those with more experience, please do feel free to correct me!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;why-functional-programming&quot;&gt;Why Functional Programming?&lt;/h2&gt;
-
-&lt;p&gt;Throughout the your programming career, we’ve mainly been approaching coding in Python from an object oriented perspective. Usually, what this means is that we have objects whose states changes over time (e.g. pokemon object is levelling up)&lt;/p&gt;
-
-&lt;p&gt;Sometimes, we can design programs which can solve things purely through functions. tl;dr: when we don’t need objects to design the program. This is where Functional programming comes into play!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;lets-get-into-it&quot;&gt;Let’s get into it!&lt;/h2&gt;
-
-&lt;p&gt;Functional programming is STATELESS aka they rely only on their given inputs to produce an output.&lt;/p&gt;
-
-&lt;p&gt;So here’s an example. We first create a global variable &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We then have the 2 following functions.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;non_func_sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func_sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;These obviously will give us the same answer if we let x=X=5 and y=10. However, the first function uses a global variable (a state) to compute it whilst the second one doesn’t. Hence, the second function is an example of functional programming. Pure functions have the advantage of not suffering from side effects of states occurring (e.g. if you accidently change X, you’re in trouble).&lt;/p&gt;
-
-&lt;p&gt;Now that we’ve gotten that out of the way, we need to make a quick detour in lambda expressions which are a good example of functional programming and will see how all this is pratical.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;lambda-functions&quot;&gt;Lambda Functions&lt;/h2&gt;
-
-&lt;p&gt;Lambda functions are anonymous functions. In other words, they are functions that don’t have a name :(&lt;/p&gt;
-
-&lt;p&gt;Generally, they tend to be a 1 line function which then can be used within other functions to do things.&lt;/p&gt;
-
-&lt;h4 id=&quot;lets-write-our-own-lambda-function&quot;&gt;Let’s write our own lambda function!&lt;/h4&gt;
-
-&lt;p&gt;If we wanted to write a function that takes in a number and adds 10, we normally go:&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_ten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is a a bit tedious and kinda of a waste of code to write. We can be more concise with this by going:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This creates a lambda function where we take in a variable x and return x+10. Hence, the keyword lambda here lets Python know we are defining a lambda function, the new few variable before the : are the arguments for our lambda function, and the expression after the : is the code we execute for our lambda expression. Running this actually doesn’t do anything. We need to actually assign it to a variable so we can start using it.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ma_new_func&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ma_new_func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;40&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Yay it works!. Note that we do not have to type the return command here (e.g. return x+10).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;building-things-with-lambda-expressions&quot;&gt;Building things with lambda expressions.&lt;/h2&gt;
-
-&lt;p&gt;We can also place lambda functions into other functions. The sort function can take in an argument on HOW you want the list to be sorted. Suppose we have the list of tuples like this:&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;unsorted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Let’s say we want to sort it by the characters and also another list sorted by integers. With lambda expressions, we can just go:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The key part is the lambda function that helps us get the 0th or 1st index in the tuple which we then sort on.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;So to summarise lambda functions, it has this form:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# lambda variable: operation to perform&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;As you seen earlier, we can also have multiple arguments in our lambda expression by going:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sum_func&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum_func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;bringing-it-all-together&quot;&gt;Bringing it all together!&lt;/h2&gt;
-
-&lt;p&gt;We have seem lambda functions and how we can put them into other functions. Now let’s see what sorts of functions we can put these lambda functions into!&lt;/p&gt;
-
-&lt;h3 id=&quot;filter&quot;&gt;FILTER&lt;/h3&gt;
-&lt;p&gt;This helps you to filter out a list&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# We need a list or else we just get back a filter object.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;[1, 3]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Our new list a is a filtered list! Note that what we get back from our the filter function is actually a filter object, hence we turn it into a list by going list() in order to get back a list. This will be a common thread in other functions we will see shortly.&lt;/p&gt;
-
-&lt;h3 id=&quot;map&quot;&gt;MAP&lt;/h3&gt;
-
-&lt;p&gt;Applies a function onto every element in our collection. It may be a bit trippy since we are passing in a function as a argument but that’s valid! Functions that lets us do this is called a first-class function. So in particular, map takes in a collection and a function. It then applies that function on each element in that collection.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Map function&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;[2, 3, 4, 5, 6]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The list has been updated! However, be aware of some caveats.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# this is still the same... why... &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;[1, 2, 3, 4, 5]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Note that the map function doesn’t actually alter the original list. It gives us back a map object with the new altered list which we then turn into a list.&lt;/p&gt;
-
-&lt;p&gt;Note that we can do a more pythonic way of this by using list comprehensions.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Map alternative.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;add_10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;zip&quot;&gt;ZIP&lt;/h3&gt;
-&lt;p&gt;This merges collections into tuples and this whole thing is an iterable!&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This is what each element from the iterator will expand to:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;f[0] = (1, 9)
-  f[1] = (2, 8)
-  f[2] = (3, 7)
-  f[3] = (4, 6)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In other words, we are doing something like this:&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;reduce&quot;&gt;REDUCE&lt;/h3&gt;
-
-&lt;p&gt;Reduce takes in an iterable and reduces it to a single value.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;functools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;reduce&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;100&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;What this does is that it:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sums 10+20 = 30.&lt;/li&gt;
-  &lt;li&gt;Then it does 30+30 = 60.&lt;/li&gt;
-  &lt;li&gt;Finally 60+40 = 100.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Max, min etc is an example of reduce as they take in an iterable and gives us back a single value.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
-
-&lt;p&gt;Hopefully this post achieved 2 things.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Beginners are able to take away some nifty little things or understand what’s happening behind some of the functions they use.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Actual functional programmers have not gone blind from reading this.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;credits&quot;&gt;Credits:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://www.dataquest.io/blog/introduction-functional-programming-python/&lt;/li&gt;
-  &lt;li&gt;INFO1110 Course at USYD.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Massive Disclaimer I am by no means a functional programmer and still quite new to the field. This is my own attempts at understanding functional programing and those with more experience, please do feel free to correct me!</summary></entry><entry><title type="html">Introduction to Decorators</title><link href="http://localhost:4000/decorators/" rel="alternate" type="text/html" title="Introduction to Decorators" /><published>2018-06-29T20:00:00+10:00</published><updated>2018-06-29T20:00:00+10:00</updated><id>http://localhost:4000/decorators</id><content type="html" xml:base="http://localhost:4000/decorators/">&lt;h1 id=&quot;decorators&quot;&gt;Decorators&lt;/h1&gt;
-
-&lt;p&gt;Decorators are a good introduction to metaprogramming. What this means is that a part of the program tries to modify another part of the program at compile time.&lt;/p&gt;
-
-&lt;p&gt;Let’s say we had the following function.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;chosen_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pikachu!&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;A decorator will take this function and add some extra code to this function. An example of a decorator for our above function would be:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;wrap_poke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;choose_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;I choose you {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;choose_pokemon&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Notice that the wrap_gen function returns the inner function choose_pokemon without the (). This means that we aren’t actually executing that function but merely returning the state (kinda like generators but not quite).&lt;/p&gt;
-
-&lt;p&gt;So now we can combine our decorator with our first function like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;wrap_poke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-  Note that argument is a function.
-  &quot;&quot;&quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;choose_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;I choose you {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;choose_pokemon&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;chosen_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pikachu!&quot;&lt;/span&gt;
-  
-&lt;span class=&quot;c&quot;&gt;# Note that we didn't execute chose_pokemon since no ()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;our_function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap_poke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chosen_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# To call our wrap_poke function:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;our_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;I choose you Pikachu!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The alternative and more common styling of the above is to just use the @ symbol like below.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;wrap_poke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;choose_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;I choose you {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;choose_pokemon&lt;/span&gt;
-  
-&lt;span class=&quot;nd&quot;&gt;@wrap_poke&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;chosen_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pikachu!&quot;&lt;/span&gt;
-  
-&lt;span class=&quot;c&quot;&gt;# Executing function.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chosen_pokemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I choose you Pikachu!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;With this wrapping functionality, this allow for flexibility now as we can define new functions and simply wrap them up with our decorators like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@wrap_poke&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;chosen_pokemon_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Squirtle!&quot;&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# Execute function.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chosen_pokemon_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;I choose you Squirtle!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So this works for other functions!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;so-what-is-actually-happening-here&quot;&gt;So what is actually happening here?&lt;/h2&gt;
-&lt;p&gt;Decorators are a way for us to call &lt;strong&gt;higher-order functions&lt;/strong&gt;, which are basically functions that either take a function in as an argument or returns a function as a result. Hence, decorators are a way for us to take a function and extend its behaviour without modifying the source code directly.&lt;/p&gt;
-
-&lt;h2 id=&quot;where-to-from-here&quot;&gt;Where to from here?&lt;/h2&gt;
-&lt;p&gt;Whilst seemingly contrived there are actual use cases for this! Decorators are used for code that you want to “wrap” with additional functionality. Numerous cases and examples can be found in Django, synchronization, telling the time, and more!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Decorators</summary></entry><entry><title type="html">Introduction to Bash Scripting</title><link href="http://localhost:4000/bash-script/" rel="alternate" type="text/html" title="Introduction to Bash Scripting" /><published>2018-06-28T20:00:00+10:00</published><updated>2018-06-28T20:00:00+10:00</updated><id>http://localhost:4000/bash-script</id><content type="html" xml:base="http://localhost:4000/bash-script/">&lt;h1 id=&quot;how-to-write-bash-scripts&quot;&gt;How to write bash scripts&lt;/h1&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is a quick crash course on how to do the basics of bash scripting.&lt;/p&gt;
-
-&lt;p&gt;First we need some definitions:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Terminal&lt;/em&gt;: What is used to take in input and print output. However, the terminal doesn’t know what to do with this.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Shell&lt;/em&gt;: The shell interprets what the user types in and executes those commands. We can also use the python interpretor shell to run commands.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Bash&lt;/em&gt;: A type of shell program. This is the default on lots of systems. Bash came from sh (shell command language) but now has more features.&lt;/p&gt;
-
-&lt;p&gt;Bash is quite useful for small task automation. Not really a good idea for large scale software development. If you’re writing more than 50 lines of code, it is recommended to use other languages.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;getting-into-it&quot;&gt;Getting Into It.&lt;/h2&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Returns standard out. If we want to store it, we can &lt;em&gt;redirect&lt;/em&gt; it into another file.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; new.txt  &lt;span class=&quot;c&quot;&gt;# use &amp;gt;&amp;gt; to append to a file.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can count the number of lines in a file by the &lt;em&gt;wc&lt;/em&gt; command.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &amp;lt; file.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The flow of data is reversed here since the file on the right is going in as the input to the command on the left. The -l flag will count the number of lines in the code. A more conventional and intuitive way of doing this is going:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;file.txt | wc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This pipes the output of the cat command as the input for the wc command.&lt;/p&gt;
-
-&lt;p&gt;We can execute multiple commands with the &amp;amp;&amp;amp; command.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;file.txt | wc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;It worked!&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The latter half of the code after the &amp;amp;&amp;amp; will only execute if the first half executes correctly. We can use conditional execution using ||.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;variables-and-quoting&quot;&gt;Variables and Quoting&lt;/h2&gt;
-&lt;p&gt;Whenever we have a $, that denotes a &lt;em&gt;variable&lt;/em&gt; in bash scripting. When denoting environment variables, or variables outside of the program, we denote them with capital letters such as $HOME.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;To initialise a variable, we can go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;myvar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;I like potatos&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;DO NOT HAVE SPACES WHEN DOING THIS. SHELL WILL THINK IT’S A BUNCH OF COMMANDS.&lt;/em&gt;
-We can then call that variable by going:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$myvar&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;To concatenate variables, we can go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This is my &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;th pair of headphones.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can also do command substitution whereby we include the output of the command in what we are working with. This can be substituted in with the `` symbols.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;There are &lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;file.txt | wc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; number of files in the file&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To know which bash we are using, we can go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Bash scripts should start with:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!bin/src&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#!bin/bash&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;We can use either src or bash (for my purposes, I’ll use bash). The # indicates a comment and the bin/bash part will tell the path to the bash binary executable. This is for the kernal. This is known as &lt;em&gt;shebang&lt;/em&gt;. Naming things with .sh at the end doesn’t actually matter for Linux operating systems but is good practice and helps other people figure out what is going on.&lt;/p&gt;
-
-&lt;p&gt;Exit code 0 means there is no error with the code being executed.&lt;/p&gt;
-
-&lt;p&gt;We can include&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;At the end, similar to return 0 in C.&lt;/p&gt;
-
-&lt;p&gt;We need to change the file mode to run shell scripts to be executable as well.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod +x myscript.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;We can run shell scripts in 3 different manners:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./myscript.sh
-bash myscript.sh
-&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;myscript.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;We can also pass in arguments to our file. Note that the first argument is the name of the script.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;ourfilename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ourfilename&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# name of file&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;For numerous arguments, we can go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;arg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Our arguments are &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; and &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;arg2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;control-flows&quot;&gt;Control Flows&lt;/h2&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Dog&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$X&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Dog&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bye&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can have multiple conditions for the logic flow:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$X&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Dog&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$X&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Cat&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I hate cats&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Nevermind!&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We use the symbol -lt as the less than sign. Hence, we can test whether has there been a certain number of variables passed into the code. The list for binary opeartors are:
--eq (Check if they are equal)
--ne (Check if they are not equal)
--gt (Check if the LHS is greater than the RHS)
--ge (Check if the LHS is greater than or equal to RHS)
--lt (Check if the LHS is less than the RHS)
--le (Check if the LHS is less than or equal to the RHS)&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;arguments_needed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$# &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-lt&lt;/span&gt; arguments_needed &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Not enough arguments.&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The $# counts the number of arguments being passed into the script.&lt;/p&gt;
-
-&lt;p&gt;We can also use || again.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bye&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Here, we only execute the LHS since that is true and it won’t bothered running the RHS. If the LHS was not true, then the RHS will execute instead.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$str1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$str2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is the same as &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;str2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To check if something is &lt;em&gt;not null&lt;/em&gt;, we can use -n. To check if length is 0, then we can use &lt;em&gt;-z&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$word&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This word is not null!&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;word&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The length of the string is 0!&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;functions&quot;&gt;Functions&lt;/h2&gt;
-
-&lt;p&gt;If we want to use &lt;em&gt;for loops&lt;/em&gt;, we go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;arg &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$arg&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;$@ symbol is an array containing all the arguments passed into the file. Hence, arg will iterate through the array.&lt;/p&gt;
-
-&lt;p&gt;We define functions by going:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;mycode &lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi there &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# The $1 refers to the second arguments passed into this function specifically.&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;runcode &lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-    mycode chris   &lt;span class=&quot;c&quot;&gt;# in bash, you don't have () to pass in arguments for functions&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The runcode function will call the mycode function and the argument passed in is chris.&lt;/p&gt;
-
-&lt;h2 id=&quot;input&quot;&gt;Input&lt;/h2&gt;
-&lt;p&gt;We can read input in with the read command.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;varname
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hey there &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;varname&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The tr utility copies the given input to produce output with substitution or deletion of selected characters. tr stands for translated/transliterate. It takes 2 sets of characters and replaces the first ones with the latter ones.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'linux'&lt;/span&gt; | tr &lt;span class=&quot;s2&quot;&gt;&quot;[:lower:]&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;[:upper:]&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'linux'&lt;/span&gt; | tr &lt;span class=&quot;s2&quot;&gt;&quot;a-z&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;A-Z&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;These two lines are equivalent.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'linux'&lt;/span&gt; | tr l q  &lt;span class=&quot;c&quot;&gt;# this will print out qinux&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;We can also translate characters around.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;linux&quot;&lt;/span&gt; | tr &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a-z'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'c-z'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This will shift everything two characters down. To make sure it works for when we go past the letter z, we go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;linux&quot;&lt;/span&gt; | tr &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a-z'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'n-za-m'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This will shift it by 13 spots&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;To make it case insensitive:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!bin/src&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;varname
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;varname&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; | tr &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;A-Za-z] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;N-ZA-Mn-za-m]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;We can manipulate for loops like we would in Python&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file_var &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;file: &lt;span class=&quot;nv&quot;&gt;$file_var&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This prints out all the files in the current directory.&lt;/p&gt;
-
-&lt;p&gt;To keep on processing things as long user gives input, we go:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;varname
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$varname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-        &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;break
-    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Command to do stuff&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This will continuously run stuff until user stops giving in input.&lt;/p&gt;
-
-&lt;p&gt;We can also traverse directories using cd etc in Bash. This will take in a folder as first argument and the file extension to search for.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!bin/src&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;That was quite a few things thrown at you there but if you weren’t able to pick all that up in one go, don’t worry! I couldn’t either when I first started out. Instead, I’d recommend slowly working your way around a few of the functions and slowly add more and more commands into your toolbox. Happy scripting!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">How to write bash scripts</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction A file is just a sequence of bytes. Everything in UNIX is a file. This is profoundly deep idea. Text files are files, directories are files, even commands like ls or pwd are just files.</summary></entry></feed>

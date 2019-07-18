@@ -1,0 +1,117 @@
+<h1 id="introduction">Introduction</h1>
+<h2 id="what-is-the-bootstrap">What is the bootstrap?</h2>
+
+<p><em>This post assumes that the reader has a basic idea of what bootstrapping entails.</em></p>
+
+<p>Recall that the bootstrap is when you sample with replacement from the data you currently have. The big idea is that the empirical distirbution generated from this will converge to the true distribution and hence any test statistics you get from this test will also be the correct distribution.</p>
+
+<p>Generally, you would resort to the bootstrap when you have unknown parameters in your model and hence the need to use these simulation techniques in order to figure out what is actually going on with the data.</p>
+
+<hr />
+<p>First lets get some notation out of the way.</p>
+
+<p>We are interested in the test statistic <script type="math/tex">\gamma(x) \in \mathbb{R}</script>. The distribution of this test statistic may depend on</p>
+
+<p>1) Sample size n;</p>
+
+<p>2) Distribution F;</p>
+
+<p>3) Parameter of the distribution F which we denote as <script type="math/tex">\theta</script>.</p>
+
+<p>Resultantly, we have a distribution of the test statistic being <script type="math/tex">J_n(.,F_{\theta})</script>. That is, for any <script type="math/tex">c \in \mathbb{R}</script>, we have that</p>
+
+<script type="math/tex; mode=display">J_n(c,F_{\theta}) = P[\gamma(x) \leq c | x_i \sim i.i.d. \; F_{\theta} \; \text{ for i = 1,2,...,n}].</script>
+
+<p>In terms of notation, <script type="math/tex">J_n</script> is the distribution of the test statistic for sample size n, <script type="math/tex">J_{\infty}</script> is the distribution of the test statistic as sample size goes to <script type="math/tex">\infty</script>, <script type="math/tex">F_{\theta}</script> is the actual CDF/distribution of interest with parameter <script type="math/tex">\theta</script>, and <script type="math/tex">F_n</script> is the empirical CDF from the data.</p>
+
+<hr />
+
+<p>We have may have the scenario of where <script type="math/tex">\gamma</script> is asymptotically pivotal, that is, as <script type="math/tex">n \rightarrow \infty</script>, we now have the asymptotic distribution. However, we shouldn’t always rely on asymptotic results in finite samples. Sometimes it doesn’t make sense to appeal to asymptotic results when you only have a sample size of 30 for example.</p>
+
+<p>Hence, we want to look at simulation techniques on non-pivotal quantities, <script type="math/tex">\textbf{regardless if they're asymptotically pivotal}</script>. However, if we do have an asymptotic pivot, then we can state even stronger results. Therefore, it is always desirable to study asymptotical pivots if given the option.</p>
+
+<hr />
+
+<p>First we introduce the 2 main types of bootstrapping techinques, the parametric and non-parametric bootstrap.</p>
+
+<h3 id="parametric-bootstrap">Parametric Bootstrap</h3>
+
+<p>Suppose we have a dataset x and we want to perform inference on the test statistic <script type="math/tex">\gamma</script> (so this could be the OLS regressor coefficient for example). Furthermore, the key difference between this and the non-parametric bootstrap is that we have a fully specified DGP that’s just missing a few parameters.</p>
+
+<p>Here, <script type="math/tex">\gamma</script> depends on the <script type="math/tex">\theta</script> of the underlying distribution <script type="math/tex">F_{\theta}</script>. So what we can do here is to estimate <script type="math/tex">\theta</script> with <script type="math/tex">\hat{\theta}</script>, which could come in the form of MLE or the method of moments. From that, we simply plug our <script type="math/tex">\hat{\theta}</script> into the DGP <script type="math/tex">F_{\theta}</script> to get <script type="math/tex">F_{\hat{\theta}}</script> as if it was the actual parameter and sample from our DGP!</p>
+
+<h3 id="nonparametric-bootstrap">Nonparametric Bootstrap</h3>
+
+<p>Unlike the parametric bootstrap, in the nonparametric bootstrap, we do not have a fully specified DGP. Hence what we do instead is to sample with replacement from the data and analyse the empirical CDF. The idea is that the more we resample, we can appeal to Glivenko-Cantelli theorem and suppose that the empirical CDF <script type="math/tex">F_n</script> converges to the true CDF <script type="math/tex">F_{\theta}</script>.</p>
+
+<hr />
+
+<p>So we have somewhat similar conditions for each bootstrap technique. We list them below.</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">F_n \rightarrow F_{\theta}</script>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">J_n(.,F_{\theta}) \rightarrow J_{\infty}(.,F_{\theta})</script>
+  </li>
+</ul>
+
+<p>The first one means that we need the empirical CDF to converge to the true CDF. The second one means that the limiting distribution <script type="math/tex">J_{\infty}</script> exists for the test statistic distribution <script type="math/tex">J_n</script>.</p>
+
+<p>Combining these two conditions, it allows us to arrive at</p>
+
+<script type="math/tex; mode=display">J_n(.,F_{n}) \rightarrow J_{\infty}(.,F_{\theta})</script>
+
+<p>In otherwards, the test statistic distribution converges to the true distribution of the test statistic under the correct DGP <script type="math/tex">F_{\theta}</script>.</p>
+
+<hr />
+<p>Now we seek to give a more rigorous proof of all this,</p>
+
+<p>(Assume we are in finite dimensional spaces, not in infinite ones as that requires further generalisation).</p>
+
+<p>Suppose <script type="math/tex">f_n</script> are a sequence of functions continuous on a domain D and <script type="math/tex">f_n \rightarrow f</script> uniformly on D. We also have a sequence in D, denoted by <script type="math/tex">\{x_n\}</script> where <script type="math/tex">x_n \rightarrow x \in D</script>.</p>
+
+<p>If these conditions hold, we have that <script type="math/tex">f_n(x_n) \rightarrow f(x)</script>.</p>
+
+<p>The proof of this is as follows:</p>
+
+<script type="math/tex; mode=display">||f_n(x_n) - f(x) || \leq ||f_n(x_n) - f(x_n)|| + ||f(x_n) - f(x)||</script>
+
+<script type="math/tex; mode=display">\leq sup_{y \in D}||f_n(y) - f(y)|| + ||f(x_n) - f(x)||</script>
+
+<script type="math/tex; mode=display">= ||f_n - f||_{\infty} + ||f(x_n) - f(x)||.</script>
+
+<hr />
+
+<p>So here, the fact that we have uniform continuity means that</p>
+
+<script type="math/tex; mode=display">||f_n - f||_{\infty} \rightarrow 0</script>
+
+<p>as <script type="math/tex">n \rightarrow \infty</script>.</p>
+
+<p>In other words, the supremum norm goes to 0. Furthermore, since <script type="math/tex">f_n</script> are continuous and uniformly converges to f, this means that f is also continuous and hence we have that</p>
+
+<script type="math/tex; mode=display">lim {x_n \rightarrow x}f(x_n) = f(x)</script>
+
+<p>so then</p>
+
+<script type="math/tex; mode=display">||f(x_n) - f(x)|| \rightarrow 0.</script>
+
+<p>This shows that</p>
+
+<script type="math/tex; mode=display">||f_n(x_n) - f(x)|| \rightarrow 0 \; as\; n \rightarrow \infty</script>
+
+<p>for all <script type="math/tex">x \in D</script>. So relating this back to conditions on the bootstrap, if we don’t have <script type="math/tex">f_n</script> being continuous, then that means <script type="math/tex">f</script> would not be continuous and we would not have</p>
+
+<script type="math/tex; mode=display">f(x_n) = f(x)</script>
+
+<p>as <script type="math/tex">x_n \rightarrow x</script>. Furthermore, if we don’t have uniform convergence, we would not have</p>
+
+<script type="math/tex; mode=display">||f_n - f||_{\infty} \rightarrow 0.</script>
+
+<p>So just drawing parallels to the bootstrap example, it’s quite similar where if we let <script type="math/tex">f_n = J_n</script> (our test statistic), which is a function of <script type="math/tex">F_{n}</script>, where in the example above, <script type="math/tex">F_n</script> would be <script type="math/tex">x_n</script> and <script type="math/tex">F_{\theta} = x</script>.</p>
+
+<hr />
+<h2 id="wrapup">Wrapup</h2>
+<p>So even though it is not an accurate proof, as we still need to generalise this to work for an infinite dimensional vector space, it follows a similar idea on why exactly does the bootstrap work.</p>

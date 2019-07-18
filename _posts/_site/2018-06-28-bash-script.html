@@ -1,0 +1,222 @@
+<h1 id="how-to-write-bash-scripts">How to write bash scripts</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>This is a quick crash course on how to do the basics of bash scripting.</p>
+
+<p>First we need some definitions:</p>
+
+<p><em>Terminal</em>: What is used to take in input and print output. However, the terminal doesn’t know what to do with this.</p>
+
+<p><em>Shell</em>: The shell interprets what the user types in and executes those commands. We can also use the python interpretor shell to run commands.</p>
+
+<p><em>Bash</em>: A type of shell program. This is the default on lots of systems. Bash came from sh (shell command language) but now has more features.</p>
+
+<p>Bash is quite useful for small task automation. Not really a good idea for large scale software development. If you’re writing more than 50 lines of code, it is recommended to use other languages.</p>
+
+<hr />
+
+<h2 id="getting-into-it">Getting Into It.</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Hello"</span>
+</code></pre></div></div>
+<p>Returns standard out. If we want to store it, we can <em>redirect</em> it into another file.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Hello"</span> <span class="o">&gt;</span> new.txt  <span class="c"># use &gt;&gt; to append to a file.</span>
+</code></pre></div></div>
+
+<p>We can count the number of lines in a file by the <em>wc</em> command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wc <span class="nt">-l</span> &lt; file.txt
+</code></pre></div></div>
+
+<p>The flow of data is reversed here since the file on the right is going in as the input to the command on the left. The -l flag will count the number of lines in the code. A more conventional and intuitive way of doing this is going:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>file.txt | wc <span class="nt">-l</span>
+</code></pre></div></div>
+
+<p>This pipes the output of the cat command as the input for the wc command.</p>
+
+<p>We can execute multiple commands with the &amp;&amp; command.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>file.txt | wc <span class="nt">-l</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"It worked!"</span>
+</code></pre></div></div>
+<p>The latter half of the code after the &amp;&amp; will only execute if the first half executes correctly. We can use conditional execution using ||.</p>
+
+<hr />
+
+<h2 id="variables-and-quoting">Variables and Quoting</h2>
+<p>Whenever we have a $, that denotes a <em>variable</em> in bash scripting. When denoting environment variables, or variables outside of the program, we denote them with capital letters such as $HOME.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$HOME</span>
+</code></pre></div></div>
+<p>To initialise a variable, we can go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">myvar</span><span class="o">=</span><span class="s2">"I like potatos"</span>
+</code></pre></div></div>
+<p><em>DO NOT HAVE SPACES WHEN DOING THIS. SHELL WILL THINK IT’S A BUNCH OF COMMANDS.</em>
+We can then call that variable by going:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$myvar</span>
+</code></pre></div></div>
+<p>To concatenate variables, we can go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">number</span><span class="o">=</span>5
+<span class="nb">echo</span> <span class="s2">"This is my </span><span class="k">${</span><span class="nv">number</span><span class="k">}</span><span class="s2">th pair of headphones.
+</span></code></pre></div></div>
+
+<p>We can also do command substitution whereby we include the output of the command in what we are working with. This can be substituted in with the `` symbols.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"There are </span><span class="sb">`</span><span class="nb">cat </span>file.txt | wc <span class="nt">-l</span><span class="sb">`</span><span class="s2"> number of files in the file"</span>
+</code></pre></div></div>
+
+<p>To know which bash we are using, we can go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which bash
+</code></pre></div></div>
+
+<p>Bash scripts should start with:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!bin/src</span>
+<span class="c">#!bin/bash</span>
+</code></pre></div></div>
+<p>We can use either src or bash (for my purposes, I’ll use bash). The # indicates a comment and the bin/bash part will tell the path to the bash binary executable. This is for the kernal. This is known as <em>shebang</em>. Naming things with .sh at the end doesn’t actually matter for Linux operating systems but is good practice and helps other people figure out what is going on.</p>
+
+<p>Exit code 0 means there is no error with the code being executed.</p>
+
+<p>We can include</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span> <span class="nv">$?</span>
+</code></pre></div></div>
+<p>At the end, similar to return 0 in C.</p>
+
+<p>We need to change the file mode to run shell scripts to be executable as well.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x myscript.sh
+</code></pre></div></div>
+<p>We can run shell scripts in 3 different manners:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./myscript.sh
+bash myscript.sh
+<span class="nb">source </span>myscript.sh
+</code></pre></div></div>
+<p>We can also pass in arguments to our file. Note that the first argument is the name of the script.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ourfilename</span><span class="o">=</span><span class="nv">$0</span>
+<span class="nb">echo</span> <span class="nv">$ourfilename</span> <span class="c"># name of file</span>
+</code></pre></div></div>
+<p>For numerous arguments, we can go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">arg1</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">arg2</span><span class="o">=</span><span class="err">$</span>
+<span class="nb">echo</span> <span class="s2">"Our arguments are </span><span class="k">${</span><span class="nv">arg1</span><span class="k">}</span><span class="s2"> and </span><span class="k">${</span><span class="nv">arg2</span><span class="k">}</span><span class="s2">:
+</span></code></pre></div></div>
+
+<h2 id="control-flows">Control Flows</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">X</span><span class="o">=</span><span class="s2">"Dog"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$X</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"Dog"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Hello"</span>
+<span class="k">fi
+    </span><span class="nb">echo</span> <span class="s2">"Bye"</span>
+</code></pre></div></div>
+
+<p>We can have multiple conditions for the logic flow:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$X</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"Dog"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Hi"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$X</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"Cat"</span><span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"I hate cats"</span>
+<span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"Nevermind!"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>We use the symbol -lt as the less than sign. Hence, we can test whether has there been a certain number of variables passed into the code. The list for binary opeartors are:
+-eq (Check if they are equal)
+-ne (Check if they are not equal)
+-gt (Check if the LHS is greater than the RHS)
+-ge (Check if the LHS is greater than or equal to RHS)
+-lt (Check if the LHS is less than the RHS)
+-le (Check if the LHS is less than or equal to the RHS)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">arguments_needed</span><span class="o">=</span>5
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span><span class="nt">-lt</span> arguments_needed <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Not enough arguments."</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+<p>The $# counts the number of arguments being passed into the script.</p>
+
+<p>We can also use || again.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Hello"</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"Bye"</span>
+</code></pre></div></div>
+<p>Here, we only execute the LHS since that is true and it won’t bothered running the RHS. If the LHS was not true, then the RHS will execute instead.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$str1</span><span class="s2">"</span> <span class="o">!=</span> <span class="s2">"</span><span class="nv">$str2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">str1</span><span class="k">}</span><span class="s2"> is the same as </span><span class="k">${</span><span class="nv">str2</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>To check if something is <em>not null</em>, we can use -n. To check if length is 0, then we can use <em>-z</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$word</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"This word is not null!"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"word"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"The length of the string is 0!"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="functions">Functions</h2>
+
+<p>If we want to use <em>for loops</em>, we go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>arg <span class="k">in</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="p">;</span> <span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$arg</span><span class="s2">"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+<p>$@ symbol is an array containing all the arguments passed into the file. Hence, arg will iterate through the array.</p>
+
+<p>We define functions by going:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function </span>mycode <span class="o">(){</span>
+    <span class="nb">echo</span> <span class="s2">"Hi there </span><span class="nv">$1</span><span class="s2">"</span> <span class="c"># The $1 refers to the second arguments passed into this function specifically.</span>
+<span class="o">}</span>
+
+<span class="k">function </span>runcode <span class="o">(){</span>
+    mycode chris   <span class="c"># in bash, you don't have () to pass in arguments for functions</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>The runcode function will call the mycode function and the argument passed in is chris.</p>
+
+<h2 id="input">Input</h2>
+<p>We can read input in with the read command.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">read </span>varname
+<span class="nb">echo</span> <span class="s2">"Hey there </span><span class="k">${</span><span class="nv">varname</span><span class="k">}</span><span class="s2">"</span>
+</code></pre></div></div>
+<p>The tr utility copies the given input to produce output with substitution or deletion of selected characters. tr stands for translated/transliterate. It takes 2 sets of characters and replaces the first ones with the latter ones.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'linux'</span> | tr <span class="s2">"[:lower:]"</span> <span class="s2">"[:upper:]"</span>
+<span class="nb">echo</span> <span class="s1">'linux'</span> | tr <span class="s2">"a-z"</span> <span class="s2">"A-Z"</span>
+</code></pre></div></div>
+<p>These two lines are equivalent.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'linux'</span> | tr l q  <span class="c"># this will print out qinux</span>
+</code></pre></div></div>
+<p>We can also translate characters around.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"linux"</span> | tr <span class="o">[</span><span class="s1">'a-z'</span><span class="o">]</span> <span class="o">[</span><span class="s1">'c-z'</span><span class="o">]</span>
+</code></pre></div></div>
+<p>This will shift everything two characters down. To make sure it works for when we go past the letter z, we go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"linux"</span> | tr <span class="o">[</span><span class="s1">'a-z'</span><span class="o">]</span> <span class="o">[</span><span class="s1">'n-za-m'</span><span class="o">]</span> <span class="c"># This will shift it by 13 spots</span>
+</code></pre></div></div>
+<p>To make it case insensitive:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!bin/src</span>
+<span class="nb">read </span>varname
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">varname</span><span class="k">}</span><span class="s2">"</span> | tr <span class="o">[</span>A-Za-z] <span class="o">[</span>N-ZA-Mn-za-m]
+</code></pre></div></div>
+<p>We can manipulate for loops like we would in Python</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>file_var <span class="k">in</span> <span class="sb">`</span><span class="nb">ls</span><span class="sb">`</span><span class="p">;</span> <span class="k">do
+    </span><span class="nb">echo </span>file: <span class="nv">$file_var</span>
+<span class="k">done</span>
+</code></pre></div></div>
+<p>This prints out all the files in the current directory.</p>
+
+<p>To keep on processing things as long user gives input, we go:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">[</span> <span class="nb">true</span> <span class="o">]</span><span class="p">;</span> <span class="k">do
+    </span><span class="nb">read </span>varname
+    <span class="k">if</span> <span class="o">[</span><span class="nt">-z</span> <span class="s2">"</span><span class="nv">$varname</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+        </span><span class="nb">break
+    </span><span class="k">fi</span>
+    <span class="c"># Command to do stuff</span>
+<span class="k">done</span>
+</code></pre></div></div>
+<p>This will continuously run stuff until user stops giving in input.</p>
+
+<p>We can also traverse directories using cd etc in Bash. This will take in a folder as first argument and the file extension to search for.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!bin/src</span>
+<span class="nb">cd</span> <span class="k">${</span><span class="nv">1</span><span class="k">}</span>
+<span class="nb">ls</span> | <span class="nb">grep</span> <span class="nt">-i</span> <span class="k">${</span><span class="nv">2</span><span class="k">}</span><span class="err">$</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+<p>That was quite a few things thrown at you there but if you weren’t able to pick all that up in one go, don’t worry! I couldn’t either when I first started out. Instead, I’d recommend slowly working your way around a few of the functions and slowly add more and more commands into your toolbox. Happy scripting!</p>

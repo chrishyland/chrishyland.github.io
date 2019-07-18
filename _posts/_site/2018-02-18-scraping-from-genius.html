@@ -1,0 +1,100 @@
+<h2 id="introduction">Introduction</h2>
+
+<p>Curious on analysing lyric content of your favourite artist? Well keep on reading! In this post I will show you how I went about scraping lyrics from the Genius API to get the lyrics of all the songs by the great Kanye West.</p>
+
+<p><img src="/assets/genius-api-post/yeezy.jpg" alt="Drawing" align="middle" style="width: 200px;" /></p>
+
+<h3 id="if-i-have-seen-further-than-others-it-is-by-standing-upon-the-shoulders-of-giants">“If I have seen further than others, it is by standing upon the shoulders of giants.”</h3>
+
+<p>Alot of content in this post was my compilation of many different sources which I must acknowledge.</p>
+
+<p>Without further ado, let’s get into it!</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>All the code from the project can be found <a href="https://github.com/ANOVAProjectUSYD/lyrics-analysis">here</a>, which requires Python3. The libraries used can be found <a href="https://github.com/ANOVAProjectUSYD/lyrics-analysis/blob/master/requirements.txt">here</a>.</p>
+
+<h2 id="beginning">Beginning</h2>
+
+<p>First, I found the id that genius assigns to Kanye West which will make later retrieval of information simpler. You can also query Genius to find out the id of any other artist you would like to use.</p>
+
+<h2 id="scraping-away">Scraping Away</h2>
+
+<p>First, I’ve scraped all the ids of the Yeezy’s songs. It is important to note that the Genius API uses <em>pagination</em> when returning results. The way I personally like to think about it is that the API will give you a list of a certain number of songs (let’s say 15) to prevent you from getting all the hundreds of songs Kanye has produced.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_song_id</span><span class="p">(</span><span class="n">artist_id</span><span class="p">):</span>
+    <span class="s">'''Get all the song id from an artist.'''</span>
+    <span class="n">current_page</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">next_page</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">songs</span> <span class="o">=</span> <span class="p">[]</span> <span class="c"># to store final song ids</span>
+
+    <span class="k">while</span> <span class="n">next_page</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s">"artists/{}/songs/"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">artist_id</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">'page'</span><span class="p">:</span> <span class="n">current_page</span><span class="p">}</span> <span class="c"># the current page</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">get_json</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span> <span class="c"># get json of songs</span>
+
+        <span class="n">page_songs</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'response'</span><span class="p">][</span><span class="s">'songs'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">page_songs</span><span class="p">:</span>
+            <span class="c"># Add all the songs of current page</span>
+            <span class="n">songs</span> <span class="o">+=</span> <span class="n">page_songs</span>
+            <span class="c"># Increment current_page value for next loop</span>
+            <span class="n">current_page</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Page {} finished scraping"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_page</span><span class="p">))</span>
+            <span class="c"># If you don't wanna wait too long to scrape, un-comment this</span>
+            <span class="c"># if current_page == 2:</span>
+            <span class="c">#     break</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># If page_songs is empty, quit</span>
+            <span class="n">next_page</span> <span class="o">=</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Note that the get_json function can be found <a href="https://github.com/ANOVAProjectUSYD/lyrics-analysis/blob/master/search.py">here</a> and simply makes a request to grab the data. The data return will be of a JSON or Javascript Object Notation format. For those who has coded in any objected oriented languages such as Java, just think of objects being returned whereby you can access particular fields for pieces of information you are looking for. For example, if we were returned a Pokémon object, we can access the name field in order to grab the name of the Pokémon. From the page data returned to us, we can access the <em>response</em> field and then access the <em>songs</em> field. From this field, we can grab all the songs on the page by Yeezy. We can then check whether is there a subsequent page and then grab the data from that continuously until we have exhausted all the pages.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># Get all the song ids, excluding not-primary-artist songs.</span>
+    <span class="n">songs</span> <span class="o">=</span> <span class="p">[</span><span class="n">song</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="k">for</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">songs</span>
+            <span class="k">if</span> <span class="n">song</span><span class="p">[</span><span class="s">"primary_artist"</span><span class="p">][</span><span class="s">"id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">artist_id</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Afterwards, we can get all the songs’ ids and store that for further use. We could simply scrape the lyrics from this but we thought to have a little fun taking the longer route.</p>
+
+<h2 id="scraping-lyrics">Scraping Lyrics</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">song_lyrics</span> <span class="o">=</span> <span class="p">[</span><span class="n">retrieve_lyrics</span><span class="p">(</span><span class="n">song_id</span><span class="p">)</span> <span class="k">for</span> <span class="n">song_id</span> <span class="ow">in</span> <span class="n">songs_ids</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Now we can simply store all the lyrics from the songs in a dictionary. Let’s explore the retrieve_lyrics functions further.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">retrieve_lyrics</span><span class="p">(</span><span class="n">song_id</span><span class="p">):</span>
+    <span class="s">'''Retrieves lyrics from html page.'''</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">connect_lyrics</span><span class="p">(</span><span class="n">song_id</span><span class="p">)</span>
+
+    <span class="n">URL</span> <span class="o">=</span> <span class="s">"http://genius.com"</span> <span class="o">+</span> <span class="n">path</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+
+    <span class="c"># Extract the page's HTML as a string</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+    <span class="c"># Scrape the song lyrics from the HTML</span>
+    <span class="n">lyrics</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">"lyrics"</span><span class="p">)</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">lyrics</span>
+</code></pre></div></div>
+
+<p>The argument passed into the function is the id of the song whose lyrics we wish to scrape. The function connect_lyrics simply creates the the URL path of the song on the Genius website.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">connect_lyrics</span><span class="p">(</span><span class="n">song_id</span><span class="p">):</span>
+    <span class="s">'''Constructs the path of song lyrics.'''</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s">"songs/{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">song_id</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">get_json</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="c"># Gets the path of song lyrics</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'response'</span><span class="p">][</span><span class="s">'song'</span><span class="p">][</span><span class="s">'path'</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">path</span>
+</code></pre></div></div>
+
+<p>From that, we can simply request the URL and using the (amazing) <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> library, we can simply access the lyrics which is in the div tag with the lyrics class. We can then apply the BS4 function to extract the raw text and then return it to be stored in the list we defined earlier.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Voila! Hope that helps and this sort of methodology of scraping can be applied to many other APIs which I have had the fortunate experience to play with such as the Facebook Graph API and more!</p>

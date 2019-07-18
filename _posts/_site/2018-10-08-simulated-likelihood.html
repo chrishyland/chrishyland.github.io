@@ -1,0 +1,75 @@
+<h1 id="introduction">Introduction</h1>
+<h3 id="terminology">Terminology</h3>
+
+<p>We give a quick refresher of maximum likelihood.</p>
+
+<p>Here, we have a dataset y, which consist of <script type="math/tex">y_1, y_2, ..., y_n</script>. An important part is that y comes from a fully specified parameteric DGP, which has a k-dimensional parameter vector <script type="math/tex">\theta</script>. From that, we can define a density function</p>
+
+<script type="math/tex; mode=display">f(y|\theta)</script>
+
+<p>which is y as a function of <script type="math/tex">\theta</script>. We can define a likelihood as the PDF where we now look at <script type="math/tex">\theta</script> as a function of y.</p>
+
+<p>The maximum likelihood estimator of <script type="math/tex">\theta</script> is</p>
+
+<script type="math/tex; mode=display">\hat{\theta} = argmax_{\theta \in \Theta}f(y|\theta).</script>
+
+<p>In other words, the <script type="math/tex">\theta</script> that maximizes the likelihood.</p>
+
+<h5 id="likelihood-function">Likelihood Function</h5>
+
+<p>The likelihood function under the assumption of i.i.d sampling is the product of likelihoods. 
+<script type="math/tex">f(y|\theta) = \prod_{i=1}^nf_i(y_i|\theta,y_1,...,y_{i-1}).</script></p>
+
+<p>Each <script type="math/tex">f_i</script> is the likelihood contribution of the i-th observation. This is usually a small number and multiplying lots of small number is computationally expensive. Hence, we work with the loglikelihood function as it is easier to work this summing loglikelihoods.</p>
+
+<script type="math/tex; mode=display">\ell(y|\theta) = ln\;f(y|\theta) = \sum_{i=1}^n\ell_i(y_i|\theta,y_1,...,y_{i-1})</script>
+
+<p>Due to the monotonicity of the log function, the loglikelihood and likelihood functions are maximised by the same value of <script type="math/tex">\theta</script>.</p>
+
+<p>We denote the gradient (score) as</p>
+
+<script type="math/tex; mode=display">g(\theta) = \frac{\partial \ell (y|\theta)}{\partial \theta}</script>
+
+<p>is a <script type="math/tex">k X 1</script> vector.</p>
+
+<hr />
+
+<h3 id="simulated-maximum-likelihood">Simulated Maximum Likelihood</h3>
+
+<p>We may come across issues when we can’t even compute the likelihood function <script type="math/tex">\ell</script>. In particular, this arises when we have intractable integrals, like in the case of each likelihood looking:</p>
+
+<script type="math/tex; mode=display">f(y_i|\theta) = \int_{\mathcal{D}}v(y_i|\theta,\eta_i)p(\eta_i)d\eta</script>
+
+<p>with p being the density function with support <script type="math/tex">\mathcal{D}</script>. v(.) is the density of <script type="math/tex">y_i</script> assuming both <script type="math/tex">\theta</script> and <script type="math/tex">\eta_i</script> are known. Simulated Maximum Likelihood approximates the integral using <script type="math/tex">\textbf{monte carlo integration}</script>, where we hope that the Monte Carlo error isn’t too bad. Note that we are given a distribution with PDF <script type="math/tex">p(\eta_i)</script> which we want to use. From that, there is usually only 1 choice of a function v(.) that works well with it, notice that this does not mean there is an unique v(.), just an “optimal” v(.). From this, if v(.) is nice and smooth, we set the subsimulator to be v(.) or else if it is not, we instead need to approximate it.</p>
+
+<hr />
+
+<p>So the procedure for doing this is as follows.</p>
+
+<p>First, we draw <script type="math/tex">\eta_i^{(s)}</script> from the distribution with the density p and find a function <script type="math/tex">\tilde{f}</script>, which is known as the <script type="math/tex">\textbf{subsimulator}</script>, where we require that</p>
+
+<script type="math/tex; mode=display">E\big[\tilde{f}(y_i|\theta,\eta_i)\big] \approx f(y_i|\theta).</script>
+
+<p>In other words, the expectation of our subsimulator gives us something similar to our function v(.). The best case of this would be if we could let <script type="math/tex">\tilde{f} = v</script>, our function that we are integrating over. However, this may cause issues at times, especially if the resulting <script type="math/tex">\hat{\ell}</script> being discontinuous can cause issues with our optimisation routines, so using a different subsimulator that is smooth can help us dramatically. However, using a different subsimulator will increase the bias and hence we shouldn’t oversmooth it and therefore try pick a subsimulator that is smooth but also as close to v as possible.</p>
+
+<p>From this, we then compute the <script type="math/tex">\textbf{simulator}</script> using Monte Carlo Integration,</p>
+
+<script type="math/tex; mode=display">\hat{f}(y_i|\theta,\eta_i^S) = \frac{1}{S}\sum_{s=1}^S\tilde{f}(y_i|\theta, \eta_i^{(s)})</script>
+
+<p>where we have that</p>
+
+<script type="math/tex; mode=display">\eta_i^{S} = \big(\eta_i^{(1)},\eta_i^{(2)},...,\eta_i^{(S)}\big)'</script>
+
+<p>In other words, the simulator is the average of the subsimulator being applied onto random draws of <script type="math/tex">\eta</script> from the distribution with a PDF of <script type="math/tex">p(\eta)</script>.</p>
+
+<p>Finally, we compute the <em>approximate likelihood</em> with</p>
+
+<script type="math/tex; mode=display">\hat{\ell}(y|\theta, \eta^S) = \sum_{i=1}^nln\hat{f}(y_i|\theta,\eta_i^S)</script>
+
+<p>As <script type="math/tex">\hat{f}</script> is not necessarily the right likelihood function, we instead call it an approximate likelihood function. Furthermore, this approximate likelihood depends on draws of <script type="math/tex">\eta</script> which are random, hence it’ll be different for each set of <script type="math/tex">\eta</script> we draw. However, if we draw a large sample of <script type="math/tex">\eta</script>, we should get the same <script type="math/tex">\eta</script> draws and hence this should not vary greatly. In particular, we need that <script type="math/tex">\sqrt{n}/S \rightarrow 0</script> as <script type="math/tex">S \rightarrow \infty</script>, so that we get efficiency. We now maximimise this <script type="math/tex">\hat{\ell}</script> as if it was the original likelihood <script type="math/tex">\ell</script>, in order to find <script type="math/tex">\hat{\theta}</script> using techniques we discussed earlier.</p>
+
+<p>Note that when maximising, we need to ensure we use the same <script type="math/tex">\eta^S</script> for every <script type="math/tex">\theta</script> or else we are changing the approximate likelihood as it depends on <script type="math/tex">\eta</script>.</p>
+
+<p>In terms of asymptotitcs, we need that <script type="math/tex">\hat{f} \rightarrow f</script> as <script type="math/tex">n \rightarrow \infty</script> and <script type="math/tex">S \rightarrow \infty</script>, so that <script type="math/tex">\hat{\theta} \rightarrow \theta</script> as a result of consistency. Hence, we need to pick the right subsimulator. On top of that, if we want <script type="math/tex">\textbf{efficiency}</script>, we require that <script type="math/tex">\frac{\sqrt{n}}{S} \rightarrow 0</script>. The asymptotic distribution of <script type="math/tex">\hat{\theta}</script> is the same.</p>
+
+<p>Hence, in finite samples, the bias can be extremely severe if we use subsimulator that are not equal to v, that is, <script type="math/tex">\tilde{f} \neq v</script>. The only case when we should do this is to prevent numerical problems. Furthermore, as a result of Monte Carlo integration used in this, we can use antithetic acceleration or if the function to sample from f to generate <script type="math/tex">\eta</script> is difficult to sample from, we can use importance sampling.</p>
