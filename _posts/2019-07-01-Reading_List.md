@@ -64,6 +64,8 @@ The list is in chronological order of when I read them in addition to my rating 
 #### Debt: The First 5,000 Years
 4.5/5: All the hype around Sapiens should be redirected towards this book. This paints such an illuminating history of humankind from the perspective of debt and how it influences our financial system, customs, and norms. This book instantly dispelled numerous mental models I had about the world in the first 20 minutes of starting this book. Would recommend to anyone interested in Economics and history.
 
+#### Flow: The Psychology of Optimal Experience
+5/5
 ---
 
 ## Podcasts
