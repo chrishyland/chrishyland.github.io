@@ -104,6 +104,9 @@ The list is in chronological order of when I read them in addition to my rating 
 #### World War II in HD Colour
 4.5/5: A really good series exploring Europe's darkest days. The way that they were able to colour old footage was incredible and the way that they weaved all the different moving parts into one smooth cohesive narrative was great.
 
+#### Dawn Wall
+5/5: Really inspiring and heart-wrenching documentary on Tommy Caldwell climbing the Dawn wall accompanied by a true partner Kevin Jorgeson.
+
 #### Icarus
 4.5/5: A must watch into cheating in sports. 
 
