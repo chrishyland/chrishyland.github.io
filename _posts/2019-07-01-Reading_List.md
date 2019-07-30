@@ -72,6 +72,7 @@ The list is in chronological order of when I read them in addition to my rating 
 
 #### The Art of Learning: An Inner Journey to Optimal Performance
 4/5: TBD.
+
 ---
 
 ## Podcasts
