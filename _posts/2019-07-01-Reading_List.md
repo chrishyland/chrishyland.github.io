@@ -21,7 +21,7 @@ One final disclaimer that I'd like to say about reading books is what Patrick Co
 
 ---
 
-## Book List (16/26)
+## Book List (17/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 
@@ -72,6 +72,10 @@ The list is in chronological order of when I read them in addition to my rating 
 
 #### The Art of Learning: An Inner Journey to Optimal Performance
 4/5: TBD.
+
+#### Hashiru Koto ni Tsuite Kataru Toki ni Boku no Kataru Koto (What I Talk About When I Talk About Running
+)
+3.5/5: TBD.
 
 ---
 
