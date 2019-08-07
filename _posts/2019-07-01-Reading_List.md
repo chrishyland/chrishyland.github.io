@@ -21,7 +21,7 @@ One final disclaimer that I'd like to say about reading books is what Patrick Co
 
 ---
 
-## Book List (17/26)
+## Book List (18/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 
@@ -76,6 +76,8 @@ The list is in chronological order of when I read them in addition to my rating 
 #### Hashiru Koto ni Tsuite Kataru Toki ni Boku no Kataru Koto (What I Talk About When I Talk About Running)
 3.5/5: TBD.
 
+#### Shoe Dog: A Memoir by the Creator of Nike
+4.5/5: TBD.
 ---
 
 ## Podcasts
