@@ -21,7 +21,7 @@ One final disclaimer that I'd like to say about reading books is what Patrick Co
 
 ---
 
-## Book List (18/26)
+## Book List (19/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 
@@ -78,6 +78,10 @@ The list is in chronological order of when I read them in addition to my rating 
 
 #### Shoe Dog: A Memoir by the Creator of Nike
 4.5/5: TBD.
+
+#### Born a Crime: Stores from a South African Childhood
+5/5: TBD.
+
 ---
 
 ## Podcasts
