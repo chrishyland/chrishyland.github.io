@@ -21,7 +21,7 @@ One final disclaimer that I'd like to say about reading books is what Patrick Co
 
 ---
 
-## Book List (20/26)
+## Book List (21/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 
@@ -83,6 +83,9 @@ The list is in chronological order of when I read them in addition to my rating 
 5/5: TBD.
 
 #### Measure What Matters: OKRs: The Simple Idea that Drives 10x Growth
+3/5: TBD.
+
+#### Alibaba: The House That Jack Ma Built
 3/5: TBD.
 
 ---
