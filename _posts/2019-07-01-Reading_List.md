@@ -21,7 +21,7 @@ One final disclaimer that I'd like to say about reading books is what Patrick Co
 
 ---
 
-## Book List (21/26)
+## Book List (24/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 
@@ -88,6 +88,14 @@ The list is in chronological order of when I read them in addition to my rating 
 #### Alibaba: The House That Jack Ma Built
 3/5: TBD.
 
+#### The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution
+4/5: TBD.
+
+#### Sophie's World
+4.5/5: TBD.
+
+#### What It Takes: Lessons in the Pursuit of Excellence
+4/5: TBD.
 ---
 
 ## Podcasts
