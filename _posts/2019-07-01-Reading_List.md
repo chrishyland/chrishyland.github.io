@@ -21,7 +21,7 @@ One final disclaimer that I'd like to say about reading books is what Patrick Co
 
 ---
 
-## Book List (24/26)
+## Book List (34/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 
@@ -96,12 +96,46 @@ The list is in chronological order of when I read them in addition to my rating 
 
 #### What It Takes: Lessons in the Pursuit of Excellence
 4/5: TBD.
+
+#### Evicted: Poverty and Profit in the American City
+4.5/5: TBD.
+
+#### American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer
+4.5/5: TBD.
+
+#### The Order of Time
+4/5: TBD.
+
+#### Energy for Future Presidents: The Science Behind the Headlines
+3/5: TBD.
+
+#### The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning
+4.5/5: TBD.
+
+#### The man who solved the market: How James Simons launched the quant revolution
+2.5/5: TBD. 
+
+#### Permanent record
+3/5: TBD.
+
+#### Creativity inc
+3/5: TBD.
+
+#### That Will Never Work: The Birth of Netflix and the Amazing Life of an Idea
+2.5/5: TBD.
+
+#### When Breath Becomes Air
+4.5/5:TBD.
+
 ---
 
 ## Podcasts
 
+#### The Journal
+4.5/5: Podcast on money, business, and power by the Wall Street Journal. Really good investigative coverage and reporting of a single topic every day.
+
 #### The Tim Ferris Show
-5/5: I have definitely adopted alot of Tim Ferris' line of questioning and attempts at trying to deconstruct the habits/routines that alot of overachievers' in my life perform. Memorable guests for me include Greg McKeown, Seth Godin, Patrick Collison, Drew Houston, Joe Gebbia, Josh Waitzkin, and Susan Cain.
+4/5: I have definitely adopted alot of Tim Ferris' line of questioning and attempts at trying to deconstruct the habits/routines that alot of overachievers' in my life perform. Memorable guests for me include Greg McKeown, Seth Godin, Patrick Collison, Drew Houston, Joe Gebbia, Josh Waitzkin, and Susan Cain.
 
 #### How I Built This
 4/5: I usually switch up the Tim Ferris show with How I Built This depending on the guest on the show. Memorable ones for me include: Logic, Melanie Perkins, Whitney Wolfe, Miguel McKelvey, and John Zimmer.
@@ -109,11 +143,14 @@ The list is in chronological order of when I read them in addition to my rating 
 #### a16z Podcast
 4/5: To be honest I just started this one recently but have been quite blown away by the recent episodes involving Marc Andreessen and Ben Horowitz. I was quite a massive sceptic of blockchain but now am a convert.
 
+#### Pivot
+4.5/5: Scott Galloway is great.
+
 #### Startup School
 4.5/5: This was a really exciting course to jump into when I first got involved in startup-land. I learnt a tremendous amount and really shifted my thinking in line with the fast-thinking and out of box creativity needed for startups.
 
 #### The Product Podcast
-3.5/5: Another podcast I recently started but have been impressed by the quality of guests they have brought onto the show so far.
+2.5/5: Another podcast I recently started but have been impressed by the quality of guests they have brought onto the show so far.
 
 #### This Week in Machine Learning & Artificial Intelligence
 2/5: As much as I am interested in machine learning, I don't seem to enjoy this podcast so much. Will need to give this one another chance.
@@ -130,6 +167,15 @@ The list is in chronological order of when I read them in addition to my rating 
 ---
 
 ## Netflix Shows
+
+#### Living Undocumented
+5/5 TBD.
+
+#### Inside Bill's Brain: Decoding Bill's Gates
+4.5/5 TBD.
+
+#### American Factory
+4/5 TBD.
 
 #### World War II in HD Colour
 4.5/5: A really good series exploring Europe's darkest days. The way that they were able to colour old footage was incredible and the way that they weaved all the different moving parts into one smooth cohesive narrative was great.
