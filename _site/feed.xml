@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-18T22:33:38+10:00</updated><id>http://localhost:4000/</id><title type="html">chrishyland.github.io</title><subtitle>A Shot of Data</subtitle><entry><title type="html">A simple explanation of Docker and Kubernetes</title><link href="http://localhost:4000/Kubernetes/" rel="alternate" type="text/html" title="A simple explanation of Docker and Kubernetes" /><published>2019-07-10T19:00:00+10:00</published><updated>2019-07-10T19:00:00+10:00</updated><id>http://localhost:4000/Kubernetes</id><content type="html" xml:base="http://localhost:4000/Kubernetes/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-09T22:43:31+07:00</updated><id>http://localhost:4000/</id><title type="html">chrishyland.github.io</title><subtitle>A Shot of Data</subtitle><entry><title type="html">A simple explanation of Docker and Kubernetes</title><link href="http://localhost:4000/Kubernetes/" rel="alternate" type="text/html" title="A simple explanation of Docker and Kubernetes" /><published>2019-07-10T16:00:00+07:00</published><updated>2019-07-10T16:00:00+07:00</updated><id>http://localhost:4000/Kubernetes</id><content type="html" xml:base="http://localhost:4000/Kubernetes/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;This is a high level explanation of the difference between Kubernetes and Docker containers and what is their relationship.&lt;/p&gt;
 
@@ -32,62 +32,194 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;tl;dr, Kubernetes just helps to coordinate your system for when you have multiple docker containers that need to interact with each other and scale up/down your system by adding/removing containers as your demand changes.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">2019 Reading List</title><link href="http://localhost:4000/Reading_List/" rel="alternate" type="text/html" title="2019 Reading List" /><published>2019-07-01T19:00:00+10:00</published><updated>2019-07-01T19:00:00+10:00</updated><id>http://localhost:4000/Reading_List</id><content type="html" xml:base="http://localhost:4000/Reading_List/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;tl;dr, Kubernetes just helps to coordinate your system for when you have multiple docker containers that need to interact with each other and scale up/down your system by adding/removing containers as your demand changes.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">2019 Reading List</title><link href="http://localhost:4000/Reading_List/" rel="alternate" type="text/html" title="2019 Reading List" /><published>2019-07-01T16:00:00+07:00</published><updated>2019-07-01T16:00:00+07:00</updated><id>http://localhost:4000/Reading_List</id><content type="html" xml:base="http://localhost:4000/Reading_List/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution &lt;a href=&quot;https://en.wikipedia.org/wiki/OKR&quot;&gt;OKRs&lt;/a&gt; is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my &lt;em&gt;personal&lt;/em&gt; review of their impact on me.&lt;/p&gt;
 
-&lt;p&gt;In addition, podcasts/Netflix shows that I have found particularly interesting will also be here.&lt;/p&gt;
+&lt;p&gt;One disclaimer I would like to state about reading books is what Patrick Collison terms “Book-Reader-Fit”, which is that that a book’s impact and impression on you depends on where you currently are in your life. That is, a book that is currently a 2.5/5 for me may be a 4/5 if I had read it at a different stage of my life and vice versa. So these ratings that I have ascribed are not an absolute declaration of the book’s influence on me but rather how do they resonate with me as a 23-year old in his final year of his undergraduate degree.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;top-recommendations&quot;&gt;Top Recommendations&lt;/h2&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;#toc&quot;&gt;here&lt;/a&gt; to see the entire reading list. The five books that have had the biggest impact on me this year:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Why We Sleep: The New Science of Sleep&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Essentialism: The Disciplined Pursuit of Less&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Range: How Generalists Triumph in a Specialized World&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Debt: The First 5,000 Years&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Evicted: Poverty and Profit in the American City&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;book-list-1326&quot;&gt;Book List (13/26)&lt;/h2&gt;
+&lt;h2 id=&quot;book-list-3826&quot;&gt;Book List (38/26)&lt;/h2&gt;
 
 &lt;p&gt;The list is in chronological order of when I read them in addition to my rating of the book and any comments.&lt;/p&gt;
+&lt;h2 id=&quot;table-of-contents&quot;&gt;&lt;a name=&quot;toc&quot;&gt;Table of contents&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#bio&quot;&gt;Biographies&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#ss&quot;&gt;Social Science&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#pd&quot;&gt;Personal Development&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#hist&quot;&gt;History&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#science&quot;&gt;Science&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;the-everything-store&quot;&gt;The Everything Store&lt;/h4&gt;
-&lt;p&gt;2/5: An interesting exploration of the intense grit and tenacity of Jeff Bezos. Whilst there was some exploration of his decision making framework, I found that I was not able to take away much else.&lt;/p&gt;
+&lt;h2 id=&quot;biographies&quot;&gt;&lt;a name=&quot;bio&quot;&gt;Biographies&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h4 id=&quot;misbehaving-the-making-of-behavioural-economics&quot;&gt;Misbehaving: The Making of Behavioural Economics&lt;/h4&gt;
-&lt;p&gt;2.5/5: I’ve read Daniel Kahneman’s Thinking, Fast and Slow last year and I found that to be a more interesting book on dealing with Behavioural Economics. I would suggest Kahneman’s book as alot of the content from Misbehaving can be found in Kahneman’s book and goes into more detail. There were some interesting anecdotes in this book but nothing too memorable.&lt;/p&gt;
+&lt;h4 id=&quot;american-prometheus-the-triumph-and-tragedy-of-j-robert-oppenheimer&quot;&gt;American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer&lt;/h4&gt;
+&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
 
-&lt;h4 id=&quot;deep-work&quot;&gt;Deep Work&lt;/h4&gt;
-&lt;p&gt;3.5/5: The main premise of the book is to focus on developing a deep level of expertise and doing work that is considered to be “deep”, which usually coincides with work that can’t be easily replicable by others and adds alot more value. The idea of blocking 3-4 hours of your day to focus on a single task with no distractions (e.g. friends) was immensely useful for helping my university studies by dramatically increasing the efficiency of my study sessions and giving me more time to focus on other aspects of my life. The reason that the rating wasn’t any higher was that I didn’t find the rest of the book that interesting after the sections mentioned above and found it to be repetitive.&lt;/p&gt;
+&lt;h4 id=&quot;born-a-crime-stories-from-a-south-african-childhood&quot;&gt;Born a Crime: Stories from a South African Childhood&lt;/h4&gt;
+&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
 
-&lt;h4 id=&quot;chaos-monkeys&quot;&gt;Chaos Monkeys&lt;/h4&gt;
-&lt;p&gt;4/5: This was a really fun read and felt like I was reading an adventure novel set in Silicon Valley. Whilst quite sarcastic and lewd alot of the times, Chaos Monkeys really taught me about alot of the absurdities that goes in these seemingly prestigious organisations and not to take life too seriously.&lt;/p&gt;
+&lt;h4 id=&quot;when-breath-becomes-air&quot;&gt;When Breath Becomes Air&lt;/h4&gt;
+&lt;p&gt;4.5/5:TBD.&lt;/p&gt;
 
-&lt;h4 id=&quot;bad-blood&quot;&gt;Bad Blood&lt;/h4&gt;
-&lt;p&gt;4/5: This was an extremely interesting read into how Silicon Valley can still get some things terribly wrong. In particular, to always have a grain of salt when listening to the supposedly game-changing opportunities happening in the Valley. The documentary was also a fascinating watch but the book was definitely better. Would recommend for those interested in seeing a darker side of startups and how important culture is.&lt;/p&gt;
+&lt;h4 id=&quot;permanent-record&quot;&gt;Permanent record&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
 
-&lt;h4 id=&quot;the-art-of-public-speaking-lessons-from-the-greatest-speeches-in-history&quot;&gt;The Art of Public Speaking: Lessons from the greatest speeches in history&lt;/h4&gt;
-&lt;p&gt;1/5: Unfortunately, I found this course to not have improved my public speaking in any manner.&lt;/p&gt;
-
-&lt;h4 id=&quot;why-we-sleep-the-new-science-of-sleep&quot;&gt;Why We Sleep: The New Science of Sleep&lt;/h4&gt;
-&lt;p&gt;5/5: My top recommendation on this list so far. One of the very few books to have truly changed my life. I used to be one of the staunchest advocates for burning the midnight oil continuously and had terrible sleeping/caffeine behaviour. Ever since reading this, I am now always aiming to get 8 hours of sleep a night, if not for my health but for my performance at work and studies.&lt;/p&gt;
-
-&lt;h4 id=&quot;sapiens-a-brief-history-of-humankind&quot;&gt;Sapiens: A Brief History of Humankind&lt;/h4&gt;
-&lt;p&gt;3.5/5: There was alot of hype around this book before going into it and unfortunately I found it to be okay. The beginning was quite slow for me personally but really picked up and got alot more interesting when looking at the 20th century. This is probably more reflective of my interests in 20th century history.&lt;/p&gt;
+&lt;h4 id=&quot;shoe-dog-a-memoir-by-the-creator-of-nike&quot;&gt;Shoe Dog: A Memoir by the Creator of Nike&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;a-beautiful-mind&quot;&gt;A Beautiful Mind&lt;/h4&gt;
-&lt;p&gt;4/5: This book was great for romanticising a life in academia, something which I long considered. The book’s exposition on the beauty of pure mathematics and Economics was really inspiring for a Math major like myself. Furthermore, it was really interesting to see many famous and notable names pop up through the book (e.g. Neumann, Belman) and seeing a much more humane side to these giants in Mathematics.&lt;/p&gt;
+&lt;p&gt;4/5: This book was great for romanticising a life in academia, something which I long considered. The book’s exposition on the beauty of pure mathematics and Economics was really inspiring for a Math major like myself. Furthermore, it was really interesting to see many famous and notable names pop up through the book (e.g. Neumann, Belman) and seeing a much more humane side to these giants in Mathematics. Would recommend to any STEM student.&lt;/p&gt;
 
-&lt;h4 id=&quot;getting-things-done&quot;&gt;Getting Things Done&lt;/h4&gt;
-&lt;p&gt;2.5/5: The only real takeaway I got from this book was having a collection bucket and action list. That is, that our brain is terrible at storing information and hence the moment we have an idea/thought in which we need to recollect later on, WRITE IT DOWN IMMEDIATELY. Hence, having a collection bucket to collect these thoughts/ideas and then moving them to your action list when it is time to get things done. I didn’t find the other aspects of the GTD system that useful for me personally.&lt;/p&gt;
+&lt;h4 id=&quot;what-it-takes-lessons-in-the-pursuit-of-excellence&quot;&gt;What It Takes: Lessons in the Pursuit of Excellence&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;steve-jobs&quot;&gt;Steve Jobs&lt;/h4&gt;
+&lt;p&gt;3.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;hashiru-koto-ni-tsuite-kataru-toki-ni-boku-no-kataru-koto-what-i-talk-about-when-i-talk-about-running&quot;&gt;Hashiru Koto ni Tsuite Kataru Toki ni Boku no Kataru Koto (What I Talk About When I Talk About Running)&lt;/h4&gt;
+&lt;p&gt;3.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;creativity-inc&quot;&gt;Creativity inc&lt;/h4&gt;
+&lt;p&gt;3/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;chaos-monkeys&quot;&gt;Chaos Monkeys&lt;/h4&gt;
+&lt;p&gt;3/5: This was a really fun read and felt like I was reading an adventure novel set in Silicon Valley. Whilst quite sarcastic and lewd alot of the times, Chaos Monkeys really taught me about alot of the absurdities that goes in these seemingly prestigious organisations and not to take life too seriously. Would recommend for aspiring high flyers in tech/startups.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-man-who-solved-the-market-how-james-simons-launched-the-quant-revolution&quot;&gt;The man who solved the market: How James Simons launched the quant revolution&lt;/h4&gt;
+&lt;p&gt;2.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-everything-store&quot;&gt;The Everything Store&lt;/h4&gt;
+&lt;p&gt;2.5/5: An interesting exploration of the intense grit and tenacity of Jeff Bezos. Whilst there was some exploration of his decision making framework, I found that I was not able to take away much else. It was interesting to see in retrospect how insane it must have seen to people for him to leave his high-paying job in trading to start a website selling books. If you are interested in reading autobiographies, there are alot more interesting ones you could find out there.&lt;/p&gt;
+
+&lt;h4 id=&quot;that-will-never-work-the-birth-of-netflix-and-the-amazing-life-of-an-idea&quot;&gt;That Will Never Work: The Birth of Netflix and the Amazing Life of an Idea&lt;/h4&gt;
+&lt;p&gt;2.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;alibaba-the-house-that-jack-ma-built&quot;&gt;Alibaba: The House That Jack Ma Built&lt;/h4&gt;
+&lt;p&gt;2/5: TBD.&lt;/p&gt;
+
+&lt;h2 id=&quot;social-science&quot;&gt;&lt;a name=&quot;ss&quot;&gt;Social Science&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4 id=&quot;evicted-poverty-and-profit-in-the-american-city&quot;&gt;Evicted: Poverty and Profit in the American City&lt;/h4&gt;
+&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;misbehaving-the-making-of-behavioural-economics&quot;&gt;Misbehaving: The Making of Behavioural Economics&lt;/h4&gt;
+&lt;p&gt;2.5/5: I’ve read Daniel Kahneman’s Thinking, Fast and Slow last year and I found that to be a more interesting book on dealing with Behavioural Economics. I would suggest Kahneman’s book as alot of the content from Misbehaving can be found in Kahneman’s book whilst going into more detail. There were some interesting anecdotes in this book but nothing too memorable for me.&lt;/p&gt;
+
+&lt;h2 id=&quot;personal-development&quot;&gt;&lt;a name=&quot;pd&quot;&gt;Personal Development&lt;/a&gt;&lt;/h2&gt;
+&lt;h4 id=&quot;essentialism-the-disciplined-pursuit-of-less&quot;&gt;Essentialism: The Disciplined Pursuit of Less&lt;/h4&gt;
+&lt;p&gt;5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;flow-the-psychology-of-optimal-experience&quot;&gt;Flow: The Psychology of Optimal Experience&lt;/h4&gt;
+&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;reboot-leadership-and-the-art-of-growing-up&quot;&gt;Reboot: Leadership and the Art of Growing Up&lt;/h4&gt;
 &lt;p&gt;4/5: Reboot was a nice breath of fresh air seeing someone who has such an accomplished career talk about such personal and heartfelt issues. It is easy to get caught up in the everyday grind but this book really helped me to stop and reflect on why I do what I do. A recommendation for high-flyers that are starting out in their careers.&lt;/p&gt;
 
-&lt;h4 id=&quot;debt-the-first-5000-years&quot;&gt;Debt: The First 5,000 Years&lt;/h4&gt;
-&lt;p&gt;4.5/5: All the hype around Sapiens should be redirected towards this book. This paints such an illuminating history of humankind from the perspective of debt and how it influences our financial system, customs, and norms. This book instantly dispelled numerous mental models I had about the world in the first 20 minutes of starting this book. Would recommend to anyone interested in Economics and history.&lt;/p&gt;
+&lt;h4 id=&quot;the-art-of-learning-an-inner-journey-to-optimal-performance&quot;&gt;The Art of Learning: An Inner Journey to Optimal Performance&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-algebra-of-happiness-notes-on-the-pursuit-of-success-love-and-meaning&quot;&gt;The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning&lt;/h4&gt;
+&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;deep-work&quot;&gt;Deep Work&lt;/h4&gt;
+&lt;p&gt;3.5/5: The main premise of the book is to focus on developing a deep level of expertise and doing work that is considered to be “deep”, which usually coincides with work that can’t be easily replicable by others and adds alot more value, a skill needed to succeed in the modern world. The idea of blocking 3-4 hours of your day to focus on a single task with no distractions (e.g. friends) was immensely useful for helping my university studies by dramatically increasing the efficiency of my study sessions and giving me more time to focus on other aspects of my life. The reason that the rating wasn’t any higher was that I didn’t find the rest of the book that interesting after the sections mentioned above and found it to be repetitive. I would actually suggest that reading a summary of this book or just some of it would be sufficient in taking away the main messages of the book.&lt;/p&gt;
+
+&lt;h4 id=&quot;getting-things-done&quot;&gt;Getting Things Done&lt;/h4&gt;
+&lt;p&gt;2.5/5: The only real takeaway I got from this book was having a collection bucket and action list. That is, that our brain is terrible at storing information and hence the moment we have an idea/thought in which we need to recollect later on, WRITE IT DOWN IMMEDIATELY. Hence, having a collection bucket to collect these thoughts/ideas and then moving them to your action list when it is time to get things done. I didn’t find the other aspects of the GTD system that useful for me personally. I think personally I already have quite a strong framework in place to get stuff done that I am quite happy with currently.&lt;/p&gt;
 
 &lt;h4 id=&quot;emotional-intelligence-why-it-can-matter-more-than-iq&quot;&gt;Emotional Intelligence: Why It Can Matter More than IQ&lt;/h4&gt;
-&lt;p&gt;2/5: Didn’t really help much with developing my EQ but definitely helped with understanding WHAT EQ is.&lt;/p&gt;
+&lt;p&gt;2/5: Didn’t really help much with developing my EQ but definitely helped with understanding WHAT EQ is. However, the book influenced my view that EQ is something that you can actually develop with practice. Luckily, I was surrounded by amazing individuals at this time of my life when I was reading this book that really helped me to learn alot more about EQ and put it into practice. It’s easy to think of everyone as a pleb when you’re just hitting your goals all the time but I found it’s extremely important to note that everyone has different utility functions that they are optimising subjected to different constraints compared to what you currently have.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-art-of-public-speaking-lessons-from-the-greatest-speeches-in-history&quot;&gt;The Art of Public Speaking: Lessons from the greatest speeches in history&lt;/h4&gt;
+&lt;p&gt;1/5: Unfortunately, I found this course to not have improved my public speaking in any manner. Maybe I would have benefited alot more from doing a Toastmaster course. Susan Cain’s talks on the matter had a much bigger impact on me, most likely due to the fact that I am an introvert myself.&lt;/p&gt;
+
+&lt;h2 id=&quot;history&quot;&gt;&lt;a name=&quot;hist&quot;&gt;History&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4 id=&quot;debt-the-first-5000-years&quot;&gt;Debt: The First 5,000 Years&lt;/h4&gt;
+&lt;p&gt;5/5: All the hype around Sapiens should be redirected towards this book. This paints such an illuminating history of humankind from the perspective of debt and how it influences our financial system, customs, and norms. This book instantly dispelled numerous mental models I had about the world in the first 20 minutes of starting this book. Would recommend to anyone interested in Economics and history.&lt;/p&gt;
+
+&lt;h4 id=&quot;bad-blood&quot;&gt;Bad Blood&lt;/h4&gt;
+&lt;p&gt;4/5: This was an extremely interesting read into how Silicon Valley can still get some things terribly wrong. In particular, to always have a grain of salt when listening to the supposedly game-changing opportunities happening in the Valley. The documentary was also a fascinating watch but the book was definitely better. Would recommend for those interested in seeing a darker side of startups and how important culture is.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-innovators-how-a-group-of-hackers-geniuses-and-geeks-created-the-digital-revolution&quot;&gt;The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;sapiens-a-brief-history-of-humankind&quot;&gt;Sapiens: A Brief History of Humankind&lt;/h4&gt;
+&lt;p&gt;3.5/5: There was alot of hype around this book before going into it and unfortunately I found it to be just okay. The beginning was quite slow for me personally but really picked up and got alot more interesting when looking at the 20th century. This is probably more reflective of my interests in 20th century history. I would probably revisit this book again in the future.&lt;/p&gt;
+
+&lt;h4 id=&quot;guns-germs-and-steel&quot;&gt;Guns, Germs, and Steel&lt;/h4&gt;
+&lt;p&gt;2/5: TBD.&lt;/p&gt;
+
+&lt;h2 id=&quot;science&quot;&gt;&lt;a name=&quot;science&quot;&gt;Science&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4 id=&quot;why-we-sleep-the-new-science-of-sleep&quot;&gt;Why We Sleep: The New Science of Sleep&lt;/h4&gt;
+&lt;p&gt;5/5: My top recommendation on this list so far. One of the very few books to have truly changed my life. I used to be one of the staunchest advocates for burning the midnight oil continuously and had terrible sleeping/caffeine behaviour. Ever since reading this, I am now always aiming to get 8 hours of sleep a night, if not for my health but for my performance at work and studies. Furthermore, besides why we as an individual should sleep, it has quite alot of interesting commentary on the increasingly backward view we as society have towards sleep. I’d highly suggest combining this book with Deep Work if you want to increase your productivity tremendously, getting enough sleep to then do deep work. 100% recommend to anyone.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-order-of-time&quot;&gt;The Order of Time&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;energy-for-future-presidents-the-science-behind-the-headlines&quot;&gt;Energy for Future Presidents: The Science Behind the Headlines&lt;/h4&gt;
+&lt;p&gt;3/5: TBD.&lt;/p&gt;
+
+&lt;h2 id=&quot;miscellaneous&quot;&gt;&lt;a name=&quot;misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;/h2&gt;
+&lt;h4 id=&quot;range-how-generalists-triumph-in-a-specialized-world&quot;&gt;Range: How Generalists Triumph in a Specialized World&lt;/h4&gt;
+&lt;p&gt;5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;sophies-world&quot;&gt;Sophie’s World&lt;/h4&gt;
+&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;killing-commendatore&quot;&gt;Killing Commendatore&lt;/h4&gt;
+&lt;p&gt;3.5/5: TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;measure-what-matters-okrs-the-simple-idea-that-drives-10x-growth&quot;&gt;Measure What Matters: OKRs: The Simple Idea that Drives 10x Growth&lt;/h4&gt;
+&lt;p&gt;3/5: TBD.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;podcasts&quot;&gt;Podcasts&lt;/h2&gt;
 
+&lt;h4 id=&quot;the-journal&quot;&gt;The Journal&lt;/h4&gt;
+&lt;p&gt;4.5/5: Podcast on money, business, and power by the Wall Street Journal. Really good investigative coverage and reporting of a single topic every day.&lt;/p&gt;
+
 &lt;h4 id=&quot;the-tim-ferris-show&quot;&gt;The Tim Ferris Show&lt;/h4&gt;
-&lt;p&gt;5/5: I have definitely adopted alot of Tim Ferris’ line of questioning and attempts at trying to deconstruct the habits/routines that alot of overachievers’ in my life perform. Memorable guests for me include Greg McKeown, Seth Godin, Patrick Collison, Drew Houston, Joe Gebbia, Josh Waitzkin, and Susan Cain.&lt;/p&gt;
+&lt;p&gt;4/5: I have definitely adopted alot of Tim Ferris’ line of questioning and attempts at trying to deconstruct the habits/routines that alot of overachievers’ in my life perform. Memorable guests for me include Greg McKeown, Seth Godin, Patrick Collison, Drew Houston, Joe Gebbia, Josh Waitzkin, and Susan Cain.&lt;/p&gt;
 
 &lt;h4 id=&quot;how-i-built-this&quot;&gt;How I Built This&lt;/h4&gt;
 &lt;p&gt;4/5: I usually switch up the Tim Ferris show with How I Built This depending on the guest on the show. Memorable ones for me include: Logic, Melanie Perkins, Whitney Wolfe, Miguel McKelvey, and John Zimmer.&lt;/p&gt;
@@ -95,17 +227,20 @@
 &lt;h4 id=&quot;a16z-podcast&quot;&gt;a16z Podcast&lt;/h4&gt;
 &lt;p&gt;4/5: To be honest I just started this one recently but have been quite blown away by the recent episodes involving Marc Andreessen and Ben Horowitz. I was quite a massive sceptic of blockchain but now am a convert.&lt;/p&gt;
 
+&lt;h4 id=&quot;pivot&quot;&gt;Pivot&lt;/h4&gt;
+&lt;p&gt;4.5/5: Scott Galloway is great.&lt;/p&gt;
+
 &lt;h4 id=&quot;startup-school&quot;&gt;Startup School&lt;/h4&gt;
 &lt;p&gt;4.5/5: This was a really exciting course to jump into when I first got involved in startup-land. I learnt a tremendous amount and really shifted my thinking in line with the fast-thinking and out of box creativity needed for startups.&lt;/p&gt;
 
 &lt;h4 id=&quot;the-product-podcast&quot;&gt;The Product Podcast&lt;/h4&gt;
-&lt;p&gt;3.5/5: Another podcast I recently started but have been impressed by the quality of guests they have brought onto the show so far.&lt;/p&gt;
+&lt;p&gt;2.5/5: Another podcast I recently started but have been impressed by the quality of guests they have brought onto the show so far.&lt;/p&gt;
 
 &lt;h4 id=&quot;this-week-in-machine-learning--artificial-intelligence&quot;&gt;This Week in Machine Learning &amp;amp; Artificial Intelligence&lt;/h4&gt;
 &lt;p&gt;2/5: As much as I am interested in machine learning, I don’t seem to enjoy this podcast so much. Will need to give this one another chance.&lt;/p&gt;
 
 &lt;h4 id=&quot;grey-mattermasters-of-scale&quot;&gt;Grey Matter/Masters of Scale&lt;/h4&gt;
-&lt;p&gt;3/5: To me these podcasts feel quite similar with Reid Hoffman being the main star. Another great resource for learning how to operate a startup.&lt;/p&gt;
+&lt;p&gt;3/5: To me these podcasts feel quite similar with Reid Hoffman being the main star. Another great resource for learning how to operate and work in a startup.&lt;/p&gt;
 
 &lt;h4 id=&quot;crazygenius&quot;&gt;Crazy/Genius&lt;/h4&gt;
 &lt;p&gt;2.5/5: A nice podcast for learning a bit more about certain trends in industries. Would be better if they got alot more into the nitty-gritty of the trends.&lt;/p&gt;
@@ -117,8 +252,22 @@
 
 &lt;h2 id=&quot;netflix-shows&quot;&gt;Netflix Shows&lt;/h2&gt;
 
+&lt;h4 id=&quot;living-undocumented&quot;&gt;Living Undocumented&lt;/h4&gt;
+&lt;p&gt;5/5 TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;inside-bills-brain-decoding-bills-gates&quot;&gt;Inside Bill’s Brain: Decoding Bill’s Gates&lt;/h4&gt;
+&lt;p&gt;4.5/5 TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;american-factory&quot;&gt;American Factory&lt;/h4&gt;
+&lt;p&gt;4/5 TBD.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-game-changers&quot;&gt;The Game Changers&lt;/h4&gt;
+
 &lt;h4 id=&quot;world-war-ii-in-hd-colour&quot;&gt;World War II in HD Colour&lt;/h4&gt;
-&lt;p&gt;4.5/5: A really good series exploring Europe’s darkest days.&lt;/p&gt;
+&lt;p&gt;4.5/5: A really good series exploring Europe’s darkest days. The way that they were able to colour old footage was incredible and the way that they weaved all the different moving parts into one smooth cohesive narrative was great.&lt;/p&gt;
+
+&lt;h4 id=&quot;dawn-wall&quot;&gt;Dawn Wall&lt;/h4&gt;
+&lt;p&gt;5/5: Really inspiring and heart-wrenching documentary on Tommy Caldwell climbing the Dawn wall accompanied by a true partner Kevin Jorgeson.&lt;/p&gt;
 
 &lt;h4 id=&quot;icarus&quot;&gt;Icarus&lt;/h4&gt;
 &lt;p&gt;4.5/5: A must watch into cheating in sports.&lt;/p&gt;
@@ -137,14 +286,26 @@
 &lt;h2 id=&quot;simple-pleasures-of-life&quot;&gt;Simple Pleasures of Life&lt;/h2&gt;
 
 &lt;h4 id=&quot;shingeki-no-kyojin&quot;&gt;Shingeki no Kyojin&lt;/h4&gt;
-&lt;p&gt;5/5&lt;/p&gt;
+&lt;p&gt;4.5/5&lt;/p&gt;
 
 &lt;h4 id=&quot;one-punch-man&quot;&gt;One Punch Man&lt;/h4&gt;
 &lt;p&gt;4/5&lt;/p&gt;
 
+&lt;h4 id=&quot;boku-no-hero-academia&quot;&gt;Boku no Hero Academia&lt;/h4&gt;
+&lt;p&gt;3.5/5&lt;/p&gt;
+
+&lt;h4 id=&quot;dragonball-super&quot;&gt;Dragonball Super&lt;/h4&gt;
+&lt;p&gt;3.5/5&lt;/p&gt;
+
+&lt;h4 id=&quot;hunter-x-hunter&quot;&gt;Hunter X Hunter&lt;/h4&gt;
+&lt;p&gt;5/5&lt;/p&gt;
+
+&lt;h4 id=&quot;fullmetal-alchemist-brotherhood&quot;&gt;Fullmetal Alchemist Brotherhood&lt;/h4&gt;
+&lt;p&gt;4.5/5&lt;/p&gt;
+
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;send-through-an-email-or-linkedin-message-if-you-have-suggestionsrecommendations-for-books-to-readpodcasts-to-listen-to&quot;&gt;Send through an email or Linkedin message if you have suggestions/recommendations for books to read/podcasts to listen to!&lt;/h3&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Other" /><summary type="html">Introduction I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution OKRs is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my personal review of their impact on me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Runge-Kutta Methods</title><link href="http://localhost:4000/Runge-Kutta/" rel="alternate" type="text/html" title="Runge-Kutta Methods" /><published>2019-06-25T19:00:00+10:00</published><updated>2019-06-25T19:00:00+10:00</updated><id>http://localhost:4000/Runge-Kutta</id><content type="html" xml:base="http://localhost:4000/Runge-Kutta/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;h3 id=&quot;send-through-an-email-or-linkedin-message-if-you-have-suggestionsrecommendations-for-books-to-readpodcasts-to-listen-to&quot;&gt;Send through an email or Linkedin message if you have suggestions/recommendations for books to read/podcasts to listen to!&lt;/h3&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Other" /><summary type="html">Introduction I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution OKRs is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my personal review of their impact on me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Runge-Kutta Methods</title><link href="http://localhost:4000/Runge-Kutta/" rel="alternate" type="text/html" title="Runge-Kutta Methods" /><published>2019-06-25T16:00:00+07:00</published><updated>2019-06-25T16:00:00+07:00</updated><id>http://localhost:4000/Runge-Kutta</id><content type="html" xml:base="http://localhost:4000/Runge-Kutta/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation &lt;script type=&quot;math/tex&quot;&gt;y'(t) = f(t,y(t))&lt;/script&gt; over a time interval &lt;script type=&quot;math/tex&quot;&gt;[t_0,t_1]&lt;/script&gt; with a starting point &lt;script type=&quot;math/tex&quot;&gt;y(t_0) = y_0&lt;/script&gt;. We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.&lt;/p&gt;
 
 &lt;p&gt;The significance of IVP problems is that we are given an initial point and the slope of the function at that point ,from the DE itself. Hence, we want to figure out what is the next point. The algorithm at a high level for Runge-Kutta methods would be taking one step along the slope and picking our next point &lt;script type=&quot;math/tex&quot;&gt;y_*&lt;/script&gt; from that step. We then evaluate the slope at that new point &lt;script type=&quot;math/tex&quot;&gt;y_*&lt;/script&gt; and step along that new slope. We iterate this process. Hence, the issues we have are:&lt;/p&gt;
@@ -270,7 +431,7 @@ k_4 = f(x_i + h,y_i+ k_3h).
 &lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt; The tradeoff between using a higher order method is computational cost/complexity in coding up vs accuracy.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Hence, we have looked at different forms of Runge-Kutta methods by varying the form of the slope &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. However, we have not discussed anything about specifying the step size h, which is a massive topic in Runge-Kutta methods.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Mathematics" /><category term="Computer Science" /><summary type="html">Introduction Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation over a time interval with a starting point . We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Cochrane-Orcutt Procedure</title><link href="http://localhost:4000/cochrane-orcutt/" rel="alternate" type="text/html" title="Cochrane-Orcutt Procedure" /><published>2018-10-21T21:00:00+11:00</published><updated>2018-10-21T21:00:00+11:00</updated><id>http://localhost:4000/cochrane-orcutt</id><content type="html" xml:base="http://localhost:4000/cochrane-orcutt/">&lt;h3 id=&quot;cochrane-what-what-is-the-purpose-of-even-doing-this-procedure-cant-i-just-regress-y_t-on-x_t-and-be-done-with-it&quot;&gt;Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress &lt;script type=&quot;math/tex&quot;&gt;y_t&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;x_t&lt;/script&gt; and be done with it?&lt;/h3&gt;
+&lt;p&gt;Hence, we have looked at different forms of Runge-Kutta methods by varying the form of the slope &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. However, we have not discussed anything about specifying the step size h, which is a massive topic in Runge-Kutta methods.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Mathematics" /><category term="Computer Science" /><summary type="html">Introduction Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation over a time interval with a starting point . We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Cochrane-Orcutt Procedure</title><link href="http://localhost:4000/cochrane-orcutt/" rel="alternate" type="text/html" title="Cochrane-Orcutt Procedure" /><published>2018-10-21T17:00:00+07:00</published><updated>2018-10-21T17:00:00+07:00</updated><id>http://localhost:4000/cochrane-orcutt</id><content type="html" xml:base="http://localhost:4000/cochrane-orcutt/">&lt;h3 id=&quot;cochrane-what-what-is-the-purpose-of-even-doing-this-procedure-cant-i-just-regress-y_t-on-x_t-and-be-done-with-it&quot;&gt;Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress &lt;script type=&quot;math/tex&quot;&gt;y_t&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;x_t&lt;/script&gt; and be done with it?&lt;/h3&gt;
 
 &lt;p&gt;Recall that if we have serial correlation/autocorrelation with our error terms, then we would have that inferences on our &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; parameters won’t turn out well. In particular, the standard errors would be too small, leading to large test statistics (since you divide &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; by the standard error), and hence this can lead to “easier” rejections of the null that &lt;script type=&quot;math/tex&quot;&gt;\beta = 0&lt;/script&gt;. (On a side note, you can use the Breusche-Godfrey test to check whether does this serial correlation exist).&lt;/p&gt;
 
@@ -350,7 +511,7 @@ k_4 = f(x_i + h,y_i+ k_3h).
 
 &lt;hr /&gt;
 
-&lt;p&gt;Thanks!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Econometrics" /><summary type="html">Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress on and be done with it?</summary></entry><entry><title type="html">Error Correction Model</title><link href="http://localhost:4000/ecm-model/" rel="alternate" type="text/html" title="Error Correction Model" /><published>2018-10-15T21:00:00+11:00</published><updated>2018-10-15T21:00:00+11:00</updated><id>http://localhost:4000/ecm-model</id><content type="html" xml:base="http://localhost:4000/ecm-model/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Econometrics" /><summary type="html">Cochrane what? What is the purpose of even doing this procedure? Can’t I just regress on and be done with it?</summary></entry><entry><title type="html">Error Correction Model</title><link href="http://localhost:4000/ecm-model/" rel="alternate" type="text/html" title="Error Correction Model" /><published>2018-10-15T17:00:00+07:00</published><updated>2018-10-15T17:00:00+07:00</updated><id>http://localhost:4000/ecm-model</id><content type="html" xml:base="http://localhost:4000/ecm-model/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
 
 &lt;p&gt;The purpose of the ECM is to capture show the short-run dynamics of the variables n the system are influenced by the deviation from the long-run equilibrium. If we are out of equilibrium, then we will move back into the equilibrium, and the model captures this. We difference the data to ensure that any regressions will not be spurious (for reasons mentioned in 1). However, if we just differenced them and regressed them on another, we fail to capture the long-run relationship between the 2 variables that exists (due to the fact they are cointegrated). Hence, we can capture that with the ECM as any time series that is not in equilibrium will move back into equilibrium according to the magnitude of the disequilibrium.&lt;/p&gt;
@@ -392,7 +553,7 @@ k_4 = f(x_i + h,y_i+ k_3h).
 
 &lt;p&gt;We can then redefine some of the variables to match the standard notation.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta y_t = \delta + \theta\Delta z_t + \gamma\eta_{t-1} +  \epsilon_t&lt;/script&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Econometrics" /><summary type="html">Introduction Motivation</summary></entry><entry><title type="html">Simulated Maximum Likelihood</title><link href="http://localhost:4000/simulated-likelihood/" rel="alternate" type="text/html" title="Simulated Maximum Likelihood" /><published>2018-10-08T21:00:00+11:00</published><updated>2018-10-08T21:00:00+11:00</updated><id>http://localhost:4000/simulated-likelihood</id><content type="html" xml:base="http://localhost:4000/simulated-likelihood/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta y_t = \delta + \theta\Delta z_t + \gamma\eta_{t-1} +  \epsilon_t&lt;/script&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Econometrics" /><summary type="html">Introduction Motivation</summary></entry><entry><title type="html">Simulated Maximum Likelihood</title><link href="http://localhost:4000/simulated-likelihood/" rel="alternate" type="text/html" title="Simulated Maximum Likelihood" /><published>2018-10-08T17:00:00+07:00</published><updated>2018-10-08T17:00:00+07:00</updated><id>http://localhost:4000/simulated-likelihood</id><content type="html" xml:base="http://localhost:4000/simulated-likelihood/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
 
 &lt;p&gt;We give a quick refresher of maximum likelihood.&lt;/p&gt;
@@ -466,7 +627,7 @@ k_4 = f(x_i + h,y_i+ k_3h).
 
 &lt;p&gt;In terms of asymptotitcs, we need that &lt;script type=&quot;math/tex&quot;&gt;\hat{f} \rightarrow f&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;n \rightarrow \infty&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;S \rightarrow \infty&lt;/script&gt;, so that &lt;script type=&quot;math/tex&quot;&gt;\hat{\theta} \rightarrow \theta&lt;/script&gt; as a result of consistency. Hence, we need to pick the right subsimulator. On top of that, if we want &lt;script type=&quot;math/tex&quot;&gt;\textbf{efficiency}&lt;/script&gt;, we require that &lt;script type=&quot;math/tex&quot;&gt;\frac{\sqrt{n}}{S} \rightarrow 0&lt;/script&gt;. The asymptotic distribution of &lt;script type=&quot;math/tex&quot;&gt;\hat{\theta}&lt;/script&gt; is the same.&lt;/p&gt;
 
-&lt;p&gt;Hence, in finite samples, the bias can be extremely severe if we use subsimulator that are not equal to v, that is, &lt;script type=&quot;math/tex&quot;&gt;\tilde{f} \neq v&lt;/script&gt;. The only case when we should do this is to prevent numerical problems. Furthermore, as a result of Monte Carlo integration used in this, we can use antithetic acceleration or if the function to sample from f to generate &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is difficult to sample from, we can use importance sampling.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Econometrics" /><category term="Computer Science" /><summary type="html">Introduction Terminology</summary></entry><entry><title type="html">Mathematical Reason why the Bootstrap Works</title><link href="http://localhost:4000/bootstrap-proof/" rel="alternate" type="text/html" title="Mathematical Reason why the Bootstrap Works" /><published>2018-09-05T20:00:00+10:00</published><updated>2018-09-05T20:00:00+10:00</updated><id>http://localhost:4000/bootstrap-proof</id><content type="html" xml:base="http://localhost:4000/bootstrap-proof/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Hence, in finite samples, the bias can be extremely severe if we use subsimulator that are not equal to v, that is, &lt;script type=&quot;math/tex&quot;&gt;\tilde{f} \neq v&lt;/script&gt;. The only case when we should do this is to prevent numerical problems. Furthermore, as a result of Monte Carlo integration used in this, we can use antithetic acceleration or if the function to sample from f to generate &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is difficult to sample from, we can use importance sampling.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Econometrics" /><category term="Computer Science" /><summary type="html">Introduction Terminology</summary></entry><entry><title type="html">Mathematical Reason why the Bootstrap Works</title><link href="http://localhost:4000/bootstrap-proof/" rel="alternate" type="text/html" title="Mathematical Reason why the Bootstrap Works" /><published>2018-09-05T17:00:00+07:00</published><updated>2018-09-05T17:00:00+07:00</updated><id>http://localhost:4000/bootstrap-proof</id><content type="html" xml:base="http://localhost:4000/bootstrap-proof/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;h2 id=&quot;what-is-the-bootstrap&quot;&gt;What is the bootstrap?&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;This post assumes that the reader has a basic idea of what bootstrapping entails.&lt;/em&gt;&lt;/p&gt;
@@ -582,7 +743,7 @@ k_4 = f(x_i + h,y_i+ k_3h).
 
 &lt;hr /&gt;
 &lt;h2 id=&quot;wrapup&quot;&gt;Wrapup&lt;/h2&gt;
-&lt;p&gt;So even though it is not an accurate proof, as we still need to generalise this to work for an infinite dimensional vector space, it follows a similar idea on why exactly does the bootstrap work.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Statistics" /><category term="Math" /><summary type="html">Introduction What is the bootstrap?</summary></entry><entry><title type="html">Introduction to Monte Carlo Integration</title><link href="http://localhost:4000/monte-integration/" rel="alternate" type="text/html" title="Introduction to Monte Carlo Integration" /><published>2018-09-05T20:00:00+10:00</published><updated>2018-09-05T20:00:00+10:00</updated><id>http://localhost:4000/monte-integration</id><content type="html" xml:base="http://localhost:4000/monte-integration/">&lt;h1 id=&quot;introduction-to-simulation-techniques&quot;&gt;Introduction to Simulation Techniques&lt;/h1&gt;
+&lt;p&gt;So even though it is not an accurate proof, as we still need to generalise this to work for an infinite dimensional vector space, it follows a similar idea on why exactly does the bootstrap work.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Statistics" /><category term="Math" /><summary type="html">Introduction What is the bootstrap?</summary></entry><entry><title type="html">Introduction to Monte Carlo Integration</title><link href="http://localhost:4000/monte-integration/" rel="alternate" type="text/html" title="Introduction to Monte Carlo Integration" /><published>2018-09-05T17:00:00+07:00</published><updated>2018-09-05T17:00:00+07:00</updated><id>http://localhost:4000/monte-integration</id><content type="html" xml:base="http://localhost:4000/monte-integration/">&lt;h1 id=&quot;introduction-to-simulation-techniques&quot;&gt;Introduction to Simulation Techniques&lt;/h1&gt;
 &lt;h2 id=&quot;why-simulations&quot;&gt;Why Simulations?&lt;/h2&gt;
 
 &lt;p&gt;Before we begin, we first ask why do we even need computational techniques. An answer to this is that there are many reasons why we need computational techniques, as they can help us in scenarios such as&lt;/p&gt;
@@ -669,7 +830,7 @@ where f(x) is a density function on the domain D and then we simply define v to 
 
 &lt;hr /&gt;
 
-&lt;p&gt;Stay tuned on how can we sample from distributions in order to compute these integrals!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><category term="Statistics" /><summary type="html">Introduction to Simulation Techniques Why Simulations?</summary></entry><entry><title type="html">Introduction to Function Pointers</title><link href="http://localhost:4000/func_point/" rel="alternate" type="text/html" title="Introduction to Function Pointers" /><published>2018-07-05T18:00:00+10:00</published><updated>2018-07-05T18:00:00+10:00</updated><id>http://localhost:4000/func_point</id><content type="html" xml:base="http://localhost:4000/func_point/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Stay tuned on how can we sample from distributions in order to compute these integrals!&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><category term="Statistics" /><summary type="html">Introduction to Simulation Techniques Why Simulations?</summary></entry><entry><title type="html">Introduction to Function Pointers</title><link href="http://localhost:4000/func_point/" rel="alternate" type="text/html" title="Introduction to Function Pointers" /><published>2018-07-05T15:00:00+07:00</published><updated>2018-07-05T15:00:00+07:00</updated><id>http://localhost:4000/func_point</id><content type="html" xml:base="http://localhost:4000/func_point/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Function pointers are literally pointers to functions.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -758,7 +919,7 @@ int sum = func_ptr(5, 10);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Function pointers are just an address referring to an area of memory with executable code.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction Function pointers are literally pointers to functions.</summary></entry><entry><title type="html">Introduction to Handling Files in C</title><link href="http://localhost:4000/files_in_c/" rel="alternate" type="text/html" title="Introduction to Handling Files in C" /><published>2018-07-04T18:00:00+10:00</published><updated>2018-07-04T18:00:00+10:00</updated><id>http://localhost:4000/files_in_c</id><content type="html" xml:base="http://localhost:4000/files_in_c/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Function pointers are just an address referring to an area of memory with executable code.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction Function pointers are literally pointers to functions.</summary></entry><entry><title type="html">Introduction to Handling Files in C</title><link href="http://localhost:4000/files_in_c/" rel="alternate" type="text/html" title="Introduction to Handling Files in C" /><published>2018-07-04T15:00:00+07:00</published><updated>2018-07-04T15:00:00+07:00</updated><id>http://localhost:4000/files_in_c</id><content type="html" xml:base="http://localhost:4000/files_in_c/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A file is just a sequence of bytes. Everything in UNIX is a file. This is profoundly deep idea. Text files are files, directories are files, even commands like ls or pwd are just files.&lt;/p&gt;
 
 &lt;p&gt;Disk storage allows us to provide persistent storage. The OS abstracts this to be known as files. These files are arranged into a tree by folder/directory structure. Whenever we want to read or write to a file, we do this through system calls.&lt;/p&gt;
