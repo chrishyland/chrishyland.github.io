@@ -57,7 +57,12 @@ The list is in chronological order of when I read them in addition to my rating 
 4.5/5: TBD.
 
 #### When Breath Becomes Air
-4.5/5:TBD.
+4.5/5:
+- Focus on the Present, Plan for the Future.
+- When you take up another’s cross, you must be willing to sometimes get crushed by its weight.
+- Death comes for all of us. It is our fate as living, breathing, metabolizing organisms.
+- Life isn’t about avoiding suffering. The defining characteristic of an organism is striving.
+- The tough difficult schedules for surgeons.
 
 #### Permanent record
 4/5: TBD.
@@ -90,7 +95,13 @@ The list is in chronological order of when I read them in addition to my rating 
 2.5/5: An interesting exploration of the intense grit and tenacity of Jeff Bezos. Whilst there was some exploration of his decision making framework, I found that I was not able to take away much else. It was interesting to see in retrospect how insane it must have seen to people for him to leave his high-paying job in trading to start a website selling books. If you are interested in reading autobiographies, there are alot more interesting ones you could find out there. 
 
 #### That Will Never Work: The Birth of Netflix and the Amazing Life of an Idea
-2.5/5: TBD.
+2.5/5
+- You have to learn to love the problem, not the solution. That’s how you stay engaged when things take longer than you expected.
+- "When you start a company, what you’re really doing is getting other people to latch on to an idea".
+- "Most business plans are a complete waste of time ... So the trick is to take your idea and set it on a collision course with reality as soon as possible".
+- You can figure out the correct technology trend but not the timing.
+- Tightly aligned and loosely coupled culture is the way to go for when you hire smart people in your company.
+- Smart people will figure out tough problems.
 
 #### Alibaba: The House That Jack Ma Built
 2/5: TBD.
@@ -107,21 +118,34 @@ The list is in chronological order of when I read them in addition to my rating 
 ## <a name='pd'>Personal Development</a>
 #### Essentialism: The Disciplined Pursuit of Less
 5/5: TBD.
+- Success begets more opportunities. This leads to the undisciplined pursuit of more and distraction from the essential and things that make you successful in the first place. This then leads to failure.
+- Identify what is essential (5 things) and learn how to say no.
 
-#### Flow: The Psychology of Optimal Experience
-4.5/5: TBD.
+#### The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning
+4.5/5:
+- When you are young, focus on _zipcode_ and _credentials_. These two factors are the biggest predictors of success and wealth. Only a select few megacities are generating economic growth and just like playing against a better tennis player, rallying with the best will improve your game. These are hard to do when you're older.
+- Sacrifice balance when you're young so you can have balance later (if you're aiming to be in the 0.1%). This is to achieve financial stability and professional success early on.
+- Following your passions is terrible advice. Most people do not know what their passions are. Find out what you’re good at and become great at it. As a result, you’ll earn status and money and will become passionate about your work over time.
+- Don't forget to enjoy time and activities with the ones you care about.
 
 #### Reboot: Leadership and the Art of Growing Up
 4/5: Reboot was a nice breath of fresh air seeing someone who has such an accomplished career talk about such personal and heartfelt issues. It is easy to get caught up in the everyday grind but this book really helped me to stop and reflect on why I do what I do. A recommendation for high-flyers that are starting out in their careers.
 
 #### The Art of Learning: An Inner Journey to Optimal Performance
-4/5: TBD.
-
-#### The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning
-4.5/5: TBD.
+4/5: 
+- Two notions of development pyschology and learning. _Entity theorists_ attributes success and failure to an unalterable level of ability. _Incremental theorists_ argue that hard work can be mastered step by step. Be the latter.
+- “The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity. _Usually, growth comes at the expense of previous comfort of safety_.”
+- Learn how to regain composure after a big mistake. It is very easy to spiral downwards after making a big mistake.
+- Build a trigger. Learn how to turn yourselves on into a focused state for whenever you need it. This can be listening to a song that pumps you out or meditating.
 
 #### Deep Work
 3.5/5: The main premise of the book is to focus on developing a deep level of expertise and doing work that is considered to be "deep", which usually coincides with work that can't be easily replicable by others and adds alot more value, a skill needed to succeed in the modern world. The idea of blocking 3-4 hours of your day to focus on a single task with no distractions (e.g. friends) was immensely useful for helping my university studies by dramatically increasing the efficiency of my study sessions and giving me more time to focus on other aspects of my life. The reason that the rating wasn't any higher was that I didn't find the rest of the book that interesting after the sections mentioned above and found it to be repetitive. I would actually suggest that reading a summary of this book or just some of it would be sufficient in taking away the main messages of the book.
+
+#### Flow: The Psychology of Optimal Experience
+3.5/5:
+- We enjoy ourselves when performing challenging activities requiring skills. You know the feeling of when you're completely absorbed in something and can work away at it for hours? That is flow. Getting into flow constantly leads to happiness.
+- Find tasks where you can see progress and receive feedback to help you achieve flow.
+- The best moments usually occur when a person’s body or mind is stretched to its limits in a voluntary effort to accomplish something difficult and worthwhile. 
 
 #### Getting Things Done
 2.5/5: The only real takeaway I got from this book was having a collection bucket and action list. That is, that our brain is terrible at storing information and hence the moment we have an idea/thought in which we need to recollect later on, WRITE IT DOWN IMMEDIATELY. Hence, having a collection bucket to collect these thoughts/ideas and then moving them to your action list when it is time to get things done. I didn't find the other aspects of the GTD system that useful for me personally. I think personally I already have quite a strong framework in place to get stuff done that I am quite happy with currently.
@@ -150,7 +174,11 @@ The list is in chronological order of when I read them in addition to my rating 
 3.5/5: There was alot of hype around this book before going into it and unfortunately I found it to be just okay. The beginning was quite slow for me personally but really picked up and got alot more interesting when looking at the 20th century. This is probably more reflective of my interests in 20th century history. I would probably revisit this book again in the future.
 
 #### Guns, Germs, and Steel
-2/5: TBD.
+2/5:
+- It is ultimately geography that determines the differences between countries.
+- The diversity and density of Eurasian populations created an immunity to germs that would later wipe out the more isolated populations of the Americas.
+- Farming and domesticating animals provide social stability that is lacking in hunter-gatherer societies. Labor specialization enables certain groups to develop weapons.
+- Major portions of Eurasia had a natural advantage in developing agriculture and domesticating animals because of geography and the presence of plants and animals that could be easily domesticated.
 
 ## <a name='science'>Science</a>
 
@@ -158,14 +186,27 @@ The list is in chronological order of when I read them in addition to my rating 
 5/5: My top recommendation on this list so far. One of the very few books to have truly changed my life. I used to be one of the staunchest advocates for burning the midnight oil continuously and had terrible sleeping/caffeine behaviour. Ever since reading this, I am now always aiming to get 8 hours of sleep a night, if not for my health but for my performance at work and studies. Furthermore, besides why we as an individual should sleep, it has quite alot of interesting commentary on the increasingly backward view we as society have towards sleep. I'd highly suggest combining this book with Deep Work if you want to increase your productivity tremendously, getting enough sleep to then do deep work. 100% recommend to anyone.
 
 #### The Order of Time
-4/5: TBD.
+4/5:
+- Time is not the same everywhere. It slows down when we are near objects with large mass.
+- Time is a local phenomena. There is no such thing as time for the entire universe, time exists locally.
+- Time does not exists when we are measuring things smaller than plank time.
+- The second law of thermodynamics states that total entropy of a system can never decrease over time. Hence, whenever there is a way to tell the past and future in a system, heat is involved somewhere.
 
 #### Energy for Future Presidents: The Science Behind the Headlines
-3/5: TBD.
+3/5:
+- Nuclear energy has had alot of misconceived notions in public opinion. It provides cheap and clean energy. The only cost is the massive CAPEX cost to build a nuclear station.
+- Getting rid of radioactive waste is a simple process for us to do now.
+- You can't have a nuclear explosion in a nuclear factory as the uranium used is not pure enough.
 
 ## <a name='misc'>Miscellaneous</a>
 #### Range: How Generalists Triumph in a Specialized World
-5/5: TBD.
+5/5:
+- Take time and accumulate range of experience and skills. Once you sample enough and feel like you know yourself well enough, go deep on an interest and get really good.
+- Meandering around instead of specialising in the beginning is OKAY.
+- Our work preferences and life preferences generally do not stay the same.
+- Kind vs wicket environments explain why some things like chess and golf benefit from fast and early specialisation.
+- Beware of premature optimisation for career. Better to choose from the best options you have. Our selves change dramatically over time.
+- There is a famous study known as the _Darkhorse study_. Majority of successful people believe that their path was not the conventional path (can you see the paradox here). They worked on moment by moment mindset. They ask themselves: "Here's who I am at the moment, here's what I've found I like to do, here's what I like to learn, and here are the opportunities. Which opportunity is the best match now?".
 
 #### Sophie's World
 4.5/5: TBD.
