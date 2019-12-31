@@ -1,6 +1,6 @@
 ---
 title:  "2019 Reading List"
-date:   2019-07-01 09:00:00
+date:   2019-12-30 09:00:00
 layout: post
 image: /assets/images/markdown.jpg
 headerImage: False
@@ -18,21 +18,25 @@ One disclaimer I would like to state about reading books is what Patrick Colliso
 ---
 ## Top Recommendations
 
-Click [here](#toc) to see the entire reading list. The five books that have had the biggest impact on me this year:
+Click [here](#toc) to see the entire reading list. The seven books that have had the biggest impact on me this year:
 
 - Why We Sleep: The New Science of Sleep
 
 - Essentialism: The Disciplined Pursuit of Less
 
+- Peak: Secrets from the New Science of Expertise
+
 - Range: How Generalists Triumph in a Specialized World
 
-- Debt: The First 5,000 Years
+- Educated
 
 - Evicted: Poverty and Profit in the American City
 
+- Sophie's World
+
 ---
 
-## Book List (38/26)
+## Book List (42/26)
 
 The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 ## <a name='toc'>Table of contents</a>
@@ -48,13 +52,18 @@ The list is in chronological order of when I read them in addition to my rating 
 
 - [Miscellaneous](#misc)
 
+- [Fiction](#fic)
+
 ## <a name='bio'>Biographies</a>
 
+#### Educated: A Memoir
+5/5: An extremely powerful story showcasing someone living with such an unorthodox family. The struggles between being part of their family against conventional societal norms. The transition between her two orthogonal worlds through the power of education was truly moving.
+
 #### American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer
-4.5/5: TBD.
+4.5/5: A detailed gripping account of such a complex and often misunderstood individual. To see all the failures and shortcoming of such a prominent and influential figure was quite revealing.
 
 #### Born a Crime: Stories from a South African Childhood
-4.5/5: TBD.
+4.5/5: A hilarious book striking a fantastic balance between humour, family, brutality, and finding your place in the world.
 
 #### When Breath Becomes Air
 4.5/5:
@@ -65,10 +74,10 @@ The list is in chronological order of when I read them in addition to my rating 
 - The tough difficult schedules for surgeons.
 
 #### Permanent record
-4/5: TBD.
+4/5: This book gave me new perspective on Edward Snowden and the importance of whistle blowers in our system. 
 
 #### Shoe Dog: A Memoir by the Creator of Nike
-4/5: TBD.
+4/5: Great inspirational American rags to riches story.
 
 #### A Beautiful Mind
 4/5: This book was great for romanticising a life in academia, something which I long considered. The book's exposition on the beauty of pure mathematics and Economics was really inspiring for a Math major like myself. Furthermore, it was really interesting to see many famous and notable names pop up through the book (e.g. Neumann, Belman) and seeing a much more humane side to these giants in Mathematics. Would recommend to any STEM student.
@@ -83,13 +92,16 @@ The list is in chronological order of when I read them in addition to my rating 
 3.5/5: TBD.
 
 #### Creativity inc
-3/5: TBD.
+3/5: It was interesting learning about how to build a company culture where the business is all about creativity and how to effectively go about doing so.
 
 #### Chaos Monkeys
 3/5: This was a really fun read and felt like I was reading an adventure novel set in Silicon Valley. Whilst quite sarcastic and lewd alot of the times, Chaos Monkeys really taught me about alot of the absurdities that goes in these seemingly prestigious organisations and not to take life too seriously. Would recommend for aspiring high flyers in tech/startups.
 
+#### Grinding It Out: The Making of McDonald's
+3/5: A heartwarming story of a man who achieved so much success at an age where most people would start to think about retiring (50 years old). A true example of someone who finds meaning and enjoyment in their work.
+
 #### The man who solved the market: How James Simons launched the quant revolution
-2.5/5: TBD. 
+2.5/5: The mathematician in me loved the higher-level mathematics discussed in the book. However, I felt that there were alot of times, it didn't delve into the psyche of James Simons.
 
 #### The Everything Store
 2.5/5: An interesting exploration of the intense grit and tenacity of Jeff Bezos. Whilst there was some exploration of his decision making framework, I found that I was not able to take away much else. It was interesting to see in retrospect how insane it must have seen to people for him to leave his high-paying job in trading to start a website selling books. If you are interested in reading autobiographies, there are alot more interesting ones you could find out there. 
@@ -104,20 +116,20 @@ The list is in chronological order of when I read them in addition to my rating 
 - Smart people will figure out tough problems.
 
 #### Alibaba: The House That Jack Ma Built
-2/5: TBD.
+2/5: I didn't particularly feel like I was given a close up look at Jack Ma nor felt that the book did justice to the remarkable work he has done.
 
 
 ## <a name='ss'>Social Science</a>
 
 #### Evicted: Poverty and Profit in the American City
-4.5/5: TBD.
+4.5/5: Extremely powerful book on understanding the plight of the lower socio-economic classes. Why do the poor spend their money seemingly frivolously? Finally, it really struck a chord in me on the importance of having a place to call home and lay down roots.
 
 #### Misbehaving: The Making of Behavioural Economics
 2.5/5: I've read Daniel Kahneman's Thinking, Fast and Slow last year and I found that to be a more interesting book on dealing with Behavioural Economics. I would suggest Kahneman's book as alot of the content from Misbehaving can be found in Kahneman's book whilst going into more detail. There were some interesting anecdotes in this book but nothing too memorable for me.
 
 ## <a name='pd'>Personal Development</a>
 #### Essentialism: The Disciplined Pursuit of Less
-5/5: TBD.
+5/5: This book was a game changer in helping me prioritise my life and HOW should I go about achieving my goals in life.
 - Success begets more opportunities. This leads to the undisciplined pursuit of more and distraction from the essential and things that make you successful in the first place. This then leads to failure.
 - Identify what is essential (5 things) and learn how to say no.
 
@@ -147,9 +159,11 @@ The list is in chronological order of when I read them in addition to my rating 
 - Find tasks where you can see progress and receive feedback to help you achieve flow.
 - The best moments usually occur when a person’s body or mind is stretched to its limits in a voluntary effort to accomplish something difficult and worthwhile. 
 
+#### Never Split the Difference
+2.5/5: The main takeaways from this book for me are the notion of using tactical empathy to understand your counterparty better. Furthermore, instead of the traditional economic notions of negotiations being a rational process, it is in fact quite an irrational process. Finally, there are many different types of no's and yes'.
+
 #### Getting Things Done
 2.5/5: The only real takeaway I got from this book was having a collection bucket and action list. That is, that our brain is terrible at storing information and hence the moment we have an idea/thought in which we need to recollect later on, WRITE IT DOWN IMMEDIATELY. Hence, having a collection bucket to collect these thoughts/ideas and then moving them to your action list when it is time to get things done. I didn't find the other aspects of the GTD system that useful for me personally. I think personally I already have quite a strong framework in place to get stuff done that I am quite happy with currently.
-
 
 #### Emotional Intelligence: Why It Can Matter More than IQ
 2/5: Didn't really help much with developing my EQ but definitely helped with understanding WHAT EQ is. However, the book influenced my view that EQ is something that you can actually develop with practice. Luckily, I was surrounded by amazing individuals at this time of my life when I was reading this book that really helped me to learn alot more about EQ and put it into practice. It's easy to think of everyone as a pleb when you're just hitting your goals all the time but I found it's extremely important to note that everyone has different utility functions that they are optimising subjected to different constraints compared to what you currently have.
@@ -168,7 +182,7 @@ The list is in chronological order of when I read them in addition to my rating 
 4/5: This was an extremely interesting read into how Silicon Valley can still get some things terribly wrong. In particular, to always have a grain of salt when listening to the supposedly game-changing opportunities happening in the Valley. The documentary was also a fascinating watch but the book was definitely better. Would recommend for those interested in seeing a darker side of startups and how important culture is.
 
 #### The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution
-4/5: TBD.
+4/5: A great history account of innovation and technology in Silicon Valley. A must read for those in the technology field as you come to appreciate how many giants whose shoulders we stand on to reach the point we are at.
 
 #### Sapiens: A Brief History of Humankind
 3.5/5: There was alot of hype around this book before going into it and unfortunately I found it to be just okay. The beginning was quite slow for me personally but really picked up and got alot more interesting when looking at the 20th century. This is probably more reflective of my interests in 20th century history. I would probably revisit this book again in the future.
@@ -184,6 +198,13 @@ The list is in chronological order of when I read them in addition to my rating 
 
 #### Why We Sleep: The New Science of Sleep
 5/5: My top recommendation on this list so far. One of the very few books to have truly changed my life. I used to be one of the staunchest advocates for burning the midnight oil continuously and had terrible sleeping/caffeine behaviour. Ever since reading this, I am now always aiming to get 8 hours of sleep a night, if not for my health but for my performance at work and studies. Furthermore, besides why we as an individual should sleep, it has quite alot of interesting commentary on the increasingly backward view we as society have towards sleep. I'd highly suggest combining this book with Deep Work if you want to increase your productivity tremendously, getting enough sleep to then do deep work. 100% recommend to anyone.
+
+#### Peak: Secrets from the New Science of Expertise
+5/5: Another book that has really changed my perspective on life. We all have a gift to get better through practice. We can reach expert level through deliberate practice. We do not have limits as the human body is remarkably adaptable and as we get better, our limits also grow. The main essence of this book is that underlying expertise is the notion of mental representations. That is, an interweaving web of knowledge and skills that we construct about topics. Through deliberate practice, we can develop our mental representations and hence develop expertise.
+
+#### Moonwalking with Einstein : The Art and Science of Remembering‎
+4/5: This was quite a fascinating book on memory. Whilst the memory techniques seemed quite disappointing to me (as they seem to be only useful for a few select task), the discussions on memorisation's role in history and its scientific underpinnings was quite intersting to me. Some interesting points stand out to me. Monotony collapses time; novelty unfolds it. Creating new memories stretches out psychological time and lengthens perceptions of our lives. So if you want a fuller life, create a denser network of memories. Expertise in a subject is a combination of having a vast amount of knowledge, an efficient memory pattern based retrieval and strong planning mechanisms in a given domain.
+
 
 #### The Order of Time
 4/5:
@@ -209,13 +230,27 @@ The list is in chronological order of when I read them in addition to my rating 
 - There is a famous study known as the _Darkhorse study_. Majority of successful people believe that their path was not the conventional path (can you see the paradox here). They worked on moment by moment mindset. They ask themselves: "Here's who I am at the moment, here's what I've found I like to do, here's what I like to learn, and here are the opportunities. Which opportunity is the best match now?".
 
 #### Sophie's World
-4.5/5: TBD.
-
-#### Killing Commendatore
-3.5/5: TBD.
+4.5/5: A nice concise and elegantly explained book on the history of philosophy, made quite accessible for a layman such as myself.
 
 #### Measure What Matters: OKRs: The Simple Idea that Drives 10x Growth
-3/5: TBD.
+3/5: John Doerr is a famous investor having backed the founders of Google, Amazon, Intuit and more. This book was a good insight for his advice on setting objectives and goals for organisations. I actually found that I was able to adopt this idea to my own personal life, by setting [Objectives and Key Results](https://en.wikipedia.org/wiki/OKR) to the goals I want to achieve. This is actually a concept that Doerr picked up from Andy Grove of Intel. 
+- An objective points us in a direction we want to go whilst Key Results are specific, time-bound, and _measurable_ metrics to track our objectives.
+- At Google, there are two types of OKRs. _Committed_ and _aspirational_ OKRs. Aspirational OKRs should generally only be 70% achieved as any higher means your OKR was not aspirational enough and any lower was delusional.
+- OKRs allows us to focus on what matters, measure our progression to our goals, and stretch us.
+
+## <a name='fic'>Fiction</a>
+
+#### Black Boy
+4.5/5: This is a fictional autobiography of Richard Wright and does an interesting job of incorporating the many different (horror) stories experienced by blacks in the South in order to convey a unified experience amongst their race. The sense of powerlessness is ever present since as a poor black boy, Wright's expectations of life will always be greater than that of what the physical reality of the world can provide him. To read the internal experience and stories of his race rather than reading about facts made the struggles and plight of blacks in the South come to life for me.
+
+#### Killing Commendatore
+3.5/5: Another typical Murakami book blending realism with fantasy. Really nice build up of the story arc and at the climax of the story, it was quite a page-turner.
+
+#### On the Road
+3/5: A book based on Jack Kerouac's own life and friends such as Allen Ginsberg. It was interesting when reading the background around the book on the Beat generation and the emphasis placed on human experiences. In particular, the graphic depiction of the human condition and attempts to record all facets of human experiences. However, the main character Dean Moriarty was an unlikeable character for me.
+
+#### Wise Blood
+2/5: I personally found this book quite hard to read but although the thematic ideas of redemption and religion struck a chord.
 
 ---
 
@@ -259,34 +294,28 @@ The list is in chronological order of when I read them in addition to my rating 
 ## Netflix Shows
 
 #### Living Undocumented
-5/5 TBD.
+4/5 TBD.
 
 #### Inside Bill's Brain: Decoding Bill's Gates
-4.5/5 TBD.
+4/5 TBD.
 
 #### American Factory
 4/5 TBD.
 
 #### The Game Changers
+4/5: TBD.
 
 #### World War II in HD Colour
 4.5/5: A really good series exploring Europe's darkest days. The way that they were able to colour old footage was incredible and the way that they weaved all the different moving parts into one smooth cohesive narrative was great.
 
 #### Dawn Wall
-5/5: Really inspiring and heart-wrenching documentary on Tommy Caldwell climbing the Dawn wall accompanied by a true partner Kevin Jorgeson.
+4/5: Really inspiring and heart-wrenching documentary on Tommy Caldwell climbing the Dawn wall accompanied by a true partner Kevin Jorgeson.
 
 #### Icarus
 4.5/5: A must watch into cheating in sports. 
 
 #### Sour Grapes
 4.5/5: A must watch into cheating in the wine industry.
-
-#### Tidying Up with Marie Kondo
-2.5/5: This did not help motivate me to start cleaning up but feel content just watching other peoples' homes get cleaned.
-
-#### Street Food
-3.5/5: Only watch the episode on Thai food!
-
 
 ---
 

@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-09T22:43:31+07:00</updated><id>http://localhost:4000/</id><title type="html">chrishyland.github.io</title><subtitle>A Shot of Data</subtitle><entry><title type="html">A simple explanation of Docker and Kubernetes</title><link href="http://localhost:4000/Kubernetes/" rel="alternate" type="text/html" title="A simple explanation of Docker and Kubernetes" /><published>2019-07-10T16:00:00+07:00</published><updated>2019-07-10T16:00:00+07:00</updated><id>http://localhost:4000/Kubernetes</id><content type="html" xml:base="http://localhost:4000/Kubernetes/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;This is a high level explanation of the difference between Kubernetes and Docker containers and what is their relationship.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;So first you have a container, which is just a way to package software and ensure your application’s code/libraries/dependencies  will always work no matter what environment/operating system you are on. You can think of it like a virtual machine except alot more lightweight and not having the additional overhead of an operating system. Docker is the most popular library for creating these containers.&lt;/p&gt;
-
-&lt;p&gt;The next level of abstraction is microservices, where you have many different apps each doing its own thing. The reason we would want to use such a set up is that if we want to make a change to a particular application, we can simply alter that application and make sure it doesn’t affect other application. It is industry standard nowadays to use microservices.&lt;/p&gt;
-
-&lt;p&gt;So now if you create a docker container for each of your applications but try to have a microservice architecture, you have an issue now since you have many different containers and you have an issue of how do we coordinate between these applications in different containers.&lt;/p&gt;
-
-&lt;p&gt;Kubernetes comes in here and “orchestrates” (fancy way of saying manages) all the containers to work together in sync. Docker also has its own container management tool called Docker Swarm but Kubernetes is just more popular. Examples of things Kubernetes does is&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;It ensures the containers talk to each other&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If a container fails, Kubernetes will distribute the work to other containers or alert other containers that a container is down&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Kubernetes can add/remove containers depending on demand helping to ensure you have just enough processing power&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Ensure consistency of storage across containers&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Acts as a load balancer by figuring which container to distribute work to&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;and many more things!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;tl;dr, Kubernetes just helps to coordinate your system for when you have multiple docker containers that need to interact with each other and scale up/down your system by adding/removing containers as your demand changes.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">2019 Reading List</title><link href="http://localhost:4000/Reading_List/" rel="alternate" type="text/html" title="2019 Reading List" /><published>2019-07-01T16:00:00+07:00</published><updated>2019-07-01T16:00:00+07:00</updated><id>http://localhost:4000/Reading_List</id><content type="html" xml:base="http://localhost:4000/Reading_List/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-31T21:58:43+07:00</updated><id>http://localhost:4000/</id><title type="html">chrishyland.github.io</title><subtitle>A Shot of Data</subtitle><entry><title type="html">2019 Reading List</title><link href="http://localhost:4000/Reading_List/" rel="alternate" type="text/html" title="2019 Reading List" /><published>2019-12-30T16:00:00+07:00</published><updated>2019-12-30T16:00:00+07:00</updated><id>http://localhost:4000/Reading_List</id><content type="html" xml:base="http://localhost:4000/Reading_List/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution &lt;a href=&quot;https://en.wikipedia.org/wiki/OKR&quot;&gt;OKRs&lt;/a&gt; is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my &lt;em&gt;personal&lt;/em&gt; review of their impact on me.&lt;/p&gt;
 
 &lt;p&gt;One disclaimer I would like to state about reading books is what Patrick Collison terms “Book-Reader-Fit”, which is that that a book’s impact and impression on you depends on where you currently are in your life. That is, a book that is currently a 2.5/5 for me may be a 4/5 if I had read it at a different stage of my life and vice versa. So these ratings that I have ascribed are not an absolute declaration of the book’s influence on me but rather how do they resonate with me as a 23-year old in his final year of his undergraduate degree.&lt;/p&gt;
@@ -40,7 +6,7 @@
 &lt;hr /&gt;
 &lt;h2 id=&quot;top-recommendations&quot;&gt;Top Recommendations&lt;/h2&gt;
 
-&lt;p&gt;Click &lt;a href=&quot;#toc&quot;&gt;here&lt;/a&gt; to see the entire reading list. The five books that have had the biggest impact on me this year:&lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&quot;#toc&quot;&gt;here&lt;/a&gt; to see the entire reading list. The seven books that have had the biggest impact on me this year:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -50,19 +16,25 @@
     &lt;p&gt;Essentialism: The Disciplined Pursuit of Less&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
+    &lt;p&gt;Peak: Secrets from the New Science of Expertise&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;p&gt;Range: How Generalists Triumph in a Specialized World&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Debt: The First 5,000 Years&lt;/p&gt;
+    &lt;p&gt;Educated&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Evicted: Poverty and Profit in the American City&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sophie’s World&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;book-list-3826&quot;&gt;Book List (38/26)&lt;/h2&gt;
+&lt;h2 id=&quot;book-list-4226&quot;&gt;Book List (42/26)&lt;/h2&gt;
 
 &lt;p&gt;The list is in chronological order of when I read them in addition to my rating of the book and any comments.&lt;/p&gt;
 &lt;h2 id=&quot;table-of-contents&quot;&gt;&lt;a name=&quot;toc&quot;&gt;Table of contents&lt;/a&gt;&lt;/h2&gt;
@@ -85,24 +57,37 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;#misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#fic&quot;&gt;Fiction&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;biographies&quot;&gt;&lt;a name=&quot;bio&quot;&gt;Biographies&lt;/a&gt;&lt;/h2&gt;
 
+&lt;h4 id=&quot;educated-a-memoir&quot;&gt;Educated: A Memoir&lt;/h4&gt;
+&lt;p&gt;5/5: An extremely powerful story showcasing someone living with such an unorthodox family. The struggles between being part of their family against conventional societal norms. The transition between her two orthogonal worlds through the power of education was truly moving.&lt;/p&gt;
+
 &lt;h4 id=&quot;american-prometheus-the-triumph-and-tragedy-of-j-robert-oppenheimer&quot;&gt;American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer&lt;/h4&gt;
-&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;4.5/5: A detailed gripping account of such a complex and often misunderstood individual. To see all the failures and shortcoming of such a prominent and influential figure was quite revealing.&lt;/p&gt;
 
 &lt;h4 id=&quot;born-a-crime-stories-from-a-south-african-childhood&quot;&gt;Born a Crime: Stories from a South African Childhood&lt;/h4&gt;
-&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;4.5/5: A hilarious book striking a fantastic balance between humour, family, brutality, and finding your place in the world.&lt;/p&gt;
 
 &lt;h4 id=&quot;when-breath-becomes-air&quot;&gt;When Breath Becomes Air&lt;/h4&gt;
-&lt;p&gt;4.5/5:TBD.&lt;/p&gt;
+&lt;p&gt;4.5/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Focus on the Present, Plan for the Future.&lt;/li&gt;
+  &lt;li&gt;When you take up another’s cross, you must be willing to sometimes get crushed by its weight.&lt;/li&gt;
+  &lt;li&gt;Death comes for all of us. It is our fate as living, breathing, metabolizing organisms.&lt;/li&gt;
+  &lt;li&gt;Life isn’t about avoiding suffering. The defining characteristic of an organism is striving.&lt;/li&gt;
+  &lt;li&gt;The tough difficult schedules for surgeons.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;permanent-record&quot;&gt;Permanent record&lt;/h4&gt;
-&lt;p&gt;4/5: TBD.&lt;/p&gt;
+&lt;p&gt;4/5: This book gave me new perspective on Edward Snowden and the importance of whistle blowers in our system.&lt;/p&gt;
 
 &lt;h4 id=&quot;shoe-dog-a-memoir-by-the-creator-of-nike&quot;&gt;Shoe Dog: A Memoir by the Creator of Nike&lt;/h4&gt;
-&lt;p&gt;4/5: TBD.&lt;/p&gt;
+&lt;p&gt;4/5: Great inspirational American rags to riches story.&lt;/p&gt;
 
 &lt;h4 id=&quot;a-beautiful-mind&quot;&gt;A Beautiful Mind&lt;/h4&gt;
 &lt;p&gt;4/5: This book was great for romanticising a life in academia, something which I long considered. The book’s exposition on the beauty of pure mathematics and Economics was really inspiring for a Math major like myself. Furthermore, it was really interesting to see many famous and notable names pop up through the book (e.g. Neumann, Belman) and seeing a much more humane side to these giants in Mathematics. Would recommend to any STEM student.&lt;/p&gt;
@@ -117,49 +102,84 @@
 &lt;p&gt;3.5/5: TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;creativity-inc&quot;&gt;Creativity inc&lt;/h4&gt;
-&lt;p&gt;3/5: TBD.&lt;/p&gt;
+&lt;p&gt;3/5: It was interesting learning about how to build a company culture where the business is all about creativity and how to effectively go about doing so.&lt;/p&gt;
 
 &lt;h4 id=&quot;chaos-monkeys&quot;&gt;Chaos Monkeys&lt;/h4&gt;
 &lt;p&gt;3/5: This was a really fun read and felt like I was reading an adventure novel set in Silicon Valley. Whilst quite sarcastic and lewd alot of the times, Chaos Monkeys really taught me about alot of the absurdities that goes in these seemingly prestigious organisations and not to take life too seriously. Would recommend for aspiring high flyers in tech/startups.&lt;/p&gt;
 
+&lt;h4 id=&quot;grinding-it-out-the-making-of-mcdonalds&quot;&gt;Grinding It Out: The Making of McDonald’s&lt;/h4&gt;
+&lt;p&gt;3/5: A heartwarming story of a man who achieved so much success at an age where most people would start to think about retiring (50 years old). A true example of someone who finds meaning and enjoyment in their work.&lt;/p&gt;
+
 &lt;h4 id=&quot;the-man-who-solved-the-market-how-james-simons-launched-the-quant-revolution&quot;&gt;The man who solved the market: How James Simons launched the quant revolution&lt;/h4&gt;
-&lt;p&gt;2.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;2.5/5: The mathematician in me loved the higher-level mathematics discussed in the book. However, I felt that there were alot of times, it didn’t delve into the psyche of James Simons.&lt;/p&gt;
 
 &lt;h4 id=&quot;the-everything-store&quot;&gt;The Everything Store&lt;/h4&gt;
 &lt;p&gt;2.5/5: An interesting exploration of the intense grit and tenacity of Jeff Bezos. Whilst there was some exploration of his decision making framework, I found that I was not able to take away much else. It was interesting to see in retrospect how insane it must have seen to people for him to leave his high-paying job in trading to start a website selling books. If you are interested in reading autobiographies, there are alot more interesting ones you could find out there.&lt;/p&gt;
 
 &lt;h4 id=&quot;that-will-never-work-the-birth-of-netflix-and-the-amazing-life-of-an-idea&quot;&gt;That Will Never Work: The Birth of Netflix and the Amazing Life of an Idea&lt;/h4&gt;
-&lt;p&gt;2.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;2.5/5&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You have to learn to love the problem, not the solution. That’s how you stay engaged when things take longer than you expected.&lt;/li&gt;
+  &lt;li&gt;“When you start a company, what you’re really doing is getting other people to latch on to an idea”.&lt;/li&gt;
+  &lt;li&gt;“Most business plans are a complete waste of time … So the trick is to take your idea and set it on a collision course with reality as soon as possible”.&lt;/li&gt;
+  &lt;li&gt;You can figure out the correct technology trend but not the timing.&lt;/li&gt;
+  &lt;li&gt;Tightly aligned and loosely coupled culture is the way to go for when you hire smart people in your company.&lt;/li&gt;
+  &lt;li&gt;Smart people will figure out tough problems.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;alibaba-the-house-that-jack-ma-built&quot;&gt;Alibaba: The House That Jack Ma Built&lt;/h4&gt;
-&lt;p&gt;2/5: TBD.&lt;/p&gt;
+&lt;p&gt;2/5: I didn’t particularly feel like I was given a close up look at Jack Ma nor felt that the book did justice to the remarkable work he has done.&lt;/p&gt;
 
 &lt;h2 id=&quot;social-science&quot;&gt;&lt;a name=&quot;ss&quot;&gt;Social Science&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h4 id=&quot;evicted-poverty-and-profit-in-the-american-city&quot;&gt;Evicted: Poverty and Profit in the American City&lt;/h4&gt;
-&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;4.5/5: Extremely powerful book on understanding the plight of the lower socio-economic classes. Why do the poor spend their money seemingly frivolously? Finally, it really struck a chord in me on the importance of having a place to call home and lay down roots.&lt;/p&gt;
 
 &lt;h4 id=&quot;misbehaving-the-making-of-behavioural-economics&quot;&gt;Misbehaving: The Making of Behavioural Economics&lt;/h4&gt;
 &lt;p&gt;2.5/5: I’ve read Daniel Kahneman’s Thinking, Fast and Slow last year and I found that to be a more interesting book on dealing with Behavioural Economics. I would suggest Kahneman’s book as alot of the content from Misbehaving can be found in Kahneman’s book whilst going into more detail. There were some interesting anecdotes in this book but nothing too memorable for me.&lt;/p&gt;
 
 &lt;h2 id=&quot;personal-development&quot;&gt;&lt;a name=&quot;pd&quot;&gt;Personal Development&lt;/a&gt;&lt;/h2&gt;
 &lt;h4 id=&quot;essentialism-the-disciplined-pursuit-of-less&quot;&gt;Essentialism: The Disciplined Pursuit of Less&lt;/h4&gt;
-&lt;p&gt;5/5: TBD.&lt;/p&gt;
+&lt;p&gt;5/5: This book was a game changer in helping me prioritise my life and HOW should I go about achieving my goals in life.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Success begets more opportunities. This leads to the undisciplined pursuit of more and distraction from the essential and things that make you successful in the first place. This then leads to failure.&lt;/li&gt;
+  &lt;li&gt;Identify what is essential (5 things) and learn how to say no.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;flow-the-psychology-of-optimal-experience&quot;&gt;Flow: The Psychology of Optimal Experience&lt;/h4&gt;
-&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+&lt;h4 id=&quot;the-algebra-of-happiness-notes-on-the-pursuit-of-success-love-and-meaning&quot;&gt;The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning&lt;/h4&gt;
+&lt;p&gt;4.5/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When you are young, focus on &lt;em&gt;zipcode&lt;/em&gt; and &lt;em&gt;credentials&lt;/em&gt;. These two factors are the biggest predictors of success and wealth. Only a select few megacities are generating economic growth and just like playing against a better tennis player, rallying with the best will improve your game. These are hard to do when you’re older.&lt;/li&gt;
+  &lt;li&gt;Sacrifice balance when you’re young so you can have balance later (if you’re aiming to be in the 0.1%). This is to achieve financial stability and professional success early on.&lt;/li&gt;
+  &lt;li&gt;Following your passions is terrible advice. Most people do not know what their passions are. Find out what you’re good at and become great at it. As a result, you’ll earn status and money and will become passionate about your work over time.&lt;/li&gt;
+  &lt;li&gt;Don’t forget to enjoy time and activities with the ones you care about.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;reboot-leadership-and-the-art-of-growing-up&quot;&gt;Reboot: Leadership and the Art of Growing Up&lt;/h4&gt;
 &lt;p&gt;4/5: Reboot was a nice breath of fresh air seeing someone who has such an accomplished career talk about such personal and heartfelt issues. It is easy to get caught up in the everyday grind but this book really helped me to stop and reflect on why I do what I do. A recommendation for high-flyers that are starting out in their careers.&lt;/p&gt;
 
 &lt;h4 id=&quot;the-art-of-learning-an-inner-journey-to-optimal-performance&quot;&gt;The Art of Learning: An Inner Journey to Optimal Performance&lt;/h4&gt;
-&lt;p&gt;4/5: TBD.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-algebra-of-happiness-notes-on-the-pursuit-of-success-love-and-meaning&quot;&gt;The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning&lt;/h4&gt;
-&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;4/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Two notions of development pyschology and learning. &lt;em&gt;Entity theorists&lt;/em&gt; attributes success and failure to an unalterable level of ability. &lt;em&gt;Incremental theorists&lt;/em&gt; argue that hard work can be mastered step by step. Be the latter.&lt;/li&gt;
+  &lt;li&gt;“The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity. &lt;em&gt;Usually, growth comes at the expense of previous comfort of safety&lt;/em&gt;.”&lt;/li&gt;
+  &lt;li&gt;Learn how to regain composure after a big mistake. It is very easy to spiral downwards after making a big mistake.&lt;/li&gt;
+  &lt;li&gt;Build a trigger. Learn how to turn yourselves on into a focused state for whenever you need it. This can be listening to a song that pumps you out or meditating.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;deep-work&quot;&gt;Deep Work&lt;/h4&gt;
 &lt;p&gt;3.5/5: The main premise of the book is to focus on developing a deep level of expertise and doing work that is considered to be “deep”, which usually coincides with work that can’t be easily replicable by others and adds alot more value, a skill needed to succeed in the modern world. The idea of blocking 3-4 hours of your day to focus on a single task with no distractions (e.g. friends) was immensely useful for helping my university studies by dramatically increasing the efficiency of my study sessions and giving me more time to focus on other aspects of my life. The reason that the rating wasn’t any higher was that I didn’t find the rest of the book that interesting after the sections mentioned above and found it to be repetitive. I would actually suggest that reading a summary of this book or just some of it would be sufficient in taking away the main messages of the book.&lt;/p&gt;
+
+&lt;h4 id=&quot;flow-the-psychology-of-optimal-experience&quot;&gt;Flow: The Psychology of Optimal Experience&lt;/h4&gt;
+&lt;p&gt;3.5/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We enjoy ourselves when performing challenging activities requiring skills. You know the feeling of when you’re completely absorbed in something and can work away at it for hours? That is flow. Getting into flow constantly leads to happiness.&lt;/li&gt;
+  &lt;li&gt;Find tasks where you can see progress and receive feedback to help you achieve flow.&lt;/li&gt;
+  &lt;li&gt;The best moments usually occur when a person’s body or mind is stretched to its limits in a voluntary effort to accomplish something difficult and worthwhile.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;never-split-the-difference&quot;&gt;Never Split the Difference&lt;/h4&gt;
+&lt;p&gt;2.5/5: The main takeaways from this book for me are the notion of using tactical empathy to understand your counterparty better. Furthermore, instead of the traditional economic notions of negotiations being a rational process, it is in fact quite an irrational process. Finally, there are many different types of no’s and yes’.&lt;/p&gt;
 
 &lt;h4 id=&quot;getting-things-done&quot;&gt;Getting Things Done&lt;/h4&gt;
 &lt;p&gt;2.5/5: The only real takeaway I got from this book was having a collection bucket and action list. That is, that our brain is terrible at storing information and hence the moment we have an idea/thought in which we need to recollect later on, WRITE IT DOWN IMMEDIATELY. Hence, having a collection bucket to collect these thoughts/ideas and then moving them to your action list when it is time to get things done. I didn’t find the other aspects of the GTD system that useful for me personally. I think personally I already have quite a strong framework in place to get stuff done that I am quite happy with currently.&lt;/p&gt;
@@ -179,37 +199,84 @@
 &lt;p&gt;4/5: This was an extremely interesting read into how Silicon Valley can still get some things terribly wrong. In particular, to always have a grain of salt when listening to the supposedly game-changing opportunities happening in the Valley. The documentary was also a fascinating watch but the book was definitely better. Would recommend for those interested in seeing a darker side of startups and how important culture is.&lt;/p&gt;
 
 &lt;h4 id=&quot;the-innovators-how-a-group-of-hackers-geniuses-and-geeks-created-the-digital-revolution&quot;&gt;The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution&lt;/h4&gt;
-&lt;p&gt;4/5: TBD.&lt;/p&gt;
+&lt;p&gt;4/5: A great history account of innovation and technology in Silicon Valley. A must read for those in the technology field as you come to appreciate how many giants whose shoulders we stand on to reach the point we are at.&lt;/p&gt;
 
 &lt;h4 id=&quot;sapiens-a-brief-history-of-humankind&quot;&gt;Sapiens: A Brief History of Humankind&lt;/h4&gt;
 &lt;p&gt;3.5/5: There was alot of hype around this book before going into it and unfortunately I found it to be just okay. The beginning was quite slow for me personally but really picked up and got alot more interesting when looking at the 20th century. This is probably more reflective of my interests in 20th century history. I would probably revisit this book again in the future.&lt;/p&gt;
 
 &lt;h4 id=&quot;guns-germs-and-steel&quot;&gt;Guns, Germs, and Steel&lt;/h4&gt;
-&lt;p&gt;2/5: TBD.&lt;/p&gt;
+&lt;p&gt;2/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It is ultimately geography that determines the differences between countries.&lt;/li&gt;
+  &lt;li&gt;The diversity and density of Eurasian populations created an immunity to germs that would later wipe out the more isolated populations of the Americas.&lt;/li&gt;
+  &lt;li&gt;Farming and domesticating animals provide social stability that is lacking in hunter-gatherer societies. Labor specialization enables certain groups to develop weapons.&lt;/li&gt;
+  &lt;li&gt;Major portions of Eurasia had a natural advantage in developing agriculture and domesticating animals because of geography and the presence of plants and animals that could be easily domesticated.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;science&quot;&gt;&lt;a name=&quot;science&quot;&gt;Science&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h4 id=&quot;why-we-sleep-the-new-science-of-sleep&quot;&gt;Why We Sleep: The New Science of Sleep&lt;/h4&gt;
 &lt;p&gt;5/5: My top recommendation on this list so far. One of the very few books to have truly changed my life. I used to be one of the staunchest advocates for burning the midnight oil continuously and had terrible sleeping/caffeine behaviour. Ever since reading this, I am now always aiming to get 8 hours of sleep a night, if not for my health but for my performance at work and studies. Furthermore, besides why we as an individual should sleep, it has quite alot of interesting commentary on the increasingly backward view we as society have towards sleep. I’d highly suggest combining this book with Deep Work if you want to increase your productivity tremendously, getting enough sleep to then do deep work. 100% recommend to anyone.&lt;/p&gt;
 
+&lt;h4 id=&quot;peak-secrets-from-the-new-science-of-expertise&quot;&gt;Peak: Secrets from the New Science of Expertise&lt;/h4&gt;
+&lt;p&gt;5/5: Another book that has really changed my perspective on life. We all have a gift to get better through practice. We can reach expert level through deliberate practice. We do not have limits as the human body is remarkably adaptable and as we get better, our limits also grow. The main essence of this book is that underlying expertise is the notion of mental representations. That is, an interweaving web of knowledge and skills that we construct about topics. Through deliberate practice, we can develop our mental representations and hence develop expertise.&lt;/p&gt;
+
+&lt;h4 id=&quot;moonwalking-with-einstein--the-art-and-science-of-remembering&quot;&gt;Moonwalking with Einstein : The Art and Science of Remembering‎&lt;/h4&gt;
+&lt;p&gt;4/5: This was quite a fascinating book on memory. Whilst the memory techniques seemed quite disappointing to me (as they seem to be only useful for a few select task), the discussions on memorisation’s role in history and its scientific underpinnings was quite intersting to me. Some interesting points stand out to me. Monotony collapses time; novelty unfolds it. Creating new memories stretches out psychological time and lengthens perceptions of our lives. So if you want a fuller life, create a denser network of memories. Expertise in a subject is a combination of having a vast amount of knowledge, an efficient memory pattern based retrieval and strong planning mechanisms in a given domain.&lt;/p&gt;
+
 &lt;h4 id=&quot;the-order-of-time&quot;&gt;The Order of Time&lt;/h4&gt;
-&lt;p&gt;4/5: TBD.&lt;/p&gt;
+&lt;p&gt;4/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Time is not the same everywhere. It slows down when we are near objects with large mass.&lt;/li&gt;
+  &lt;li&gt;Time is a local phenomena. There is no such thing as time for the entire universe, time exists locally.&lt;/li&gt;
+  &lt;li&gt;Time does not exists when we are measuring things smaller than plank time.&lt;/li&gt;
+  &lt;li&gt;The second law of thermodynamics states that total entropy of a system can never decrease over time. Hence, whenever there is a way to tell the past and future in a system, heat is involved somewhere.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;energy-for-future-presidents-the-science-behind-the-headlines&quot;&gt;Energy for Future Presidents: The Science Behind the Headlines&lt;/h4&gt;
-&lt;p&gt;3/5: TBD.&lt;/p&gt;
+&lt;p&gt;3/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nuclear energy has had alot of misconceived notions in public opinion. It provides cheap and clean energy. The only cost is the massive CAPEX cost to build a nuclear station.&lt;/li&gt;
+  &lt;li&gt;Getting rid of radioactive waste is a simple process for us to do now.&lt;/li&gt;
+  &lt;li&gt;You can’t have a nuclear explosion in a nuclear factory as the uranium used is not pure enough.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;miscellaneous&quot;&gt;&lt;a name=&quot;misc&quot;&gt;Miscellaneous&lt;/a&gt;&lt;/h2&gt;
 &lt;h4 id=&quot;range-how-generalists-triumph-in-a-specialized-world&quot;&gt;Range: How Generalists Triumph in a Specialized World&lt;/h4&gt;
-&lt;p&gt;5/5: TBD.&lt;/p&gt;
+&lt;p&gt;5/5:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Take time and accumulate range of experience and skills. Once you sample enough and feel like you know yourself well enough, go deep on an interest and get really good.&lt;/li&gt;
+  &lt;li&gt;Meandering around instead of specialising in the beginning is OKAY.&lt;/li&gt;
+  &lt;li&gt;Our work preferences and life preferences generally do not stay the same.&lt;/li&gt;
+  &lt;li&gt;Kind vs wicket environments explain why some things like chess and golf benefit from fast and early specialisation.&lt;/li&gt;
+  &lt;li&gt;Beware of premature optimisation for career. Better to choose from the best options you have. Our selves change dramatically over time.&lt;/li&gt;
+  &lt;li&gt;There is a famous study known as the &lt;em&gt;Darkhorse study&lt;/em&gt;. Majority of successful people believe that their path was not the conventional path (can you see the paradox here). They worked on moment by moment mindset. They ask themselves: “Here’s who I am at the moment, here’s what I’ve found I like to do, here’s what I like to learn, and here are the opportunities. Which opportunity is the best match now?”.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;sophies-world&quot;&gt;Sophie’s World&lt;/h4&gt;
-&lt;p&gt;4.5/5: TBD.&lt;/p&gt;
-
-&lt;h4 id=&quot;killing-commendatore&quot;&gt;Killing Commendatore&lt;/h4&gt;
-&lt;p&gt;3.5/5: TBD.&lt;/p&gt;
+&lt;p&gt;4.5/5: A nice concise and elegantly explained book on the history of philosophy, made quite accessible for a layman such as myself.&lt;/p&gt;
 
 &lt;h4 id=&quot;measure-what-matters-okrs-the-simple-idea-that-drives-10x-growth&quot;&gt;Measure What Matters: OKRs: The Simple Idea that Drives 10x Growth&lt;/h4&gt;
-&lt;p&gt;3/5: TBD.&lt;/p&gt;
+&lt;p&gt;3/5: John Doerr is a famous investor having backed the founders of Google, Amazon, Intuit and more. This book was a good insight for his advice on setting objectives and goals for organisations. I actually found that I was able to adopt this idea to my own personal life, by setting &lt;a href=&quot;https://en.wikipedia.org/wiki/OKR&quot;&gt;Objectives and Key Results&lt;/a&gt; to the goals I want to achieve. This is actually a concept that Doerr picked up from Andy Grove of Intel.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;An objective points us in a direction we want to go whilst Key Results are specific, time-bound, and &lt;em&gt;measurable&lt;/em&gt; metrics to track our objectives.&lt;/li&gt;
+  &lt;li&gt;At Google, there are two types of OKRs. &lt;em&gt;Committed&lt;/em&gt; and &lt;em&gt;aspirational&lt;/em&gt; OKRs. Aspirational OKRs should generally only be 70% achieved as any higher means your OKR was not aspirational enough and any lower was delusional.&lt;/li&gt;
+  &lt;li&gt;OKRs allows us to focus on what matters, measure our progression to our goals, and stretch us.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fiction&quot;&gt;&lt;a name=&quot;fic&quot;&gt;Fiction&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4 id=&quot;black-boy&quot;&gt;Black Boy&lt;/h4&gt;
+&lt;p&gt;4.5/5: This is a fictional autobiography of Richard Wright and does an interesting job of incorporating the many different (horror) stories experienced by blacks in the South in order to convey a unified experience amongst their race. The sense of powerlessness is ever present since as a poor black boy, Wright’s expectations of life will always be greater than that of what the physical reality of the world can provide him. To read the internal experience and stories of his race rather than reading about facts made the struggles and plight of blacks in the South come to life for me.&lt;/p&gt;
+
+&lt;h4 id=&quot;killing-commendatore&quot;&gt;Killing Commendatore&lt;/h4&gt;
+&lt;p&gt;3.5/5: Another typical Murakami book blending realism with fantasy. Really nice build up of the story arc and at the climax of the story, it was quite a page-turner.&lt;/p&gt;
+
+&lt;h4 id=&quot;on-the-road&quot;&gt;On the Road&lt;/h4&gt;
+&lt;p&gt;3/5: A book based on Jack Kerouac’s own life and friends such as Allen Ginsberg. It was interesting when reading the background around the book on the Beat generation and the emphasis placed on human experiences. In particular, the graphic depiction of the human condition and attempts to record all facets of human experiences. However, the main character Dean Moriarty was an unlikeable character for me.&lt;/p&gt;
+
+&lt;h4 id=&quot;wise-blood&quot;&gt;Wise Blood&lt;/h4&gt;
+&lt;p&gt;2/5: I personally found this book quite hard to read but although the thematic ideas of redemption and religion struck a chord.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -253,33 +320,28 @@
 &lt;h2 id=&quot;netflix-shows&quot;&gt;Netflix Shows&lt;/h2&gt;
 
 &lt;h4 id=&quot;living-undocumented&quot;&gt;Living Undocumented&lt;/h4&gt;
-&lt;p&gt;5/5 TBD.&lt;/p&gt;
+&lt;p&gt;4/5 TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;inside-bills-brain-decoding-bills-gates&quot;&gt;Inside Bill’s Brain: Decoding Bill’s Gates&lt;/h4&gt;
-&lt;p&gt;4.5/5 TBD.&lt;/p&gt;
+&lt;p&gt;4/5 TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;american-factory&quot;&gt;American Factory&lt;/h4&gt;
 &lt;p&gt;4/5 TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;the-game-changers&quot;&gt;The Game Changers&lt;/h4&gt;
+&lt;p&gt;4/5: TBD.&lt;/p&gt;
 
 &lt;h4 id=&quot;world-war-ii-in-hd-colour&quot;&gt;World War II in HD Colour&lt;/h4&gt;
 &lt;p&gt;4.5/5: A really good series exploring Europe’s darkest days. The way that they were able to colour old footage was incredible and the way that they weaved all the different moving parts into one smooth cohesive narrative was great.&lt;/p&gt;
 
 &lt;h4 id=&quot;dawn-wall&quot;&gt;Dawn Wall&lt;/h4&gt;
-&lt;p&gt;5/5: Really inspiring and heart-wrenching documentary on Tommy Caldwell climbing the Dawn wall accompanied by a true partner Kevin Jorgeson.&lt;/p&gt;
+&lt;p&gt;4/5: Really inspiring and heart-wrenching documentary on Tommy Caldwell climbing the Dawn wall accompanied by a true partner Kevin Jorgeson.&lt;/p&gt;
 
 &lt;h4 id=&quot;icarus&quot;&gt;Icarus&lt;/h4&gt;
 &lt;p&gt;4.5/5: A must watch into cheating in sports.&lt;/p&gt;
 
 &lt;h4 id=&quot;sour-grapes&quot;&gt;Sour Grapes&lt;/h4&gt;
 &lt;p&gt;4.5/5: A must watch into cheating in the wine industry.&lt;/p&gt;
-
-&lt;h4 id=&quot;tidying-up-with-marie-kondo&quot;&gt;Tidying Up with Marie Kondo&lt;/h4&gt;
-&lt;p&gt;2.5/5: This did not help motivate me to start cleaning up but feel content just watching other peoples’ homes get cleaned.&lt;/p&gt;
-
-&lt;h4 id=&quot;street-food&quot;&gt;Street Food&lt;/h4&gt;
-&lt;p&gt;3.5/5: Only watch the episode on Thai food!&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -305,7 +367,41 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;send-through-an-email-or-linkedin-message-if-you-have-suggestionsrecommendations-for-books-to-readpodcasts-to-listen-to&quot;&gt;Send through an email or Linkedin message if you have suggestions/recommendations for books to read/podcasts to listen to!&lt;/h3&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Other" /><summary type="html">Introduction I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution OKRs is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my personal review of their impact on me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Runge-Kutta Methods</title><link href="http://localhost:4000/Runge-Kutta/" rel="alternate" type="text/html" title="Runge-Kutta Methods" /><published>2019-06-25T16:00:00+07:00</published><updated>2019-06-25T16:00:00+07:00</updated><id>http://localhost:4000/Runge-Kutta</id><content type="html" xml:base="http://localhost:4000/Runge-Kutta/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;h3 id=&quot;send-through-an-email-or-linkedin-message-if-you-have-suggestionsrecommendations-for-books-to-readpodcasts-to-listen-to&quot;&gt;Send through an email or Linkedin message if you have suggestions/recommendations for books to read/podcasts to listen to!&lt;/h3&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Other" /><summary type="html">Introduction I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution OKRs is to expand my mental model of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my personal review of their impact on me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">A simple explanation of Docker and Kubernetes</title><link href="http://localhost:4000/Kubernetes/" rel="alternate" type="text/html" title="A simple explanation of Docker and Kubernetes" /><published>2019-07-10T16:00:00+07:00</published><updated>2019-07-10T16:00:00+07:00</updated><id>http://localhost:4000/Kubernetes</id><content type="html" xml:base="http://localhost:4000/Kubernetes/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This is a high level explanation of the difference between Kubernetes and Docker containers and what is their relationship.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;So first you have a container, which is just a way to package software and ensure your application’s code/libraries/dependencies  will always work no matter what environment/operating system you are on. You can think of it like a virtual machine except alot more lightweight and not having the additional overhead of an operating system. Docker is the most popular library for creating these containers.&lt;/p&gt;
+
+&lt;p&gt;The next level of abstraction is microservices, where you have many different apps each doing its own thing. The reason we would want to use such a set up is that if we want to make a change to a particular application, we can simply alter that application and make sure it doesn’t affect other application. It is industry standard nowadays to use microservices.&lt;/p&gt;
+
+&lt;p&gt;So now if you create a docker container for each of your applications but try to have a microservice architecture, you have an issue now since you have many different containers and you have an issue of how do we coordinate between these applications in different containers.&lt;/p&gt;
+
+&lt;p&gt;Kubernetes comes in here and “orchestrates” (fancy way of saying manages) all the containers to work together in sync. Docker also has its own container management tool called Docker Swarm but Kubernetes is just more popular. Examples of things Kubernetes does is&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;It ensures the containers talk to each other&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a container fails, Kubernetes will distribute the work to other containers or alert other containers that a container is down&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kubernetes can add/remove containers depending on demand helping to ensure you have just enough processing power&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ensure consistency of storage across containers&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acts as a load balancer by figuring which container to distribute work to&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and many more things!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;tl;dr, Kubernetes just helps to coordinate your system for when you have multiple docker containers that need to interact with each other and scale up/down your system by adding/removing containers as your demand changes.&lt;/p&gt;</content><author><name>chrishyland</name></author><category term="blog" /><category term="Computer Science" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Runge-Kutta Methods</title><link href="http://localhost:4000/Runge-Kutta/" rel="alternate" type="text/html" title="Runge-Kutta Methods" /><published>2019-06-25T16:00:00+07:00</published><updated>2019-06-25T16:00:00+07:00</updated><id>http://localhost:4000/Runge-Kutta</id><content type="html" xml:base="http://localhost:4000/Runge-Kutta/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Runge-Kutta methods are a family of iterative methods used for solving ordinary differential equations in the setting of Initial Value problems (IVP) where we are given a differential equation &lt;script type=&quot;math/tex&quot;&gt;y'(t) = f(t,y(t))&lt;/script&gt; over a time interval &lt;script type=&quot;math/tex&quot;&gt;[t_0,t_1]&lt;/script&gt; with a starting point &lt;script type=&quot;math/tex&quot;&gt;y(t_0) = y_0&lt;/script&gt;. We note that Boundary Value Problems (BVP) are differential equations are different to IVP as there are conditions imposed at the boundaries/extremes of the independent variable. BVP will require different numerical methods.&lt;/p&gt;
 
 &lt;p&gt;The significance of IVP problems is that we are given an initial point and the slope of the function at that point ,from the DE itself. Hence, we want to figure out what is the next point. The algorithm at a high level for Runge-Kutta methods would be taking one step along the slope and picking our next point &lt;script type=&quot;math/tex&quot;&gt;y_*&lt;/script&gt; from that step. We then evaluate the slope at that new point &lt;script type=&quot;math/tex&quot;&gt;y_*&lt;/script&gt; and step along that new slope. We iterate this process. Hence, the issues we have are:&lt;/p&gt;
