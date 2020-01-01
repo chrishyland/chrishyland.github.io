@@ -38,7 +38,6 @@ Click [here](#toc) to see the entire reading list. The seven books that has had 
 
 ## Book List (50/26)
 
-The list is in chronological order of when I read them in addition to my rating of the book and any comments.
 ## <a name='toc'>Table of contents</a>
 - [Biographies](#bio)
 
