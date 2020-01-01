@@ -11,7 +11,7 @@ author: chrishyland
 description: My reading list for 2019
 ---
 ## Introduction
-I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution [OKRs](https://en.wikipedia.org/wiki/OKR) was to expand my [mental representation](https://en.wikipedia.org/wiki/Mental_representation) of the world by reading 26 books this year, a book every 2 weeks. This list is a compilation of my progress so far and my *personal* review of their impact on me.
+I love to read books but unfortunately I have not placed reading books as a priority during my university years. It is very easy to conflate technical growth with personal growth. Hence, this year, one of my New Year resolution [OKRs](https://en.wikipedia.org/wiki/OKR) was to expand my [mental representation](https://en.wikipedia.org/wiki/Mental_representation) of the world by reading 26 books this year, a book every 2 weeks (Update: Managed to exceed this goal by 24 books). This list is a compilation of my progress so far and my *personal* review of their impact on me.
 
 One disclaimer I would like to state about reading books is what Patrick Collison terms "Book-Reader-Fit", which is that that a book's impact and impression on you depends on where you currently are in your life. That is, a book that is currently a 2.5/5 for me may be a 4/5 if I had read it at a different stage of my life and vice versa. So these ratings that I have ascribed are not an absolute declaration of the book's influence on me but rather how do they resonate with me as a 23-year old in his final year of his undergraduate degree.
 
