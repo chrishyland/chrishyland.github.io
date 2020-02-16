@@ -1,6 +1,6 @@
 ---
-title:  "2019 Reading List"
-date:   2019-12-30 09:00:00
+title:  "2020 Reading List"
+date:   2020-01-01 09:00:00
 layout: post
 image: /assets/images/markdown.jpg
 headerImage: False
@@ -12,9 +12,9 @@ description: My reading list for 2020
 ---
 ## Introduction
 
-The goal for this year is 52 books.
+The goal for this year is 52 books. The theme for the year is to incorporate more fiction and Economics books into my repertoire. 
 
-## Book List (6/52)
+## Book List (10/52)
 
 #### Franny and Zooey
 2/5
@@ -34,6 +34,18 @@ The goal for this year is 52 books.
 #### Seven Brief Lessons On Physics
 4.5/5
 
+#### Mindset: The New Psychology of Success
+4/5
+
+#### 12 Rules for Life: An Antidote to Chaos
+5/5
+
+#### The Mckinsey Way: Using the Techniques of the World's Top Strategic Consultants to Help You and Your Business
+3.5/5
+
+#### The Rosie Project
+3/5
+
 ---
 ## Online Courses Taken
 
@@ -43,6 +55,9 @@ The goal for this year is 52 books.
 ---
 
 ## Netflix Shows
+
+#### Rise of Empires: Ottoman
+3/5
 
 #### The Last Czar
 4/5
