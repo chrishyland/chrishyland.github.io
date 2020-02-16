@@ -46,6 +46,9 @@ The goal for this year is 52 books. The theme for the year is to incorporate mor
 #### The Rosie Project
 3/5
 
+#### Being Mortal: Illness, Medicine and What Matters in the End
+2.5/5
+
 ---
 ## Online Courses Taken
 
