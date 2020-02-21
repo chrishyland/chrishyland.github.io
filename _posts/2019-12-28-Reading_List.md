@@ -1,6 +1,6 @@
 ---
 title:  "2019 Reading List"
-date:   2019-12-30 09:00:00
+date:   2019-12-28 09:00:00
 layout: post
 image: /assets/images/markdown.jpg
 headerImage: False
