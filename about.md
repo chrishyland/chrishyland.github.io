@@ -5,7 +5,7 @@ layout: page
 
 ## Hey!
 
-I am currently an honours year student at the University of Sydney. As an aspiring polymath, my majors are in:  Pure Mathematics, Computer Science, Econometrics and Statistics and with minors in Business Analytics, Economics, and Finance.
+I am currently an honours year student at the University of Sydney studying Statistics. I have majored in:  Pure Mathematics, Computer Science, and Econometrics and with minors in Business Analytics, Economics, and Finance.
 
 ### About myself
 I'm currently exploring the blogosphere and contributing with my knowledge on the intersection of Machine Learning, Computer Science, Statistics, Mathematics, and Econometrics. I have worn many hats, from being a data engineer at [me&u](https://www.meandu.com.au/), a machine learning engineer at [IAG](https://www.iag.com.au/), NLP engineer at [SoDa Labs](https://sodalabs.io/), data scientist and growth hacker at [Liven](https://www.liven.com.au/), quant at Goldman Sachs, a computational economist at [QuantEcon](https://quantecon.org/), technical consultant with the ANOVA Project, head academic tutor in the Econometrics department, and sleep deprived student.
@@ -43,6 +43,8 @@ Below is a list of some of the courses I have taken during my undergraduate stud
 - Econometric Analysis
 - Intermediate Econometrics
 #### Statistics
+- Measure Theoretic Probability Theory and Mathematical Statistics
+- Networks and High Dimensional Inference
 - Advanced Statistical Inference
 - Advanced Probability Theory
 - Statistical Tests
