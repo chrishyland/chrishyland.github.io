@@ -88,6 +88,8 @@ We study the role that safe-asset premia (“convenience yields”), a pervasive
 
 ### Who Holds the Risk? Demographics and the Market Price of Risk
 
+<em>with Tim Willems</em>
+
 **Abstract**
 
 This paper develops a continuous-time endowment economy in which demographics shape asset prices through a composition channel. In a Blanchard–Yaari environment with gradual retirement, the share of consumption financed by dividends rather than labor income becomes the sufficient statistic that links population aging to the price of risk. When retirements are longer or earnings decline more steeply with age, the economy relies more on dividend income to finance consumption. Because dividend income is more exposed to aggregate risk than labor income in the data, this compositional shift raises consumption volatility, increases the volatility of the pricing kernel, and thereby elevates the market price of risk and risk premia. Longer lifespans also reduce the risk‑free rate directly through lower mortality discounting and indirectly through higher consumption volatility; longer retirements tend to depress the risk‑free rate through the volatility channel while raising risk premia. The mechanism delivers an alternative to rare‑disaster narratives for understanding secular movements in risk premia.
