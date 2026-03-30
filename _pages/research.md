@@ -12,7 +12,7 @@ author_profile: true
 
 ### [Monetary Policy in the Presence of Tail Risks (JMP)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)
 
-<small><em>Presentations: LSE Macro PhD Workshop, St Andrews Workshop in Macroeconomics</em></small>
+<small><em>Presentations: LSE Macro PhD Workshop; St Andrews Workshop in Macroeconomics</em></small>
 
 This paper develops a New-Keynesian macro-finance model in which higher-order uncertainty directly affects asset prices, the natural rate, and optimal policy.
 
@@ -22,7 +22,7 @@ This paper develops a New-Keynesian macro-finance model in which higher-order un
 
 <em>with Theofanis Papamichalis, Dimitrios P. Tsomocos, and Nikolaos Romanidis</em>
 
-<small><em>Presentation: SAET 2025</em></small>
+<small><em>Presentation: SAET 2025; Cowles Foundation 20th Annual Conference on General Equilibrium and its Applications</em></small>
 
 This paper shows that fluctuations in corporate credit spreads are driven primarily by the time-varying risk-bearing capacity of financial intermediaries rather than firm fundamentals. We develop a continuous-time heterogeneous-agent model that resolves the credit-spread puzzle, highlights the non-neutrality of default, and characterizes the welfare trade-offs of default penalties.
 
@@ -32,7 +32,7 @@ This paper shows that fluctuations in corporate credit spreads are driven primar
 
 <em>with Tobias Kawalec</em>
 
-<small><em>Presentations: Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop</em></small>
+<small><em>Presentations: Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop; Econometric Society North American Summer Meeting</em></small>
 
 We develop and estimate an open-economy present-value framework showing that debt fluctuations reflect both surplus revisions and discount-rate news tied to global yields and exchange-rate expectations. A two-country model demonstrates how fiscal shocks in a hegemon propagate internationally through exchange rates and real interest rates, generating fiscal contagion.
 
@@ -85,14 +85,5 @@ We propose a novel approach to flexibly estimate the conditional distribution of
 <small><em>Winner of Best Doctoral Paper at Saïd Business School, 2023</em></small>
 
 I construct a general equilibrium model to study how a retail CBDC affects monetary transmission and financial stability. While increased banking competition improves liquidity, deposit disintermediation raises funding costs and can reduce welfare under aggregate uncertainty.
-
----
-
-### Convenience Yields as Fiscal Space
-
-<em>with Tobias Kawalec</em>
-
-We show that safe-asset premia (“convenience yields”) relax effective government budget constraints and expand the region of monetary–fiscal determinacy. In a two-country New Keynesian framework, these premia also reshape exchange-rate dynamics and help reconcile several international macro puzzles.
-
 
 
