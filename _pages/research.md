@@ -12,9 +12,30 @@ author_profile: true
 
 ### [Monetary Policy in the Presence of Tail Risks (JMP)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)
 
-<small><em>Presentations: LSE Macro PhD Workshop; St Andrews Workshop in Macroeconomics</em></small>
+<small><em>Presentations: LSE Macro PhD Workshop; St Andrews Workshop in Macroeconomics, Central Bank Research Association (CEBRA) Annual Meeting</em></small>
 
 This paper develops a New-Keynesian macro-finance model in which higher-order uncertainty directly affects asset prices, the natural rate, and optimal policy.
+
+
+### [Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444)
+
+<em>with Tobias Kawalec</em>
+
+<small><em>Presentations: Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop; Econometric Society North American Summer Meeting</em></small>
+
+We develop and estimate an open-economy present-value framework showing that debt fluctuations reflect both surplus revisions and discount-rate news tied to global yields and exchange-rate expectations. A two-country model demonstrates how fiscal shocks in a hegemon propagate internationally through exchange rates and real interest rates, generating fiscal contagion.
+
+---
+
+
+### [Pricing the Left Tail: Downside Consumption Risk and the Equity Premium](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140)
+
+<em>with Niklas Schmitz </em>
+
+<small><em>Presentations: University of Oxford Internal Seminar</em></small>
+
+We propose a novel approach to flexibly estimate the conditional distribution of aggregate consumption growth. We document that Kelly skewness of consumption growth is priced in the cross-section and time series of equity returns.
+
 
 ---
 
@@ -28,15 +49,6 @@ This paper shows that fluctuations in corporate credit spreads are driven primar
 
 ---
 
-### [Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444)
-
-<em>with Tobias Kawalec</em>
-
-<small><em>Presentations: Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop; Econometric Society North American Summer Meeting</em></small>
-
-We develop and estimate an open-economy present-value framework showing that debt fluctuations reflect both surplus revisions and discount-rate news tied to global yields and exchange-rate expectations. A two-country model demonstrates how fiscal shocks in a hegemon propagate internationally through exchange rates and real interest rates, generating fiscal contagion.
-
----
 
 ### [The Inequality Multiplier: Market Inelasticity and the Persistence of Wealth Inequality](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310388)
 
@@ -71,13 +83,7 @@ We propose a multilayer network framework using stochastic block models to joint
 
 We develop a continuous-time model in which demographic aging alters the composition of income used to finance consumption, raising consumption volatility and the market price of risk. The mechanism provides a demographic explanation for secular movements in risk premia and the risk-free rate.
 
----
 
-### Pricing the Left Tail: Downside Consumption Risk and the Equity Premium
-
-<em>with Niklas Schmitz </em>
-
-We propose a novel approach to flexibly estimate the conditional distribution of aggregate consumption growth. We document that Kelly skewness of consumption growth is priced in the cross-section and time series of equity returns.
 
 ---
 ### Financial Stability Implications of Central Bank Digital Currencies: A Solution in Search of a Problem?
