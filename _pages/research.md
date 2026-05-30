@@ -12,16 +12,16 @@ author_profile: true
 
 ### [Monetary Policy in the Presence of Tail Risks (JMP)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)
 
-<small><em>Presentations: LSE Macro PhD Workshop; St Andrews Workshop in Macroeconomics, Central Bank Research Association (CEBRA) Annual Meeting</em></small>
+<small><em>Presentations: LSE Macro PhD Workshop; Macro, Money and International Finance Conference, St Andrews Workshop in Macroeconomics, PSE-CEPR Policy Forum, Central Bank Research Association (CEBRA) Annual Meeting</em></small>
 
 This paper develops a New-Keynesian macro-finance model in which higher-order uncertainty directly affects asset prices, the natural rate, and optimal policy.
 
 
 ### [Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444)
 
-<em>with Tobias Kawalec</em>
+<em>with Tobias Kawalec (SUBMITTED)</em>
 
-<small><em>Presentations: Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop; Econometric Society North American Summer Meeting</em></small>
+<small><em>Presentations: Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop; Macro, Money and International Finance Conference; Econometric Society North American Summer Meeting</em></small>
 
 We develop and estimate an open-economy present-value framework showing that debt fluctuations reflect both surplus revisions and discount-rate news tied to global yields and exchange-rate expectations. A two-country model demonstrates how fiscal shocks in a hegemon propagate internationally through exchange rates and real interest rates, generating fiscal contagion.
 
@@ -30,7 +30,7 @@ We develop and estimate an open-economy present-value framework showing that deb
 
 ### [Pricing the Left Tail: Downside Consumption Risk and the Equity Premium](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140)
 
-<em>with Niklas Schmitz </em>
+<em>with Niklas Schmitz (SUBMITTED) </em>
 
 <small><em>Presentations: University of Oxford Internal Seminar</em></small>
 
@@ -43,7 +43,7 @@ We propose a novel approach to flexibly estimate the conditional distribution of
 
 <em>with Theofanis Papamichalis, Dimitrios P. Tsomocos, and Nikolaos Romanidis</em>
 
-<small><em>Presentation: SAET 2025; Cowles Foundation 20th Annual Conference on General Equilibrium and its Applications</em></small>
+<small><em>Presentation: SAET 2025; Cowles Foundation 20th Annual Conference on General Equilibrium and its Applications; SAET-EWET 2026;</em></small>
 
 This paper shows that fluctuations in corporate credit spreads are driven primarily by the time-varying risk-bearing capacity of financial intermediaries rather than firm fundamentals. We develop a continuous-time heterogeneous-agent model that resolves the credit-spread puzzle, highlights the non-neutrality of default, and characterizes the welfare trade-offs of default penalties.
 
@@ -78,18 +78,15 @@ We propose a multilayer network framework using stochastic block models to joint
 
 
 ### Demographic Trends and the Market Price of Risk
-
 <em>with Tim Willems</em>
 
-We develop a continuous-time model in which demographic aging alters the composition of income used to finance consumption, raising consumption volatility and the market price of risk. The mechanism provides a demographic explanation for secular movements in risk premia and the risk-free rate.
+### Dollar Diplomacy and Global Imbalances: Evidence from the Plaza and Louvre Accords
+<em>with Marco Garofalo and Roger Vicquéry</em>
 
 
+### The Investor Composition of Public Debt 
+<em>with Sitong Ding and Tobias Kawalec</em>
 
----
 ### Financial Stability Implications of Central Bank Digital Currencies: A Solution in Search of a Problem?
 
 <small><em>Winner of Best Doctoral Paper at Saïd Business School, 2023</em></small>
-
-I construct a general equilibrium model to study how a retail CBDC affects monetary transmission and financial stability. While increased banking competition improves liquidity, deposit disintermediation raises funding costs and can reduce welfare under aggregate uncertainty.
-
-
