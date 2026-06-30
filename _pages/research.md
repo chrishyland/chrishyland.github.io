@@ -83,10 +83,14 @@ We propose a multilayer network framework using stochastic block models to joint
 ### Dollar Diplomacy and Global Imbalances: Evidence from the Plaza and Louvre Accords
 <em>with Marco Garofalo and Roger Vicquéry</em>
 
+### Running Towards Disaster: Bank Runs, Rare Disasters, and Asset Prices
+<em>with Rustam Jamilov, Tobias König, Karsten Müller and Farzad Saidi</em>
+
+### How to Shrink a Central Bank: The Dynamics of Quantitative Tightening
+<em>with Seung Joo Lee</em>
 
 ### The Investor Composition of Public Debt 
 <em>with Sitong Ding and Tobias Kawalec</em>
 
 ### Financial Stability Implications of Central Bank Digital Currencies: A Solution in Search of a Problem?
-
 <small><em>Winner of Best Doctoral Paper at Saïd Business School, 2023</em></small>
