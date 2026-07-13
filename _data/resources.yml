@@ -1,0 +1,14 @@
+# Resources shown on the Resources page (_pages/resources.md).
+#
+# Each section renders as a heading with its items listed beneath it.
+# Item fields: title (required), file (path to the PDF), note (optional
+# small caption under the link, e.g. "Last updated July 2026").
+
+- section: "Graduate Courses at the University of Oxford"
+  items:
+    - title: "Microeconomics Notes"
+      file: /assets/notes/micro-notes.pdf
+    - title: "Macroeconomics Notes"
+      file: /assets/notes/macro-notes.pdf
+    - title: "Econometrics Notes"
+      file: /assets/notes/econometrics-notes.pdf

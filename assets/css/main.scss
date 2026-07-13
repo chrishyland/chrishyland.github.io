@@ -169,6 +169,26 @@ h1, h2, h3, h4 { letter-spacing: 0.03em; }
 }
 
 /* ==========================================================================
+   Resources page
+   ========================================================================== */
+
+.resources {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.resource {
+  margin-bottom: 1em;
+
+  &__note {
+    display: block;
+    font-size: 0.8em;
+    color: $muted-text-color;
+  }
+}
+
+/* ==========================================================================
    Footer — a single quiet line under a hairline
    ========================================================================== */
 
