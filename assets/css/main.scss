@@ -4,19 +4,97 @@
 
 @charset "utf-8";
 
+/* ==========================================================================
+   "Sumi & Washi" — Japanese-minimal palette on the Minimal Mistakes theme.
+   Variables set here override the skin's `!default` values.
+   ========================================================================== */
+
+$accent-color: #cb4042; // akabeni (seal red) — the single accent, used sparingly
+$panel-color: #f1ede2;  // deeper washi, for panels and code blocks
+
+$background-color: #f9f7f2; // kinari — warm paper ground
+$text-color: #2b2822;       // warm sumi ink
+$muted-text-color: #7e786c;
+$border-color: #e3ded2;     // hairlines
+$primary-color: $accent-color;
+$link-color: #165e83;       // ai — indigo
+$link-color-hover: $accent-color;
+$masthead-link-color: $text-color;
+$masthead-link-color-hover: $accent-color;
+$footer-background-color: $background-color;
+$form-background-color: $panel-color;
+$code-background-color: $panel-color;
+
+$serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+$sans-serif: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Hiragino Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+$global-font-family: $sans-serif;
+$header-font-family: $serif;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* ==========================================================================
+   Typography — open leading, quiet tracking
+   ========================================================================== */
+
+html { line-height: 1.7; }
+
+h1, h2, h3, h4 { letter-spacing: 0.03em; }
+
+/* ==========================================================================
+   Masthead — serif title with a hanko-red square, letterspaced nav
+   ========================================================================== */
+
+.site-title {
+  font-family: $header-font-family;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.6em;
+    background-color: $accent-color;
+  }
+}
+
+.greedy-nav .visible-links a {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+/* ==========================================================================
+   Sidebar author profile
+   ========================================================================== */
+
+.author__avatar img { border-radius: 2px; }
+
+/* ==========================================================================
+   Content — section headings get a red bar instead of a full underline
+   ========================================================================== */
+
+.page__content h2 {
+  border-bottom: none;
+  border-left: 3px solid $accent-color;
+  padding-left: 0.8rem;
+}
 
 /* ==========================================================================
    Research page: paper entries
    ========================================================================== */
 
 .paper {
-  margin-bottom: 2em;
+  margin-bottom: 2.4em;
 
   &__title {
     margin-top: 0;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.25em;
+
+    a { color: $text-color; }
+    a:hover { color: $accent-color; }
   }
 
   &__meta {
@@ -32,21 +110,21 @@
 
   &__badge {
     display: inline-block;
-    margin-right: 0.5em;
-    padding: 0.1em 0.7em;
+    margin-right: 0.6em;
+    padding: 0.1em 0.8em;
     border: 1px solid $border-color;
-    border-radius: 1em;
-    font-size: 0.8em;
-    font-weight: 700;
+    border-radius: 2px;
+    font-size: 0.7em;
+    font-weight: 600;
     font-style: normal;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.14em;
     vertical-align: 0.1em;
   }
 
   &__badge--jmp {
-    background-color: $link-color;
-    border-color: $link-color;
+    background-color: $accent-color;
+    border-color: $accent-color;
     color: #fff;
   }
 
@@ -55,12 +133,8 @@
     font-size: 0.8em;
     font-style: italic;
     color: $muted-text-color;
-
-    &::before {
-      content: "\1F3C6"; /* trophy */
-      margin-right: 0.4em;
-      font-style: normal;
-    }
+    border-left: 2px solid $accent-color;
+    padding-left: 0.7em;
   }
 
   &__more {
@@ -69,16 +143,17 @@
     summary {
       cursor: pointer;
       color: $link-color;
-      font-weight: 600;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      list-style-type: "+ ";
 
-      &:hover {
-        text-decoration: underline;
-      }
+      &::marker { color: $accent-color; }
+      &:hover { color: $accent-color; }
     }
 
-    p {
-      margin: 0.6em 0 0;
-    }
+    &[open] summary { list-style-type: "− "; }
+
+    p { margin: 0.7em 0 0; }
   }
 
   &__presentations {
@@ -88,8 +163,30 @@
 
 /* Highlighted box for the job market paper */
 .paper--jmp {
-  padding: 1em 1.25em;
-  border-left: 4px solid $link-color;
-  border-radius: 4px;
-  background-color: mix(#fff, $link-color, 93%);
+  padding: 1.3em 1.5em;
+  border-left: 2px solid $accent-color;
+  background-color: $panel-color;
+}
+
+/* ==========================================================================
+   Footer — a single quiet line under a hairline
+   ========================================================================== */
+
+.page__footer {
+  margin-top: 3em;
+  border-top: 1px solid $border-color;
+
+  footer {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+}
+
+.page__footer-copyright {
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.page__footer-follow .social-icons {
+  text-align: center;
 }
