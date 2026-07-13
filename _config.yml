@@ -16,9 +16,12 @@
 title: C. Chris Hyland
 email: christopherhyland95@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  PhD Student in Finance at the University of Oxford
-twitter_username: chyland18
+  PhD Candidate in Finance at the University of Oxford, researching
+  macro-finance, monetary economics, and asset pricing.
 github_username: chrishyland
+og_image: /assets/images/prof_pic.jpg
+twitter:
+  username: chyland18
 minimal_mistakes_skin: default
 search: false
 
