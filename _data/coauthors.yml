@@ -1,0 +1,27 @@
+# Coauthor name -> personal website.
+#
+# Names must match the spelling used in the `coauthors` lists in papers.yml.
+# Any coauthor listed there but missing here renders as plain (unlinked) text,
+# so it is always safe to leave someone out.
+
+"Aditya Khemka": "https://www.khemkaaditya.com/"
+"Tobias Kawalec": "https://tobiaskawalec.com/"
+"Tim Willems": "https://sites.google.com/site/twillems85/home"
+"Seung Joo Lee": "https://seungecon.github.io/"
+"Theofanis Papamichalis": "https://sites.google.com/view/papamichalis"
+"Dimitrios P. Tsomocos": "https://www.tsomocos.org/"
+"Marco Garofalo": "https://sites.google.com/view/marco-garofalo/home"
+"Roger Vicquéry": "https://sites.google.com/view/rogervicquery/home"
+"Rustam Jamilov": "https://www.rustamjamilov.com"
+"Tobias König": "https://tobiaskoenigecon.com"
+"Karsten Müller": "https://www.karstenmueller.com/"
+# farzadsaidi.com is http-only; its https endpoint is currently broken
+"Farzad Saidi": "http://www.farzadsaidi.com/"
+"Sitong Ding": "https://www.sitongding.com/"
+"Niklas Schmitz": "https://www.schmitzniklas.com/"
+"Yuanming Tao": "https://alexta0.github.io/"
+"Lamiae Azizi": "https://cc.um6p.ma/people/Lamiae.AZIZI"
+"Martin Gerlach": "https://martingerlach.github.io/"
+"Tiago P. Peixoto": "https://skewed.de/tiago"
+"Eduardo G. Altmann": "https://www.maths.usyd.edu.au/u/ega/"
+# Nikolaos Romanidis has no academic homepage (moved to industry) — unlinked.

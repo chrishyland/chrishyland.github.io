@@ -1,0 +1,113 @@
+# Papers shown on the Research page (_pages/research.md).
+#
+# To add a paper, add an entry to the relevant section. Only `title` is
+# required; the other fields are optional:
+#   url           — link for the title (SSRN, journal, etc.)
+#   coauthors     — list of names; the page renders it as "with A, B, and C".
+#                   Names with an entry in _data/coauthors.yml become links.
+#   status        — short badge text, e.g. "Submitted", "R&R at JF"
+#   jmp           — true to render the highlighted Job Market Paper box
+#   award         — prize or award text
+#   abstract      — shown inside the dropdown
+#   presentations — semicolon-separated list, shown inside the dropdown
+
+working_papers:
+  - title: "Monetary Policy in the Presence of Tail Risks"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078"
+    jmp: true
+    abstract: >-
+      This paper develops a New-Keynesian macro-finance model in which
+      higher-order uncertainty directly affects asset prices, the natural
+      rate, and optimal policy.
+    presentations: >-
+      LSE Macro PhD Workshop; Macro, Money and International Finance
+      Conference; St Andrews Workshop in Macroeconomics; PSE-CEPR Policy
+      Forum; Central Bank Research Association (CEBRA) Annual Meeting
+
+  - title: "Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444"
+    coauthors: ["Tobias Kawalec"]
+    status: "Submitted"
+    abstract: >-
+      We develop and estimate an open-economy present-value framework showing
+      that debt fluctuations reflect both surplus revisions and discount-rate
+      news tied to global yields and exchange-rate expectations. A two-country
+      model demonstrates how fiscal shocks in a hegemon propagate
+      internationally through exchange rates and real interest rates,
+      generating fiscal contagion.
+    presentations: >-
+      Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop;
+      Macro, Money and International Finance Conference; Econometric Society
+      North American Summer Meeting
+
+  - title: "Pricing the Left Tail: Consumption Skewness and Expected Returns"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140"
+    coauthors: ["Niklas Schmitz"]
+    status: "Submitted"
+    abstract: >-
+      We propose a novel approach to flexibly estimate the conditional
+      distribution of aggregate consumption growth. We document that Kelly
+      skewness of consumption growth is priced in the cross-section and time
+      series of equity returns.
+    presentations: >-
+      University of Oxford Internal Seminar
+
+  - title: "A Macro-Finance Model of Credit Spreads"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5313973"
+    coauthors: ["Theofanis Papamichalis", "Dimitrios P. Tsomocos", "Nikolaos Romanidis"]
+    abstract: >-
+      This paper shows that fluctuations in corporate credit spreads are
+      driven primarily by the time-varying risk-bearing capacity of financial
+      intermediaries rather than firm fundamentals. We develop a
+      continuous-time heterogeneous-agent model that resolves the
+      credit-spread puzzle, highlights the non-neutrality of default, and
+      characterizes the welfare trade-offs of default penalties.
+    presentations: >-
+      SAET 2025; Cowles Foundation 20th Annual Conference on General
+      Equilibrium and its Applications; SAET-EWET 2026
+
+  - title: "The Inequality Multiplier: Market Inelasticity and the Persistence of Wealth Inequality"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310388"
+    coauthors: ["Aditya Khemka"]
+    award: "Winner of Best Doctoral Paper at Saïd Business School, 2024"
+    abstract: >-
+      We show that rising income inequality, interacting with inelastic asset
+      markets, generates a self-reinforcing “inequality multiplier” through
+      asset price revaluation. A calibrated general equilibrium model matches
+      U.S. trends in equity prices, debt, and wealth concentration, linking
+      financial market structure to persistent wealth inequality.
+    presentations: >-
+      Bank of England Macro Brown Bag; Asian Finance Association, Taipei;
+      Trans-Atlantic Doctoral Conference, London Business School; Rethinking
+      Economic Theory Conference, Athens
+
+publications:
+  - title: "Multilayer Networks For Text Analysis With Multiple Data Types"
+    url: "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-021-00288-5"
+    coauthors: ["Yuanming Tao", "Lamiae Azizi", "Martin Gerlach", "Tiago P. Peixoto", "Eduardo G. Altmann"]
+    venue: "EPJ Data Science, 2021"
+    award: "Winner of Best Thesis at University of Sydney Mathematics Department"
+    abstract: >-
+      We propose a multilayer network framework using stochastic block models
+      to jointly analyze text, metadata, and hyperlinks within a unified
+      probabilistic structure. The approach improves topic detection and link
+      prediction across diverse large-scale document datasets.
+
+work_in_progress:
+  - title: "Demographic Trends and the Market Price of Risk"
+    coauthors: ["Tim Willems"]
+
+  - title: "Dollar Diplomacy and Global Imbalances: Evidence from the Plaza and Louvre Accords"
+    coauthors: ["Marco Garofalo", "Roger Vicquéry"]
+
+  - title: "Running Towards Disaster: Bank Runs, Rare Disasters, and Asset Prices"
+    coauthors: ["Rustam Jamilov", "Tobias König", "Karsten Müller", "Farzad Saidi"]
+
+  - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
+    coauthors: ["Seung Joo Lee"]
+
+  - title: "The Investor Composition of Public Debt"
+    coauthors: ["Sitong Ding", "Tobias Kawalec"]
+
+  - title: "Financial Stability Implications of Central Bank Digital Currencies: A Solution in Search of a Problem?"
+    award: "Winner of Best Doctoral Paper at Saïd Business School, 2023"

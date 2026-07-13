@@ -1,0 +1,95 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* ==========================================================================
+   Research page: paper entries
+   ========================================================================== */
+
+.paper {
+  margin-bottom: 2em;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+  }
+
+  &__meta {
+    margin: 0 0 0.4em;
+    font-size: 0.85em;
+    color: $muted-text-color;
+  }
+
+  &__coauthors,
+  &__venue {
+    font-style: italic;
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0.1em 0.7em;
+    border: 1px solid $border-color;
+    border-radius: 1em;
+    font-size: 0.8em;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: 0.1em;
+  }
+
+  &__badge--jmp {
+    background-color: $link-color;
+    border-color: $link-color;
+    color: #fff;
+  }
+
+  &__award {
+    margin: 0 0 0.4em;
+    font-size: 0.8em;
+    font-style: italic;
+    color: $muted-text-color;
+
+    &::before {
+      content: "\1F3C6"; /* trophy */
+      margin-right: 0.4em;
+      font-style: normal;
+    }
+  }
+
+  &__more {
+    font-size: 0.85em;
+
+    summary {
+      cursor: pointer;
+      color: $link-color;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin: 0.6em 0 0;
+    }
+  }
+
+  &__presentations {
+    color: $muted-text-color;
+  }
+}
+
+/* Highlighted box for the job market paper */
+.paper--jmp {
+  padding: 1em 1.25em;
+  border-left: 4px solid $link-color;
+  border-radius: 4px;
+  background-color: mix(#fff, $link-color, 93%);
+}

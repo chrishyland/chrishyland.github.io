@@ -1,0 +1,24 @@
+{% assign paper = include.paper %}
+<div class="paper{% if paper.jmp %} paper--jmp{% endif %}">
+  <h3 class="paper__title">
+    {% if paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
+  </h3>
+  {% if paper.jmp or paper.status or paper.coauthors or paper.venue %}
+  <p class="paper__meta">
+    {% if paper.jmp %}<span class="paper__badge paper__badge--jmp">Job Market Paper</span>{% endif %}
+    {% if paper.status %}<span class="paper__badge">{{ paper.status }}</span>{% endif %}
+    {% if paper.coauthors %}<span class="paper__coauthors">with {% for name in paper.coauthors %}{% assign co_url = site.data.coauthors[name] %}{% unless forloop.first %}{% if forloop.last %}{% if forloop.length > 2 %},{% endif %} and {% else %}, {% endif %}{% endunless %}{% if co_url %}<a href="{{ co_url }}">{{ name }}</a>{% else %}{{ name }}{% endif %}{% endfor %}</span>{% endif %}
+    {% if paper.venue %}<span class="paper__venue">{{ paper.venue }}</span>{% endif %}
+  </p>
+  {% endif %}
+  {% if paper.award %}
+  <p class="paper__award">{{ paper.award }}</p>
+  {% endif %}
+  {% if paper.abstract or paper.presentations %}
+  <details class="paper__more">
+    <summary>Abstract{% if paper.presentations %} &amp; presentations{% endif %}</summary>
+    {% if paper.abstract %}<p class="paper__abstract">{{ paper.abstract }}</p>{% endif %}
+    {% if paper.presentations %}<p class="paper__presentations"><strong>Presented at:</strong> {{ paper.presentations }}</p>{% endif %}
+  </details>
+  {% endif %}
+</div>
