@@ -15,6 +15,7 @@ working_papers:
   - title: "Monetary Policy in the Presence of Tail Risks"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078"
     jmp: true
+    award: "Winner of the Princeton Macro, Money, and International Finance Young Researcher Award"
     abstract: >-
       This paper develops a New-Keynesian macro-finance model in which
       higher-order uncertainty directly affects asset prices, the natural
@@ -38,7 +39,9 @@ working_papers:
     presentations: >-
       Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop;
       Macro, Money and International Finance Conference; Econometric Society
-      North American Summer Meeting
+      North American Summer Meeting; GRAPE; Econometric Society European
+      Meeting; 6th Oxford/Federal Reserve Bank of New York/Bank of England
+      Monetary Economics Conference; CEPR European Economic Policy RPN
 
   - title: "Pricing the Left Tail: Consumption Skewness and Expected Returns"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140"
