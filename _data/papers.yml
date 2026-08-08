@@ -85,6 +85,15 @@ working_papers:
       Trans-Atlantic Doctoral Conference, London Business School; Rethinking
       Economic Theory Conference, Athens; ISB Summer Research
 
+  - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7207778"
+    coauthors: ["Seung Joo Lee"]
+    abstract: >-
+      This paper shows how quantitative tightening can be recast as forward
+      guidance about the path of the central bank's balance sheet. We then
+      solve for the optimal path of quantitative tightening, taking the
+      associated trade-offs into account.
+
 publications:
   - title: "Multilayer Networks For Text Analysis With Multiple Data Types"
     url: "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-021-00288-5"
@@ -106,9 +115,6 @@ work_in_progress:
 
   - title: "Running Towards Disaster: Bank Runs, Rare Disasters, and Asset Prices"
     coauthors: ["Rustam Jamilov", "Tobias König", "Karsten Müller", "Farzad Saidi"]
-
-  - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
-    coauthors: ["Seung Joo Lee"]
 
   - title: "The Investor Composition of Public Debt"
     coauthors: ["Sitong Ding", "Tobias Kawalec"]
