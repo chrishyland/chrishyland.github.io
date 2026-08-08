@@ -41,7 +41,8 @@ working_papers:
       Macro, Money and International Finance Conference; Econometric Society
       North American Summer Meeting; GRAPE; Econometric Society European
       Meeting; 6th Oxford/Federal Reserve Bank of New York/Bank of England
-      Monetary Economics Conference; CEPR European Economic Policy RPN
+      Monetary Economics Conference; CEPR European Economic Policy RPN;
+      28th Macro Finance Society Workshop
 
   - title: "Pricing the Left Tail: Consumption Skewness and Expected Returns"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140"
@@ -70,6 +71,16 @@ working_papers:
       Equilibrium and its Applications; SAET-EWET 2026; Mathematics in
       Finance 2026
 
+  - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7207778"
+    coauthors: ["Seung Joo Lee"]
+    abstract: >-
+      This paper shows how quantitative tightening can be recast as forward
+      guidance about the path of the central bank's balance sheet. We then
+      solve for the optimal path of quantitative tightening, trading off the
+      costs of a large balance sheet against the risk that shrinking it too
+      fast strains financial intermediation.
+
   - title: "The Inequality Multiplier: Market Inelasticity and the Persistence of Wealth Inequality"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310388"
     coauthors: ["Aditya Khemka"]
@@ -84,15 +95,6 @@ working_papers:
       Bank of England Macro Brown Bag; Asian Finance Association, Taipei;
       Trans-Atlantic Doctoral Conference, London Business School; Rethinking
       Economic Theory Conference, Athens; ISB Summer Research
-
-  - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
-    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7207778"
-    coauthors: ["Seung Joo Lee"]
-    abstract: >-
-      This paper shows how quantitative tightening can be recast as forward
-      guidance about the path of the central bank's balance sheet. We then
-      solve for the optimal path of quantitative tightening, taking the
-      associated trade-offs into account.
 
 publications:
   - title: "Multilayer Networks For Text Analysis With Multiple Data Types"
