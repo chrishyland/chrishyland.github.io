@@ -23,7 +23,9 @@ working_papers:
     presentations: >-
       LSE Macro PhD Workshop; Macro, Money and International Finance
       Conference; St Andrews Workshop in Macroeconomics; PSE-CEPR Policy
-      Forum; Central Bank Research Association (CEBRA) Annual Meeting
+      Forum; Central Bank Research Association (CEBRA) Annual Meeting;
+      Cambridge Macro and Development PhD Conference; Saïd Business School
+      Seminar; Oxford Economics Brownbag Seminar
 
   - title: "Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444"
@@ -40,9 +42,10 @@ working_papers:
       Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop;
       Macro, Money and International Finance Conference; Econometric Society
       North American Summer Meeting; GRAPE; Econometric Society European
-      Meeting; 6th Oxford/Federal Reserve Bank of New York/Bank of England
-      Monetary Economics Conference; CEPR European Economic Policy RPN;
-      28th Macro Finance Society Workshop
+      Meeting; German Economic Association (VfS) Annual Conference; 6th
+      Oxford/Federal Reserve Bank of New York/Bank of England Monetary
+      Economics Conference; CEPR European Economic Policy RPN; 28th Macro
+      Finance Society Workshop (poster session)
 
   - title: "Pricing the Left Tail: Consumption Skewness and Expected Returns"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140"
@@ -94,7 +97,8 @@ working_papers:
     presentations: >-
       Bank of England Macro Brown Bag; Asian Finance Association, Taipei;
       Trans-Atlantic Doctoral Conference, London Business School; Rethinking
-      Economic Theory Conference, Athens; ISB Summer Research
+      Economic Theory Conference, Athens; ISB Summer Research; European
+      Economic Association Annual Congress
 
 publications:
   - title: "Multilayer Networks For Text Analysis With Multiple Data Types"
@@ -109,7 +113,7 @@ publications:
       prediction across diverse large-scale document datasets.
 
 work_in_progress:
-  - title: "Demographic Trends and the Market Price of Risk"
+  - title: "Supplying Safety to an Aging World: Demographics, Debt, and Risk Premia"
     coauthors: ["Tim Willems"]
 
   - title: "Dollar Diplomacy and Global Imbalances: Evidence from the Plaza and Louvre Accords"
