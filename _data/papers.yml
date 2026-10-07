@@ -25,7 +25,8 @@ working_papers:
       Conference; St Andrews Workshop in Macroeconomics; PSE-CEPR Policy
       Forum; Central Bank Research Association (CEBRA) Annual Meeting;
       Cambridge Macro and Development PhD Conference; Saïd Business School
-      Seminar; Oxford Economics Brownbag Seminar
+      Seminar; Oxford Economics Brownbag Seminar; Econometric Society European
+      Winter Meeting (2026, forthcoming)
 
   - title: "Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444"
@@ -62,6 +63,7 @@ working_papers:
   - title: "A Macro-Finance Model of Credit Spreads"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5313973"
     coauthors: ["Theofanis Papamichalis", "Dimitrios P. Tsomocos", "Nikolaos Romanidis"]
+    status: "Submitted"
     abstract: >-
       This paper shows that fluctuations in corporate credit spreads are
       driven primarily by the time-varying risk-bearing capacity of financial
@@ -73,6 +75,17 @@ working_papers:
       SAET 2025; Cowles Foundation 20th Annual Conference on General
       Equilibrium and its Applications; SAET-EWET 2026; Mathematics in
       Finance 2026
+
+  - title: "Supplying Safety to an Aging World: Demographics, Debt, and Risk Premia"
+    url: "https://papers.ssrn.com/abstract=7570178"
+    coauthors: ["Tim Willems"]
+    abstract: >-
+      We show that demographic aging increases demand for safe bonds and
+      reduces households' capacity to bear equity risk, lowering safe interest
+      rates and raising equity premia. In a two-country model where aging is
+      more pronounced abroad, the relatively younger U.S. supplies safe assets
+      and takes leveraged equity positions, leading to a larger rise in its
+      equity premium.
 
   - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7207778"
@@ -113,9 +126,6 @@ publications:
       prediction across diverse large-scale document datasets.
 
 work_in_progress:
-  - title: "Supplying Safety to an Aging World: Demographics, Debt, and Risk Premia"
-    coauthors: ["Tim Willems"]
-
   - title: "Dollar Diplomacy and Global Imbalances: Evidence from the Plaza and Louvre Accords"
     coauthors: ["Marco Garofalo", "Roger Vicquéry"]
 
