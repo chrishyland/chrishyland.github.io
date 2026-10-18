@@ -6,9 +6,9 @@ permalink: /
 author_profile: true
 ---
 
-I'm a PhD (DPhil) candidate in Finance at the University of Oxford's Saïd Business School and a member of the Oxford-Man Institute of Quantitative Finance. My work focuses on macro-finance, with interests in monetary economics, international macroeconomics, fiscal–monetary interactions and asset pricing. I previously completed the MPhil in Economics at Oxford and undergraduate studies in Mathematics, Computer Science, and Statistics at the University of Sydney.
+I'm a PhD (DPhil) candidate in Finance at the University of Oxford's Saïd Business School and a member of the Oxford-Man Institute of Quantitative Finance.
 
-I am currently a PhD intern at the Bank of England in the International Directorate. I have previous experience at SPX Capital (Macro hedge fund), Goldman Sachs, Amazon, Kiel Institute for the World Economy and Insurance Australia Group.
+**Research interests:** Macro-Finance, Monetary Economics, International Macroeconomics, Asset Pricing.
 
 My job market paper is “[Monetary Policy in the Presence of Tail Risks](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)”. You can find the rest of my work on the [research page](/research/).
 
