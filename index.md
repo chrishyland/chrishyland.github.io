@@ -12,4 +12,6 @@ I'm a PhD (DPhil) candidate in Finance at the University of Oxford's Saïd Busin
 
 My job market paper is “[Monetary Policy in the Presence of Tail Risks](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)”. You can find the rest of my work on the [research page](/research/).
 
+You can find my [resume here](/assets/resume/Academic_Resume.pdf).
+
 **Contact:** [christopherhyland95@gmail.com](mailto:christopherhyland95@gmail.com)
