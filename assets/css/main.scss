@@ -163,35 +163,39 @@ h1, h2, h3, h4 { letter-spacing: 0.03em; }
   &__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.8em;
+    align-items: center;
+    gap: 0.15rem 1rem;
+    margin-top: 0.65em;
+    font-size: 0.8em;
 
-    a.paper__button:hover { text-decoration: none; }
+    a.paper__control--pdf:hover { text-decoration: none; }
   }
 
-  &__button {
+  &__control {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3em;
+    gap: 0.35em;
     min-height: 44px;
-    padding: 0.45em 0.9em;
-    border: 1px solid $link-color;
-    border-radius: 2px;
+    padding: 0.15em 0;
+    border: 0;
     background: transparent;
     color: $link-color;
     font-family: $sans-serif;
-    font-size: 0.8em;
+    font-size: inherit;
     font-weight: 500;
     line-height: 1.4;
     text-decoration: none;
     cursor: pointer;
 
-    &:not(:disabled):hover,
+    &:hover,
     &[aria-expanded="true"] {
-      background: $link-color;
-      color: $background-color;
-      text-decoration: none;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    &[aria-expanded="true"] .paper__chevron {
+      transform: rotate(180deg);
     }
 
     &:focus-visible {
@@ -199,14 +203,24 @@ h1, h2, h3, h4 { letter-spacing: 0.03em; }
       outline-offset: 3px;
     }
 
-    &:disabled {
-      border-color: $border-color;
-      color: $muted-text-color;
-      cursor: default;
+    &--pdf {
+      padding: 0.3em 0.85em;
+      border-radius: 2px;
+      background: $link-color;
+      color: $background-color;
+
+      &:hover {
+        background: $accent-color;
+        color: $background-color;
+      }
     }
   }
 
-  &__soon { font-size: 0.85em; }
+  &__chevron {
+    display: inline-block;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
 
   &__panel-content {
     margin-top: 0.8em;

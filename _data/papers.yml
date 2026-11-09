@@ -12,7 +12,7 @@
 #   abstract      — text (Markdown supported), shown by the Abstract button
 #   summary       — text (Markdown supported), shown by the Summary button
 #   presentations — semicolon-separated list, shown in its own dropdown
-# Empty working-paper fields leave the corresponding button disabled.
+# Empty working-paper fields hide the corresponding control.
 
 working_papers:
   - title: "Monetary Policy in the Presence of Tail Risks"
