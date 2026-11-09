@@ -2,7 +2,7 @@
 #
 # To add a paper, add an entry to the relevant section. Only `title` is
 # required; the other fields are optional:
-#   url           — link for the title (SSRN, journal, etc.)
+#   url           — SSRN link for working papers; title link for other entries
 #   coauthors     — list of names; the page renders it as "with A, B, and C".
 #                   Names with an entry in _data/coauthors.yml become links.
 #   status        — short badge text, e.g. "Submitted", "R&R at JF"
@@ -15,16 +15,19 @@
 # Empty working-paper fields hide the corresponding control.
 
 working_papers:
-  - title: "Monetary Policy in the Presence of Tail Risks"
+  - title: "Taming Black Swans: Disaster Risk and the Neutral Rate of Interest"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078"
-    pdf: ""
+    pdf: "/assets/papers/chris_jmp.pdf"
     abstract: ""
     jmp: true
     award: "Winner of the Princeton Macro, Money, and International Finance Young Researcher Award"
     summary: >-
-      This paper develops a New-Keynesian macro-finance model in which
-      higher-order uncertainty directly affects asset prices, the natural
-      rate, and optimal policy.
+      I develop and estimate a nonlinear New Keynesian model in which higher
+      disaster risk lowers asset prices and spending, reducing the risk-adjusted
+      neutral rate before any disaster occurs. Evidence from option prices
+      supports interpreting disaster-risk shocks as negative demand shocks.
+      The estimates imply that monetary policy can remain contractionary even
+      as rates are cut if the neutral rate falls faster.
     presentations: >-
       LSE Macro PhD Workshop; Macro, Money and International Finance
       Conference; St Andrews Workshop in Macroeconomics; PSE-CEPR Policy
@@ -35,19 +38,19 @@ working_papers:
       Workshop on Monetary Policy in Emerging Markets (2026)</a>; Econometric Society European
       Winter Meeting (2026, forthcoming)
 
-  - title: "Our Deficit, Your Problem: Fiscal Sustainability and Exchange Rates"
+  - title: "Our Deficit, Your Problem? Fiscal Sustainability, Exchange Rates, and Inflation"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5395444"
-    pdf: ""
+    pdf: "/assets/papers/Our_Deficit__Your_Problem.pdf"
     abstract: ""
     coauthors: ["Tobias Kawalec"]
     status: "Submitted"
     summary: >-
-      We develop and estimate an open-economy present-value framework showing
-      that debt fluctuations reflect both surplus revisions and discount-rate
-      news tied to global yields and exchange-rate expectations. A two-country
-      model demonstrates how fiscal shocks in a hegemon propagate
-      internationally through exchange rates and real interest rates,
-      generating fiscal contagion.
+      We study how U.S. fiscal deficits transmit to U.K. borrowing costs and
+      inflation through exchange rates and sovereign bond markets. A two-country
+      model explains this fiscal contagion and shows how the monetary–fiscal
+      policy mix determines the foreign response. Estimated on U.S. and U.K.
+      data, the model attributes about a quarter of the 2021–2023 surge in U.K.
+      producer-price inflation to U.S. fiscal shocks.
     presentations: >-
       Austrian National Bank; University of Konstanz; LSE Macro PhD Workshop;
       Macro, Money and International Finance Conference; Econometric Society
@@ -59,31 +62,34 @@ working_papers:
 
   - title: "Pricing the Left Tail: Consumption Skewness and Expected Returns"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662140"
-    pdf: ""
+    pdf: "/assets/papers/consumption_risk.pdf"
     abstract: ""
     coauthors: ["Niklas Schmitz"]
     status: "Submitted"
     summary: >-
-      We propose a novel approach to flexibly estimate the conditional
-      distribution of aggregate consumption growth. We document that Kelly
-      skewness of consumption growth is priced in the cross-section and time
-      series of equity returns.
+      We estimate the conditional distribution of future U.S. consumption
+      growth using quantile regressions and machine learning. Greater downside
+      risk, measured by lower Kelley skewness, predicts higher excess equity
+      returns and is priced in the cross section, while variance and dispersion
+      have no comparable predictive power. Monetary easing is associated with
+      lower downside risk when that risk is already high.
     presentations: >-
       University of Oxford Internal Seminar
 
   - title: "A Macro-Finance Model of Credit Spreads"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5313973"
-    pdf: ""
+    pdf: "/assets/papers/A_Macro_Finance_Model_of_Credit_Spreads.pdf"
     abstract: ""
     coauthors: ["Theofanis Papamichalis", "Dimitrios P. Tsomocos", "Nikolaos Romanidis"]
     status: "Submitted"
     summary: >-
-      This paper shows that fluctuations in corporate credit spreads are
-      driven primarily by the time-varying risk-bearing capacity of financial
-      intermediaries rather than firm fundamentals. We develop a
-      continuous-time heterogeneous-agent model that resolves the
-      credit-spread puzzle, highlights the non-neutrality of default, and
-      characterizes the welfare trade-offs of default penalties.
+      We develop a continuous-time macro-finance model in which scarce
+      intermediary capital raises the excess bond premium, the part of
+      corporate spreads unexplained by firm-level default risk. The model
+      reproduces the premium's rise in recessions and shows how default can
+      recapitalize intermediaries and expand credit. Its welfare analysis
+      favors lenient default penalties and tighter leverage limits when
+      intermediary capital is scarce.
     presentations: >-
       SAET 2025; Cowles Foundation 20th Annual Conference on General
       Equilibrium and its Applications; SAET-EWET 2026; Mathematics in
@@ -91,7 +97,7 @@ working_papers:
 
   - title: "Supplying Safety to an Aging World: Demographics, Debt, and Risk Premia"
     url: "https://papers.ssrn.com/abstract=7570178"
-    pdf: ""
+    pdf: "/assets/papers/demographics.pdf"
     abstract: ""
     coauthors: ["Tim Willems"]
     summary: >-
@@ -102,31 +108,35 @@ working_papers:
       and takes leveraged equity positions, leading to a larger rise in its
       equity premium.
 
-  - title: "How to Shrink a Central Bank: The Dynamics of Quantitative Tightening"
+  - title: "How to Shrink a Central Bank: The Optimal Pace of Quantitative Tightening"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7207778"
-    pdf: ""
+    pdf: "/assets/papers/shrink_central_bank.pdf"
     abstract: ""
     coauthors: ["Seung Joo Lee"]
     summary: >-
-      This paper shows how quantitative tightening can be recast as forward
-      guidance about the path of the central bank's balance sheet. We then
-      solve for the optimal path of quantitative tightening, trading off the
-      costs of a large balance sheet against the risk that shrinking it too
-      fast strains financial intermediation.
+      We solve for the optimal reserve-drainage path and completion date of
+      quantitative tightening. Reserve scarcity and rapid drainage tighten
+      financial conditions through distinct channels, so announcements affect
+      demand before reserves change. Without output stabilization, optimal
+      drainage starts quickly and tapers. Stabilization can shorten the
+      transition when prolonged scarcity is costly, or lengthen it when
+      payment-flow strains dominate.
 
-  - title: "The Inequality Multiplier: Market Inelasticity and the Persistence of Wealth Inequality"
+  - title: "The Inequality Multiplier: Portfolio Allocation Frictions and Wealth Inequality"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310388"
-    pdf: ""
+    pdf: "/assets/papers/The_Inequality_Multiplier.pdf"
     abstract: ""
     coauthors: ["Aditya Khemka"]
     status: "Submitted"
     award: "Winner of Best Doctoral Paper at Saïd Business School, 2024"
     summary: >-
-      We show that rising income inequality, interacting with inelastic asset
-      markets, generates a self-reinforcing “inequality multiplier” through
-      asset price revaluation. A calibrated general equilibrium model matches
-      U.S. trends in equity prices, debt, and wealth concentration, linking
-      financial market structure to persistent wealth inequality.
+      We study how portfolio allocation frictions link equity revaluation to
+      household lending and wealth concentration. Restrictions on intermediaries'
+      substitution between equity and debt amplify the effects of asset demand
+      on inequality in a model calibrated to the U.S. economy. Even with identical
+      equity price paths, these frictions generate a cumulative response of the
+      top wealth share about one third larger than with flexible portfolios,
+      through additional lending.
     presentations: >-
       Bank of England Macro Brown Bag; Asian Finance Association, Taipei;
       Trans-Atlantic Doctoral Conference, London Business School; Rethinking

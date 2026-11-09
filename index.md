@@ -10,7 +10,7 @@ I'm a PhD (DPhil) candidate in Finance at the University of Oxford's Saïd Busin
 
 **Research interests:** Macro-Finance, Monetary Economics, International Macroeconomics, Asset Pricing.
 
-My job market paper is “[Monetary Policy in the Presence of Tail Risks](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)”. You can find the rest of my work on the [research page](/research/).
+My job market paper is “[Taming Black Swans: Disaster Risk and the Neutral Rate of Interest](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078)”. You can find the rest of my work on the [research page](/research/).
 
 You can find my [resume here](/assets/resume/Academic_Resume.pdf).
 
