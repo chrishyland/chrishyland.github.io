@@ -16,12 +16,18 @@
   {% endif %}
   {% if include.working_paper %}
   {% assign abstract = paper.abstract | default: '' | strip %}
+  {% assign summary = paper.summary | default: '' | strip %}
   {% assign presentations = paper.presentations | default: '' | strip %}
   <div class="paper__actions" role="group" aria-label="Resources for {{ paper.title | escape }}">
     {% if abstract != '' %}
     <button class="paper__button" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-abstract">Abstract</button>
     {% else %}
     <button class="paper__button" type="button" disabled title="Abstract coming soon" aria-label="Abstract coming soon">Abstract <span class="paper__soon">(soon)</span></button>
+    {% endif %}
+    {% if summary != '' %}
+    <button class="paper__button" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-summary">Summary</button>
+    {% else %}
+    <button class="paper__button" type="button" disabled title="Summary coming soon" aria-label="Summary coming soon">Summary <span class="paper__soon">(soon)</span></button>
     {% endif %}
     {% if presentations != '' %}
     <button class="paper__button" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-presentations">Presentations</button>
@@ -31,6 +37,12 @@
   <details class="paper__more paper__panel" id="paper-{{ include.paper_id }}-abstract">
     <summary>Abstract</summary>
     <div class="paper__panel-content"><h4>Abstract</h4>{{ paper.abstract | markdownify }}</div>
+  </details>
+  {% endif %}
+  {% if summary != '' %}
+  <details class="paper__more paper__panel" id="paper-{{ include.paper_id }}-summary">
+    <summary>Summary</summary>
+    <div class="paper__panel-content"><h4>Summary</h4>{{ paper.summary | markdownify }}</div>
   </details>
   {% endif %}
   {% if presentations != '' %}
