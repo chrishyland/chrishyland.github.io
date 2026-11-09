@@ -159,6 +159,64 @@ h1, h2, h3, h4 { letter-spacing: 0.03em; }
   &__presentations {
     color: $muted-text-color;
   }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8em;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    min-height: 44px;
+    padding: 0.45em 0.9em;
+    border: 1px solid $link-color;
+    border-radius: 2px;
+    background: transparent;
+    color: $link-color;
+    font-family: $sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:not(:disabled):hover,
+    &[aria-expanded="true"] {
+      background: $link-color;
+      color: $background-color;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $accent-color;
+      outline-offset: 3px;
+    }
+
+    &:disabled {
+      border-color: $border-color;
+      color: $muted-text-color;
+      cursor: default;
+    }
+  }
+
+  &__soon { font-size: 0.85em; }
+
+  &__panel-content {
+    margin-top: 0.8em;
+    padding: 0.8em 1em;
+    border-left: 2px solid $border-color;
+
+    h4 { margin: 0; }
+    > :last-child { margin-bottom: 0; }
+  }
+
+  // Override theme display rules for progressively enhanced controls.
+  [hidden] { display: none !important; }
 }
 
 /* Highlighted box for the job market paper */

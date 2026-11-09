@@ -11,7 +11,7 @@ author_profile: true
 ## Working Papers
 
 {% for paper in site.data.papers.working_papers %}
-{% include paper.html paper=paper %}
+{% include paper.html paper=paper working_paper=true paper_id=forloop.index %}
 {% endfor %}
 
 ## Publications
@@ -25,3 +25,5 @@ author_profile: true
 {% for paper in site.data.papers.work_in_progress %}
 {% include paper.html paper=paper %}
 {% endfor %}
+
+<script src="{{ '/assets/js/papers.js' | relative_url }}" defer></script>
