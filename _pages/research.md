@@ -4,6 +4,7 @@ description: "Working papers and publications by C. Chris Hyland (University of 
 layout: single
 permalink: /research/
 author_profile: true
+classes: wide
 ---
 
 <!-- Papers live in _data/papers.yml — edit that file to add or update papers. -->

@@ -1,7 +1,7 @@
 {% assign paper = include.paper %}
 <div class="paper{% if paper.jmp %} paper--jmp{% endif %}">
   <h3 class="paper__title">
-    {% if paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
+    {% if include.working_paper %}{{ paper.title }}{% elsif paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
   </h3>
   {% if paper.jmp or paper.status or paper.coauthors or paper.venue %}
   <p class="paper__meta">
@@ -15,10 +15,19 @@
   <p class="paper__award">{{ paper.award }}</p>
   {% endif %}
   {% if include.working_paper %}
+  {% assign pdf = paper.pdf | default: '' | strip %}
   {% assign abstract = paper.abstract | default: '' | strip %}
   {% assign summary = paper.summary | default: '' | strip %}
   {% assign presentations = paper.presentations | default: '' | strip %}
   <div class="paper__actions" role="group" aria-label="Resources for {{ paper.title | escape }}">
+    {% if paper.url %}
+    <a class="paper__button" href="{{ paper.url | escape }}" aria-label="View on SSRN: {{ paper.title | escape }}">SSRN</a>
+    {% endif %}
+    {% if pdf != '' %}
+    <a class="paper__button" href="{{ pdf | relative_url }}" aria-label="Read PDF: {{ paper.title | escape }}">PDF</a>
+    {% else %}
+    <button class="paper__button" type="button" disabled title="PDF coming soon" aria-label="PDF coming soon">PDF <span class="paper__soon">(soon)</span></button>
+    {% endif %}
     {% if abstract != '' %}
     <button class="paper__button" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-abstract">Abstract</button>
     {% else %}
