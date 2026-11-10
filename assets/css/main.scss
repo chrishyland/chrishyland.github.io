@@ -207,13 +207,16 @@ h1, h2, h3, h4 { letter-spacing: 0.03em; }
       padding: 0.3em 0.85em;
       border-radius: 2px;
       background: $link-color;
-      color: $background-color;
 
-      &:visited { color: $background-color; }
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active { color: #fff; }
 
       &:hover {
         background: $accent-color;
-        color: $background-color;
       }
     }
   }
