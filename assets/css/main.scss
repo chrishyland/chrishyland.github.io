@@ -209,6 +209,8 @@ h1, h2, h3, h4 { letter-spacing: 0.03em; }
       background: $link-color;
       color: $background-color;
 
+      &:visited { color: $background-color; }
+
       &:hover {
         background: $accent-color;
         color: $background-color;
