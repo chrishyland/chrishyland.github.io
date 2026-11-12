@@ -7,6 +7,9 @@ Working-paper resources are configured in `_data/papers.yml`:
 - **PDF:** Add the file to `assets/papers/`, then set `pdf` to its path, such as
   `"/assets/papers/monetary-policy.pdf"`. The button opens the hosted PDF in the
   browser. No external paper service or forced download is required.
+- **Video:** Set `video` to a YouTube link. The Video control expands a player
+  on the page; the video only loads from YouTube once the control is opened.
+  Any other link is shown as a plain Video link that opens the address.
 - **Abstract:** Replace `abstract: ""` with `abstract: |` and indent the full
   abstract below it by six spaces when ready.
 - **Summary:** Edit the existing `summary` text, which contains the short

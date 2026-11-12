@@ -20,13 +20,25 @@
   {% assign abstract = paper.abstract | default: '' | strip %}
   {% assign summary = paper.summary | default: '' | strip %}
   {% assign presentations = paper.presentations | default: '' | strip %}
-  {% if pdf != '' or ssrn != '' or abstract != '' or summary != '' or presentations != '' %}
+  {% assign video = paper.video | default: '' | strip %}
+  {% assign video_id = '' %}
+  {% if video contains 'youtu.be/' %}
+    {% assign video_id = video | split: 'youtu.be/' | last | split: '?' | first | split: '&' | first %}
+  {% elsif video contains 'youtube.com' and video contains 'v=' %}
+    {% assign video_id = video | split: 'v=' | last | split: '&' | first | split: '#' | first %}
+  {% endif %}
+  {% if pdf != '' or ssrn != '' or video != '' or abstract != '' or summary != '' or presentations != '' %}
   <div class="paper__actions" role="group" aria-label="Resources for {{ paper.title | escape }}">
     {% if pdf != '' %}
     <a class="paper__control paper__control--pdf" href="{{ pdf | relative_url }}" aria-label="Read PDF: {{ paper.title | escape }}">PDF</a>
     {% endif %}
     {% if ssrn != '' %}
     <a class="paper__control" href="{{ ssrn | escape }}" aria-label="View on SSRN: {{ paper.title | escape }}">SSRN <span aria-hidden="true">↗</span></a>
+    {% endif %}
+    {% if video_id != '' %}
+    <button class="paper__control" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-video">Video <span class="paper__chevron" aria-hidden="true">▾</span></button>
+    {% elsif video != '' %}
+    <a class="paper__control" href="{{ video | escape }}" aria-label="Watch video: {{ paper.title | escape }}">Video <span aria-hidden="true">↗</span></a>
     {% endif %}
     {% if abstract != '' %}
     <button class="paper__control" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-abstract">Abstract <span class="paper__chevron" aria-hidden="true">▾</span></button>
@@ -38,6 +50,16 @@
     <button class="paper__control" type="button" hidden data-paper-toggle aria-expanded="false" aria-controls="paper-{{ include.paper_id }}-presentations">Presentations <span class="paper__chevron" aria-hidden="true">▾</span></button>
     {% endif %}
   </div>
+  {% endif %}
+  {% if video_id != '' %}
+  <details class="paper__more paper__panel" id="paper-{{ include.paper_id }}-video">
+    <summary>Video</summary>
+    <div class="paper__panel-content">
+      <h4>Video</h4>
+      <div class="paper__video" hidden data-video-embed="https://www.youtube-nocookie.com/embed/{{ video_id | escape }}?rel=0" data-video-title="Video: {{ paper.title | escape }}"></div>
+      <p class="paper__video-link"><a href="{{ video | escape }}">Watch on YouTube <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </details>
   {% endif %}
   {% if abstract != '' %}
   <details class="paper__more paper__panel" id="paper-{{ include.paper_id }}-abstract">

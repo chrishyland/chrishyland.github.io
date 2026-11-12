@@ -9,6 +9,7 @@
 #   jmp           — true to render the highlighted Job Market Paper box
 #   award         — prize or award text
 #   pdf           — hosted PDF path, e.g. /assets/papers/paper-name.pdf
+#   video         — YouTube link; the Video button plays it on the page
 #   abstract      — text (Markdown supported), shown by the Abstract button
 #   summary       — text (Markdown supported), shown by the Summary button
 #   presentations — semicolon-separated list, shown in its own dropdown
@@ -18,6 +19,7 @@ working_papers:
   - title: "Taming Black Swans: Disaster Risk and the Neutral Rate of Interest"
     url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078"
     pdf: "/assets/papers/chris_jmp.pdf"
+    video: "https://www.youtube.com/watch?v=XhaBE8SzwFM"
     abstract: ""
     jmp: true
     award: "Winner of the Princeton Macro, Money, and International Finance Young Researcher Award"
